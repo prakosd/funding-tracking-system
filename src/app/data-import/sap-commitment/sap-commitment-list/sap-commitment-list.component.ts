@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { SapCommitmentService } from '../sap-commitment.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { SapCommitment } from '../sap-commitment.model';
-import { MatTableDataSource, MatSlideToggleChange } from '@angular/material';
+import { MatTableDataSource, MatSlideToggleChange, MatSnackBar } from '@angular/material';
 import { MatSort } from '@angular/material/sort';
 import { Subscription } from 'rxjs';
 import { DataImportService } from '../../data-import.service';
@@ -41,6 +41,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     private dataImportService: DataImportService,
     private route: ActivatedRoute,
     private router: Router,
+    private snackBar: MatSnackBar
     ) { }
 
   ngOnInit() {
@@ -58,11 +59,16 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     this.router.navigate(['../sap-commitment-form', 'clone', id], {relativeTo: this.route});
   }
 
-  onUpdateOne(id: string) {
+  onUpdateOne(id: string, isLocked: boolean | true) {
+    if (isLocked) {
+      this.snackBar.open('The data is locked!', 'Unlock it first.', { duration: 2000 });
+      return;
+    }
     this.router.navigate(['../sap-commitment-form', 'edit', id], {relativeTo: this.route});
   }
 
   fetchData(expandedId: string | null) {
+    const snackBarRef = this.snackBar.open('Please wait.', 'Updating list.');
     this.sapCommitmentService.getMany(this.fiscalYear)
     .subscribe((result: { message: string; sapCommitments: SapCommitment[] }) => {
       this.sapCommitments = result.sapCommitments;
@@ -71,8 +77,10 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
       if (expandedId) {
         this.expandedElement = this.sapCommitments.filter(row => row.id === expandedId)[0];
       }
+      snackBarRef.dismiss();
     }, error => {
       console.log(error);
+      snackBarRef.dismiss();
     });
   }
 

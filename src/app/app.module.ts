@@ -26,6 +26,7 @@ import { MatNativeDateModule } from '@angular/material';
     DataImportModule,
     MatNativeDateModule
   ],
+  entryComponents: [],
   providers: [],
   bootstrap: [AppComponent]
 })

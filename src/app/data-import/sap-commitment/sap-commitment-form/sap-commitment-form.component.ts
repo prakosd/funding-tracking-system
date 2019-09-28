@@ -82,6 +82,11 @@ export class SapCommitmentFormComponent implements OnInit {
           username: data.username
       });
       this.isLoading = false;
+      if (this.mode === 'edit') {
+        this.form.get('orderNumber').disable();
+        this.form.get('documentNumber').disable();
+        this.form.get('position').disable();
+      }
     }, error => {
       console.log(error);
       this.isLoading = false;
@@ -89,24 +94,24 @@ export class SapCommitmentFormComponent implements OnInit {
   }
 
   private initForm() {
-        this.form = new FormGroup({
-        orderNumber: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        category: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        documentNumber: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        name: new FormControl(null),
-        position: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        quantity: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        uom: new FormControl(null),
-        costElement: new FormControl(null),
-        currency: new FormControl('IDR', { validators: Validators.required, updateOn: 'blur' }),
-        actualValue: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        planValue: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        documentDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        debitDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-        isLocked: new FormControl(true),
-        isLinked: new FormControl(true),
-        username: new FormControl(this.username, { validators: Validators.required, updateOn: 'blur' })
-      });
+      this.form = new FormGroup({
+      orderNumber: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      category: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      documentNumber: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      name: new FormControl(null),
+      position: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      quantity: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      uom: new FormControl(null),
+      costElement: new FormControl(null),
+      currency: new FormControl('IDR', { validators: Validators.required, updateOn: 'blur' }),
+      actualValue: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      planValue: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      documentDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      debitDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      isLocked: new FormControl(true),
+      isLinked: new FormControl(true),
+      username: new FormControl(this.username, { validators: Validators.required, updateOn: 'blur' })
+    });
   }
 
   onSubmit() {
