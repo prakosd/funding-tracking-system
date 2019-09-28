@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <span>
+    <a routerLink="/">Funding Tracking</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="isUserAuthenticated">
+      <a mat-button routerLink="/home" routerLinkActive="mat-accent">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+    </li>
+    <li *ngIf="isUserAuthenticated">
+      <button mat-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu" routerLink="/data-import"  routerLinkActive="mat-accent">
+      <!-- [disabled]="false" (mouseenter)="menuTrigger.openMenu()"> -->
+        <mat-icon>cloud</mat-icon>
+        Data Import</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/data-import/sap-commitment" routerLinkActive="mat-accent">SAP Commitment</button>
+          <button mat-menu-item routerLink="/data-import/sap-actual" routerLinkActive="mat-accent">SAP Actual</button>
+          <button mat-menu-item routerLink="/data-import/eas" routerLinkActive="mat-accent">EAS</button>
+        </mat-menu>
+    </li>
+    <li *ngIf="isUserAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>

@@ -1,0 +1,12 @@
+mat-tab-group {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}

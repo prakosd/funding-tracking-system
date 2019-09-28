@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: rgb(223, 223, 223);
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.actual-value {
+  text-align: right;
+}
+
+.plan-value {
+  text-align: right;
+  padding-right: 1rem;
+}

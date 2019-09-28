@@ -1,0 +1,115 @@
+<h3>DETAIL</h3>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!isLoading">
+  <div style="display: flex; justify-content: center;">
+    <mat-card>
+      <mat-card-title>{{ title }}</mat-card-title>
+      <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>
+      <mat-card-content>
+        <div class="flex-container">
+          <mat-form-field style="width: 10rem;">
+            <input matInput placeholder="Order No." formControlName="orderNumber">
+            <mat-error *ngIf="form.get('orderNumber').invalid">Please enter an order number.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category">
+                <mat-option value="PReq">PR</mat-option>
+                <mat-option value="POrd">PO</mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('category').invalid">Please select a category.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="width: 10rem;">
+            <input matInput placeholder="Document No." formControlName="documentNumber">
+            <mat-error *ngIf="form.get('documentNumber').invalid">Please enter document number.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="width: 6rem;">
+            <input matInput placeholder="Position" formControlName="position">
+            <mat-error *ngIf="form.get('position').invalid">Please enter position in document.</mat-error>
+          </mat-form-field>
+
+          <div style="flex-basis: 100%; height: 0;"></div>
+
+          <mat-form-field style="width: 25rem;">
+            <input matInput placeholder="Name" formControlName="name">
+            <mat-error *ngIf="form.get('name').invalid">Please enter item's name.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="width: 5rem;">
+            <input matInput placeholder="Qty" formControlName="quantity">
+            <mat-error *ngIf="form.get('quantity').invalid">Please enter item's quantity.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="width: 5rem;">
+            <input matInput placeholder="UoM" formControlName="uom">
+            <mat-error *ngIf="form.get('uom').invalid">Please enter UoM.</mat-error>
+          </mat-form-field>
+
+          <div style="flex-basis: 100%; height: 0;"></div>
+
+          <mat-form-field style="width: 6rem;">
+            <input matInput placeholder="GL Account" formControlName="costElement">
+            <mat-error *ngIf="form.get('costElement').invalid">Please enter GL Account.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="width: 5rem;">
+            <input matInput placeholder="Currency" formControlName="currency">
+            <mat-error *ngIf="form.get('currency').invalid">Please enter currency.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="width: 10rem;">
+            <input matInput placeholder="Value" formControlName="actualValue">
+            <mat-error *ngIf="form.get('actualValue').invalid">Please enter actual value.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="width: 10rem;">
+            <input matInput placeholder="Plan Value" formControlName="planValue">
+            <mat-error *ngIf="form.get('planValue').invalid">Please enter plan value.</mat-error>
+          </mat-form-field>
+
+          <div style="flex-basis: 100%; height: 0;"></div>
+
+          <mat-form-field style="width: 10rem;">
+            <input matInput [matDatepicker]="pickerIssue" placeholder="Issue Date" formControlName="documentDate">
+            <mat-datepicker-toggle matSuffix [for]="pickerIssue"></mat-datepicker-toggle>
+            <mat-datepicker #pickerIssue></mat-datepicker>
+            <mat-error *ngIf="form.get('documentDate').invalid">Please select issue date.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="width: 10rem;">
+            <input matInput [matDatepicker]="pickerDebit" placeholder="Debit Date" formControlName="debitDate">
+            <mat-datepicker-toggle matSuffix [for]="pickerDebit"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDebit></mat-datepicker>
+            <mat-error *ngIf="form.get('debitDate').invalid">Please select debit date.</mat-error>
+          </mat-form-field>
+
+          <mat-slide-toggle checked="true" formControlName="isLocked">
+            Locked
+          </mat-slide-toggle>
+          <mat-slide-toggle checked="true" formControlName="isLinked">
+            Linked
+          </mat-slide-toggle>
+
+          <div style="flex-basis: 100%; height: 0;"></div>
+
+          <mat-form-field style="width: 10rem;">
+              <input matInput placeholder="User Name" formControlName="username">
+              <mat-error *ngIf="form.get('username').invalid">Please enter username.</mat-error>
+            </mat-form-field>
+        </div>
+      </mat-card-content>
+      <div style="display: flex; justify-content: space-between; height: 2.5rem;">
+          <mat-card-actions>
+              <button mat-raised-button color="primary" type="submit">SAVE</button>
+              <button mat-raised-button color="accent" (click)="onClear()" type="reset">CLEAR</button>
+            </mat-card-actions>
+            <mat-card-actions>
+                <button mat-raised-button color="accent" (click)="onCancel()" type="button">CANCEL</button>
+            </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+</form>
