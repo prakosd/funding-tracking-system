@@ -28,7 +28,6 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   fiscalYearSubs: Subscription;
   fiscalYear: number;
   dataSource;
-  isLoading: boolean;
   expandedElement;
   displayedColumns = [
     'orderNumber', 'category',
@@ -45,11 +44,10 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     ) { }
 
   ngOnInit() {
-    this.isLoading = false;
+    this.dataSource = new MatTableDataSource<SapCommitment[]>();
     this.fiscalYearSubs = this.dataImportService.getFiscalYear().subscribe(year => {
       this.fiscalYear = year;
       this.fetchData(null);
-
     });
   }
   onRefresh() {
@@ -65,29 +63,24 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   }
 
   fetchData(expandedId: string | null) {
-    this.isLoading = true;
     this.sapCommitmentService.getMany(this.fiscalYear)
     .subscribe((result: { message: string; sapCommitments: SapCommitment[] }) => {
       this.sapCommitments = result.sapCommitments;
       this.dataSource = new MatTableDataSource(this.sapCommitments);
       this.dataSource.sort = this.sort;
-      this.isLoading = false;
       if (expandedId) {
         this.expandedElement = this.sapCommitments.filter(row => row.id === expandedId)[0];
       }
     }, error => {
       console.log(error);
-      this.isLoading = false;
     });
   }
 
   onDeleteOne(id: string) {
-    this.isLoading = true;
     this.sapCommitmentService.deleteOne(id).subscribe(result => {
       this.fetchData(null);
     }, error => {
       console.log(error);
-      this.isLoading = false;
     });
   }
 
@@ -100,24 +93,18 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   }
 
   onLinkChange(id: string, slider: MatSlideToggleChange) {
-    this.isLoading = true;
     this.sapCommitmentService.setLink(id, slider.checked).subscribe(result => {
-      this.isLoading = false;
       this.fetchData(id);
     }, error => {
       console.log(error);
-      this.isLoading = false;
     });
   }
 
   onLockChange(id: string, slider: MatSlideToggleChange) {
-    this.isLoading = true;
     this.sapCommitmentService.setLock(id, slider.checked).subscribe(result => {
-      this.isLoading = false;
       this.fetchData(id);
     }, error => {
       console.log(error);
-      this.isLoading = false;
     });
   }
 }
