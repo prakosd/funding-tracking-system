@@ -8,7 +8,7 @@
       <mat-card-content>
         <div class="flex-container">
           <mat-form-field style="width: 10rem;">
-            <input matInput placeholder="Order No." formControlName="orderNumber">
+            <input matInput placeholder="Order No." formControlName="orderNumber" [readonly]="mode==='edit'">
             <mat-error *ngIf="form.get('orderNumber').invalid">Please enter an order number.</mat-error>
           </mat-form-field>
 
@@ -22,12 +22,12 @@
           </mat-form-field>
 
           <mat-form-field style="width: 10rem;">
-            <input matInput placeholder="Document No." formControlName="documentNumber">
+            <input matInput placeholder="Document No." formControlName="documentNumber" [readonly]="mode==='edit'">
             <mat-error *ngIf="form.get('documentNumber').invalid">Please enter document number.</mat-error>
           </mat-form-field>
 
           <mat-form-field style="width: 6rem;">
-            <input matInput placeholder="Position" formControlName="position" type="number">
+            <input matInput placeholder="Position" formControlName="position" type="number" [readonly]="mode==='edit'">
             <mat-error *ngIf="form.get('position').invalid">Please enter position in document.</mat-error>
           </mat-form-field>
 

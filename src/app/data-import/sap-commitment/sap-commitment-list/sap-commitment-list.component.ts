@@ -2,11 +2,12 @@ import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { SapCommitmentService } from '../sap-commitment.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { SapCommitment } from '../sap-commitment.model';
-import { MatTableDataSource, MatSlideToggleChange, MatSnackBar } from '@angular/material';
+import { MatTableDataSource, MatSlideToggleChange, MatSnackBar, MatDialog, MatDialogRef } from '@angular/material';
 import { MatSort } from '@angular/material/sort';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 import { DataImportService } from '../../data-import.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ConfirmationDialogComponent } from '../../../shared/confirmation-dialog/confirmation-dialog.component';
 
 
 @Component({
@@ -41,7 +42,8 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     private dataImportService: DataImportService,
     private route: ActivatedRoute,
     private router: Router,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private dialog: MatDialog
     ) { }
 
   ngOnInit() {
@@ -84,11 +86,52 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     });
   }
 
-  onDeleteOne(id: string) {
-    this.sapCommitmentService.deleteOne(id).subscribe(result => {
-      this.fetchData(null);
+  confirmationDialog(title: string, message: string): Observable<any> {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '25rem',
+      data: { title, message }
+     });
+
+    return dialogRef.afterClosed();
+  }
+
+  onDeleteOne(id: string, isLocked: boolean | true) {
+    if (isLocked) {
+      this.snackBar.open('The data is locked!', 'Unlock it first.', { duration: 2000 });
+      return;
+    }
+    this.confirmationDialog('Delete Commitment.', 'Are you sure want to do this?').subscribe(result => {
+      if (result) {
+        this.sapCommitmentService.deleteOne(id).subscribe(() => {
+          this.fetchData(null);
+          this.snackBar.open('Delete Commitment', 'Success', { duration: 2000 });
+        }, error => {
+          console.log(error);
+          this.snackBar.open('Delete Commitment', 'Failed!', { duration: 2000 });
+        });
+      }
+    });
+  }
+
+  onDeleteMany() {
+    let snackBarRef;
+    this.confirmationDialog('WARNING!', 'You will delete all UNLOCKED commitment. ' + '<br />' + 'Are you sure want to do this?')
+    .subscribe(result => {
+      if (result) {
+        snackBarRef = this.snackBar.open('Please wait.', 'Deleting list.');
+        this.sapCommitmentService.deleteMany().subscribe(() => {
+        this.fetchData(null);
+        snackBarRef.dismiss();
+        this.snackBar.open('Delete Commitment', 'Success', { duration: 2000 });
+      }, error => {
+        console.log(error);
+        snackBarRef.dismiss();
+        this.snackBar.open('Delete Commitment', 'Failed!', { duration: 2000 });
+      });
+      }
     }, error => {
       console.log(error);
+      snackBarRef.dismiss();
     });
   }
 

@@ -82,11 +82,6 @@ export class SapCommitmentFormComponent implements OnInit {
           username: data.username
       });
       this.isLoading = false;
-      if (this.mode === 'edit') {
-        this.form.get('orderNumber').disable();
-        this.form.get('documentNumber').disable();
-        this.form.get('position').disable();
-      }
     }, error => {
       console.log(error);
       this.isLoading = false;
@@ -185,7 +180,6 @@ export class SapCommitmentFormComponent implements OnInit {
       isLocked: this.form.value.isLocked,
       isLinked: this.form.value.isLinked
     };
-
     this.sapCommitmentService.updateOne(this.id, newSapCommitment).subscribe((result: { message: string, id: string }) => {
       this.isLoading = false;
       this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list']);

@@ -1,0 +1,8 @@
+<h3 matDialogTitle>{{ data.title }}</h3>
+<mat-dialog-content>
+    <p [innerHTML]="data.message"></p>
+</mat-dialog-content>
+<mat-dialog-actions class="flex-container">
+  <button mat-raised-button type="button" color="warn" [mat-dialog-close]="true">Yes</button>
+  <button mat-raised-button type="button" color="primary" (click)="onNoClick()" cdkFocusInitial>No</button>
+</mat-dialog-actions>

@@ -117,6 +117,10 @@ export class SapCommitmentService {
     return this.http.delete<{ message: string }>(BACKEND_URL + id);
   }
 
+  deleteMany() {
+    return this.http.delete<{ message: string }>(BACKEND_URL);
+  }
+
   setLink(id: string, value: boolean) {
     const set = { isLinked: value };
     return this.http.put<{ message: string; id: string }>(BACKEND_URL + 'setlink/' + id, set);

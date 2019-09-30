@@ -10,13 +10,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { DataImportComponent } from './data-import/data-import.component';
 import { MatNativeDateModule } from '@angular/material';
+import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    DataImportComponent
+    DataImportComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { MatNativeDateModule } from '@angular/material';
     DataImportModule,
     MatNativeDateModule
   ],
-  entryComponents: [],
+  entryComponents: [ConfirmationDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
