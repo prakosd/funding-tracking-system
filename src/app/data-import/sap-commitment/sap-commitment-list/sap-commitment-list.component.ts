@@ -8,6 +8,7 @@ import { Subscription, Observable } from 'rxjs';
 import { DataImportService } from '../../data-import.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ConfirmationDialogComponent } from '../../../shared/confirmation-dialog/confirmation-dialog.component';
+import { ExcelService } from '../../../shared/excel.service';
 
 
 @Component({
@@ -40,6 +41,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   constructor(
     private sapCommitmentService: SapCommitmentService,
     private dataImportService: DataImportService,
+    private excelService: ExcelService,
     private route: ActivatedRoute,
     private router: Router,
     private snackBar: MatSnackBar,
@@ -157,5 +159,9 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     }, error => {
       console.log(error);
     });
+  }
+
+  exportToExcel() {
+    this.excelService.exportAsExcelFile(this.sapCommitments, 'SapCommitment');
   }
 }
