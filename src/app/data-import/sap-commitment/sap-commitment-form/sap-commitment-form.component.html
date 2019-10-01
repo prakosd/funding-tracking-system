@@ -50,7 +50,7 @@
 
           <div style="flex-basis: 100%; height: 0;"></div>
 
-          <mat-form-field style="width: 6rem;">
+          <mat-form-field style="width: 4rem;">
             <input matInput placeholder="GL Account" formControlName="costElement" type="number">
             <mat-error *ngIf="form.get('costElement').invalid">Please enter GL Account.</mat-error>
           </mat-form-field>
@@ -99,6 +99,12 @@
               <input matInput placeholder="User Name" formControlName="username">
               <mat-error *ngIf="form.get('username').invalid">Please enter username.</mat-error>
           </mat-form-field>
+
+          <mat-form-field style="width: 25rem;">
+            <input matInput placeholder="Remark" formControlName="remark">
+            <mat-error *ngIf="form.get('remark').invalid"></mat-error>
+        </mat-form-field>
+
         </div>
       </mat-card-content>
       <div style="display: flex; justify-content: space-between; height: 2.5rem;">

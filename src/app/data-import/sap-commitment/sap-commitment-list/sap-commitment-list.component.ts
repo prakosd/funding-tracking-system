@@ -148,6 +148,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   onLinkChange(id: string, slider: MatSlideToggleChange) {
     this.sapCommitmentService.setLink(id, slider.checked).subscribe(result => {
       this.fetchData(id);
+      this.snackBar.open('Link', 'Updated', { duration: 2000 });
     }, error => {
       console.log(error);
     });
@@ -156,6 +157,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   onLockChange(id: string, slider: MatSlideToggleChange) {
     this.sapCommitmentService.setLock(id, slider.checked).subscribe(result => {
       this.fetchData(id);
+      this.snackBar.open('Lock', 'Updated', { duration: 2000 });
     }, error => {
       console.log(error);
     });
@@ -163,5 +165,14 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
   exportToExcel() {
     this.excelService.exportAsExcelFile(this.sapCommitments, 'SapCommitment');
+  }
+
+  onBlurRemark(id: string, event: any) {
+    this.sapCommitmentService.updateRemark(id, event.target.value).subscribe(result => {
+      this.fetchData(id);
+      this.snackBar.open('Remark', 'Updated', { duration: 2000 });
+    }, error => {
+      console.log(error);
+    });
   }
 }

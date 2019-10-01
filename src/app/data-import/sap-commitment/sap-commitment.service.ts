@@ -14,29 +14,30 @@ export class SapCommitmentService {
   getMany(year: number) {
     const queryParams = `?year=${year}`;
     return this.http.get<{ message: string; sapCommitments: any }>(BACKEND_URL + queryParams).pipe(map(result => {
-      return { message: result.message, sapCommitments: result.sapCommitments.map(sapCommitment => {
+      return { message: result.message, sapCommitments: result.sapCommitments.map(data => {
         return {
-          id: sapCommitment._id,
-          year: new Date(sapCommitment.debitDate).getFullYear(),
-          month: new Date(sapCommitment.debitDate).getMonth(),
-          lastUpdateAt: sapCommitment.lastUpdateAt,
-          lastUpdateBy: sapCommitment.lastUpdateBy,
-          orderNumber: sapCommitment.orderNumber,
-          category: sapCommitment.category,
-          documentNumber: sapCommitment.documentNumber,
-          position: sapCommitment.position,
-          costElement: sapCommitment.costElement,
-          name: sapCommitment.name,
-          quantity: sapCommitment.quantity,
-          uom: sapCommitment.uom,
-          currency: sapCommitment.currency,
-          actualValue: sapCommitment.actualValue,
-          planValue: sapCommitment.planValue,
-          documentDate: sapCommitment.documentDate,
-          debitDate: sapCommitment.debitDate,
-          username: sapCommitment.username,
-          isLocked: sapCommitment.isLocked,
-          isLinked: sapCommitment.isLinked
+          id: data._id,
+          year: new Date(data.debitDate).getFullYear(),
+          month: new Date(data.debitDate).getMonth(),
+          lastUpdateAt: data.lastUpdateAt,
+          lastUpdateBy: data.lastUpdateBy,
+          orderNumber: data.orderNumber,
+          category: data.category,
+          documentNumber: data.documentNumber,
+          position: data.position,
+          costElement: data.costElement,
+          name: data.name,
+          quantity: data.quantity,
+          uom: data.uom,
+          currency: data.currency,
+          actualValue: data.actualValue,
+          planValue: data.planValue,
+          documentDate: data.documentDate,
+          debitDate: data.debitDate,
+          username: data.username,
+          remark: data.remark,
+          isLocked: data.isLocked,
+          isLinked: data.isLinked
         };
       })};
     }));
@@ -65,6 +66,7 @@ export class SapCommitmentService {
           documentDate: result.sapCommitment.documentDate,
           debitDate: result.sapCommitment.debitDate,
           username: result.sapCommitment.username,
+          remark: result.sapCommitment.remark || '',
           isLocked: result.sapCommitment.isLocked,
           isLinked: result.sapCommitment.isLinked
       }};
@@ -87,6 +89,7 @@ export class SapCommitmentService {
     newData.append('documentDate', newOne.documentDate.toISOString());
     newData.append('debitDate', newOne.debitDate.toISOString());
     newData.append('username', newOne.username);
+    newData.append('remark', newOne.remark);
     newData.append('isLocked', newOne.isLocked.toString());
     newData.append('isLinked', newOne.isLinked.toString());
     return this.http.post<{ message: string; id: string }>(BACKEND_URL, newData);
@@ -108,9 +111,10 @@ export class SapCommitmentService {
     newData.append('documentDate', newOne.documentDate.toISOString());
     newData.append('debitDate', newOne.debitDate.toISOString());
     newData.append('username', newOne.username);
+    newData.append('remark', newOne.remark);
     newData.append('isLocked', newOne.isLocked.toString());
     newData.append('isLinked', newOne.isLinked.toString());
-    return this.http.put<{ message: string; id: string }>(BACKEND_URL + id, newData);
+    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, newData);
   }
 
   deleteOne(id: string) {
@@ -123,11 +127,16 @@ export class SapCommitmentService {
 
   setLink(id: string, value: boolean) {
     const set = { isLinked: value };
-    return this.http.put<{ message: string; id: string }>(BACKEND_URL + 'setlink/' + id, set);
+    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
   }
 
   setLock(id: string, value: boolean) {
     const set = { isLocked: value };
-    return this.http.put<{ message: string; id: string }>(BACKEND_URL + 'setlock/' + id, set);
+    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
+  }
+
+  updateRemark(id: string, value: string) {
+    const set = { remark: value };
+    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
   }
 }

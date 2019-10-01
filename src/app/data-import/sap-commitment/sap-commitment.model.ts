@@ -16,6 +16,7 @@ export interface SapCommitment {
   documentDate: Date;
   debitDate: Date;
   username: string;
+  remark: string;
   lastUpdateAt: Date;
   lastUpdateBy: string;
   isLocked: boolean;

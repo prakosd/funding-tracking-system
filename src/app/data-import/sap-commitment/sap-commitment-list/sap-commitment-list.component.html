@@ -127,7 +127,7 @@
                           </button>
                       </div>
                       <div>
-                        <mat-form-field style="margin: 1.3rem 1rem 0 0;">
+                        <mat-form-field style="margin: 1.3rem 1rem 0 0; width: 6rem;">
                           <input matInput placeholder="Fiscal Year - Month" value="{{ element.year }} - {{ element.month }}" [readonly]="true">
                         </mat-form-field>
                       </div>
@@ -137,8 +137,13 @@
                         </mat-form-field>
                       </div>
                       <div>
-                        <mat-form-field style="margin: 1.3rem 1rem 0 0;">
+                        <mat-form-field style="margin: 1.3rem 1rem 0 0; width: 10rem;">
                           <input matInput placeholder="Last Update" value="{{ element.lastUpdateAt | date:'dd MMM yyy' }} - {{ element.lastUpdateBy }}" [readonly]="true">
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field style="margin: 1.3rem 1rem 0 0; width: 15rem;">
+                          <input matInput placeholder="Remark" value="{{ element.remark }}" (blur)="onBlurRemark(element.id,  $event)">
                         </mat-form-field>
                       </div>
                   </div>

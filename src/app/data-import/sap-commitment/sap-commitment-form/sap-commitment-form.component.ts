@@ -79,7 +79,8 @@ export class SapCommitmentFormComponent implements OnInit {
           debitDate: data.debitDate,
           isLocked: data.isLocked,
           isLinked: data.isLinked,
-          username: data.username
+          username: data.username,
+          remark: data.remark
       });
       this.isLoading = false;
     }, error => {
@@ -105,6 +106,7 @@ export class SapCommitmentFormComponent implements OnInit {
       debitDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       isLocked: new FormControl(true),
       isLinked: new FormControl(true),
+      remark: new FormControl(null),
       username: new FormControl(this.username, { validators: Validators.required, updateOn: 'blur' })
     });
   }
@@ -142,6 +144,7 @@ export class SapCommitmentFormComponent implements OnInit {
       documentDate: new Date(this.form.value.documentDate),
       debitDate: new Date(this.form.value.debitDate),
       username: this.form.value.username,
+      remark: this.form.value.remark,
       isLocked: this.form.value.isLocked,
       isLinked: this.form.value.isLinked
     };
@@ -177,6 +180,7 @@ export class SapCommitmentFormComponent implements OnInit {
       documentDate: new Date(this.form.value.documentDate),
       debitDate: new Date(this.form.value.debitDate),
       username: this.form.value.username,
+      remark: this.form.value.remark,
       isLocked: this.form.value.isLocked,
       isLinked: this.form.value.isLinked
     };
