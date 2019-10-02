@@ -218,4 +218,18 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   exportToExcel() {
     this.excelService.exportAsExcelFile(this.mapToExcel(), 'SapCommitment');
   }
+
+  onFilePicked(event: Event) {
+    const file = (event.target as HTMLInputElement).files[0];
+    console.log(file);
+    // below code from mean-course
+    // const file = (event.target as HTMLInputElement).files[0];
+    // this.form.patchValue({ image: file });
+    // this.form.get("image").updateValueAndValidity();
+    // const reader = new FileReader();
+    // reader.onload = () => {
+    //   this.imagePreview = reader.result as string;
+    // };
+    // reader.readAsDataURL(file);
+  }
 }

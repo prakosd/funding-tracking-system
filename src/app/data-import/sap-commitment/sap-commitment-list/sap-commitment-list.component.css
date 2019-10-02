@@ -29,3 +29,8 @@ mat-slide-toggle {
   padding-left: 1rem;
   padding-top: 1.8rem;
 }
+
+input[type="file"] {
+  visibility: hidden;
+  width: 0;
+}
