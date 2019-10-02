@@ -183,11 +183,9 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   }
 
   mapToExcel(): any[] {
-    const result = [];
-    this.sapCommitments.map(data => {
-      result.push(
-        {
-          No: result.length + 1,
+    return this.sapCommitments.map((data, index) => {
+      return {
+          No: index + 1,
           Year: new Date(data.debitDate).getFullYear(),
           Month: new Date(data.debitDate).getMonth(),
           Order: data.orderNumber,
@@ -210,10 +208,8 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
           id: data.id,
           'Last Update At': new Date(data.lastUpdateAt),
           'Last Update By': data.lastUpdateBy,
-        }
-      );
+      };
     });
-    return result;
   }
   exportToExcel() {
     this.excelService.exportAsExcelFile(this.mapToExcel(), 'SapCommitment');
@@ -221,7 +217,17 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
   onFilePicked(event: Event) {
     const file = (event.target as HTMLInputElement).files[0];
-    console.log(file);
+
+    // check leng dan is Exixst
+    let arrayBuffer: ArrayBuffer;
+    const reader = new FileReader();
+    reader.onload = () => {
+      arrayBuffer = reader.result as ArrayBuffer;
+      console.log(ArrayBuffer);
+      this.excelService.importAsJson(arrayBuffer);
+    };
+    reader.readAsDataURL(file);
+
     // below code from mean-course
     // const file = (event.target as HTMLInputElement).files[0];
     // this.form.patchValue({ image: file });

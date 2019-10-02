@@ -199,6 +199,7 @@ export class SapCommitmentFormComponent implements OnInit {
     this.form.reset();
   }
   onCancel() {
-    this.location.back();
+    // this.location.back();
+    this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
   }
 }
