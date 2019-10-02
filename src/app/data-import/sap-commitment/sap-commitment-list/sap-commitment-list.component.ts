@@ -6,7 +6,7 @@ import { MatTableDataSource, MatSlideToggleChange, MatSnackBar, MatDialog, MatDi
 import { MatSort } from '@angular/material/sort';
 import { Subscription, Observable } from 'rxjs';
 import { DataImportService } from '../../data-import.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { ConfirmationDialogComponent } from '../../../shared/confirmation-dialog/confirmation-dialog.component';
 import { ExcelService } from '../../../shared/excel.service';
 
@@ -31,6 +31,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   fiscalYear: number;
   dataSource;
   expandedElement;
+  expandedId: string | null;
   displayedColumns = [
     'orderNumber', 'category',
     'documentNumber', 'position', 'name',
@@ -49,18 +50,24 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     ) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe((paramMap: ParamMap) => {
+      if (paramMap.has('id')) {
+        this.expandedId = paramMap.get('id');
+      }
+    });
+
     this.dataSource = new MatTableDataSource<SapCommitment[]>();
     this.fiscalYearSubs = this.dataImportService.getFiscalYear().subscribe(year => {
       this.fiscalYear = year;
-      this.fetchData(null);
+      this.fetchData(this.expandedId);
     });
   }
   onRefresh() {
-    this.fetchData(null);
+    this.fetchData(this.expandedId);
   }
 
   onCloneOne(id: string) {
-    this.router.navigate(['../sap-commitment-form', 'clone', id], {relativeTo: this.route});
+    this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-form', 'clone', id]);
   }
 
   onUpdateOne(id: string, isLocked: boolean | true) {
@@ -68,7 +75,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
       this.snackBar.open('The data is locked!', 'Unlock it first.', { duration: 2000 });
       return;
     }
-    this.router.navigate(['../sap-commitment-form', 'edit', id], {relativeTo: this.route});
+    this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-form', 'edit', id]);
   }
 
   fetchData(expandedId: string | null) {
@@ -163,16 +170,52 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     });
   }
 
-  exportToExcel() {
-    this.excelService.exportAsExcelFile(this.sapCommitments, 'SapCommitment');
-  }
-
-  onBlurRemark(id: string, event: any) {
+  onBlurRemark(id: string, isLocked: boolean, event: any) {
+    if (isLocked) {
+      return;
+    }
     this.sapCommitmentService.updateRemark(id, event.target.value).subscribe(result => {
       this.fetchData(id);
       this.snackBar.open('Remark', 'Updated', { duration: 2000 });
     }, error => {
       console.log(error);
     });
+  }
+
+  mapToExcel(): any[] {
+    const result = [];
+    this.sapCommitments.map(data => {
+      result.push(
+        {
+          No: result.length + 1,
+          Year: new Date(data.debitDate).getFullYear(),
+          Month: new Date(data.debitDate).getMonth(),
+          Order: data.orderNumber,
+          Category: data.category,
+          Document: data.documentNumber,
+          Position: +data.position,
+          'Cost Element': data.costElement,
+          Name: data.name,
+          Qty: +data.quantity,
+          UoM: data.uom,
+          Currency: data.currency,
+          'Actual Value': +data.actualValue,
+          'Plan Value': +data.planValue,
+          'Document Date': new Date(data.documentDate),
+          'Debit Date': new Date(data.debitDate),
+          Username: data.username,
+          Remark: data.remark,
+          Locked: data.isLocked ? 'Yes' : '' ,
+          Linked: data.isLinked ? 'Yes' : '' ,
+          id: data.id,
+          'Last Update At': new Date(data.lastUpdateAt),
+          'Last Update By': data.lastUpdateBy,
+        }
+      );
+    });
+    return result;
+  }
+  exportToExcel() {
+    this.excelService.exportAsExcelFile(this.mapToExcel(), 'SapCommitment');
   }
 }

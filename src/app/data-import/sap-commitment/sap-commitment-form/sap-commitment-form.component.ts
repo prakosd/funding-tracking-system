@@ -150,8 +150,9 @@ export class SapCommitmentFormComponent implements OnInit {
     };
 
     this.sapCommitmentService.createOne(newSapCommitment).subscribe((result: { message: string, id: string }) => {
+      this.id = result.id;
       this.isLoading = false;
-      this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list']);
+      this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
     }, error => {
       this.isLoading = false;
       console.log(error);
@@ -185,8 +186,9 @@ export class SapCommitmentFormComponent implements OnInit {
       isLinked: this.form.value.isLinked
     };
     this.sapCommitmentService.updateOne(this.id, newSapCommitment).subscribe((result: { message: string, id: string }) => {
+      this.id = result.id;
       this.isLoading = false;
-      this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list']);
+      this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
     }, error => {
       this.isLoading = false;
       console.log(error);

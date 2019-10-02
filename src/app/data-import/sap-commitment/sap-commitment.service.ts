@@ -114,7 +114,7 @@ export class SapCommitmentService {
     newData.append('remark', newOne.remark);
     newData.append('isLocked', newOne.isLocked.toString());
     newData.append('isLinked', newOne.isLinked.toString());
-    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, newData);
+    return this.http.put<{ message: string; id: string }>(BACKEND_URL + id, newData);
   }
 
   deleteOne(id: string) {
@@ -127,16 +127,16 @@ export class SapCommitmentService {
 
   setLink(id: string, value: boolean) {
     const set = { isLinked: value };
-    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
+    return this.http.put<{ message: string; id: string }>(BACKEND_URL + id, set);
   }
 
   setLock(id: string, value: boolean) {
     const set = { isLocked: value };
-    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
+    return this.http.put<{ message: string; id: string }>(BACKEND_URL + id, set);
   }
 
   updateRemark(id: string, value: string) {
     const set = { remark: value };
-    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
+    return this.http.put<{ message: string; id: string }>(BACKEND_URL + id, set);
   }
 }
