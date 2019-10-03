@@ -8,7 +8,7 @@
       <mat-card-content>
         <div class="flex-container">
           <mat-form-field style="width: 10rem;">
-            <input matInput placeholder="Order No." formControlName="orderNumber" [readonly]="mode==='edit'">
+            <input matInput placeholder="Order No." formControlName="orderNumber" [readonly]="mode==='edit'" style="text-transform: uppercase;">
             <mat-error *ngIf="form.get('orderNumber').invalid">Please enter an order number.</mat-error>
           </mat-form-field>
 
@@ -22,7 +22,7 @@
           </mat-form-field>
 
           <mat-form-field style="width: 10rem;">
-            <input matInput placeholder="Document No." formControlName="documentNumber" [readonly]="mode==='edit'">
+            <input matInput placeholder="Document No." formControlName="documentNumber" [readonly]="mode==='edit'" style="text-transform: uppercase;">
             <mat-error *ngIf="form.get('documentNumber').invalid">Please enter document number.</mat-error>
           </mat-form-field>
 
@@ -44,7 +44,7 @@
           </mat-form-field>
 
           <mat-form-field style="width: 5rem;">
-            <input matInput placeholder="UoM" formControlName="uom">
+            <input matInput placeholder="UoM" formControlName="uom" style="text-transform: uppercase;">
             <mat-error *ngIf="form.get('uom').invalid">Please enter UoM.</mat-error>
           </mat-form-field>
 
@@ -56,7 +56,7 @@
           </mat-form-field>
 
           <mat-form-field style="width: 5rem;">
-            <input matInput placeholder="Currency" formControlName="currency">
+            <input matInput placeholder="Currency" formControlName="currency" style="text-transform: uppercase;">
             <mat-error *ngIf="form.get('currency').invalid">Please enter currency.</mat-error>
           </mat-form-field>
 

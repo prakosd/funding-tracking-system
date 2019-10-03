@@ -19,10 +19,11 @@ export class ExcelService {
     this.saveAsExcelFile(excelBuffer, excelFileName);
   }
 
-  public importAsJson(arrayBuffer: ArrayBuffer) {
+  public importAsJson(arrayBuffer: ArrayBuffer): any[] {
     const data = new Uint8Array(arrayBuffer);
     const workbook = XLSX.read(data, { type: 'array' });
-    console.log(workbook);
+    const worksheet: XLSX.WorkSheet = workbook.Sheets[workbook.SheetNames[0]];
+    return XLSX.utils.sheet_to_json(worksheet);
   }
 
   private saveAsExcelFile(buffer: any, fileName: string): void {

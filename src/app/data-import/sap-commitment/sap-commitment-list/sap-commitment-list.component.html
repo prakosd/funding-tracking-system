@@ -27,7 +27,7 @@
           <button mat-raised-button color="primary" (click)="filePicker.click()">
            <mat-icon>cloud_upload</mat-icon>Upload Data
           </button>
-          <input type="file" #filePicker (change)="onFilePicked($event)">
+          <input type="file" #filePicker (change)="onFilePicked($event)" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
     </div>
   </div>
 </div>
