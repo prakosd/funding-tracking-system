@@ -239,16 +239,22 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     'All UNLOCKED data will be updated and non existing will be inserted.<br />' + 'Are you sure want to do this?')
     .subscribe(ok => {
       if (ok) {
-        data.forEach(d => {
+        data.forEach((d, index) => {
           this.sapCommitmentService.getLock(d.orderNumber, d.documentNumber, d.position).subscribe(isLocked => {
             if (!isLocked.data || (isLocked.data && isLocked.data.isLocked === false)) {
               this.sapCommitmentService.updateOne(d).subscribe(result => {
-                console.log(result);
+                // console.log(result);
+
               }, error => {
-                console.log(d);
+                console.log(error);
               });
             }
           });
+          console.log(index);
+          if (index >= data.length - 1) {
+
+            // this.fetchData(null);
+          }
         });
       } else { return; }
     }, error => {
@@ -264,10 +270,10 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     }
 
     const file = files[0];
-    if (file.type !== 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
-      this.snackBar.open('File type not allowed.', 'Only *.xls', { duration: 2000 });
-      return;
-    }
+    // if (file.type !== 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+    //   this.snackBar.open('File type not allowed.', 'only *.xlsx', { duration: 2000 });
+    //   return;
+    // }
 
     let arrayBuffer: ArrayBuffer;
     const reader = new FileReader();

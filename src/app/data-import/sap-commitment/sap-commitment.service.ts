@@ -12,7 +12,7 @@ export class SapCommitmentService {
   constructor(private http: HttpClient) {}
 
   getMany(year: number) {
-    const queryParams = `?year=${year}`;
+    const queryParams = `?year=${year}&sorts=orderNumber documentNumber position`;
     return this.http.get<{ message: string; sapCommitments: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, sapCommitments: result.sapCommitments.map(data => {
         return {
@@ -86,12 +86,12 @@ export class SapCommitmentService {
     newData.append('currency', newOne.currency);
     newData.append('actualValue', newOne.actualValue.toString());
     newData.append('planValue', newOne.planValue.toString());
-    newData.append('documentDate', newOne.documentDate.toISOString());
-    newData.append('debitDate', newOne.debitDate.toISOString());
+    newData.append('documentDate', new Date(newOne.documentDate).toISOString());
+    newData.append('debitDate', new Date(newOne.debitDate).toISOString());
     newData.append('username', newOne.username);
     newData.append('remark', newOne.remark);
-    newData.append('isLocked', newOne.isLocked.toString());
-    newData.append('isLinked', newOne.isLinked.toString());
+    newData.append('isLocked', newOne.isLocked.toString() || 'false');
+    newData.append('isLinked', newOne.isLinked.toString() || 'true');
     return this.http.post<{ message: string; id: string }>(BACKEND_URL, newData);
   }
 
@@ -112,8 +112,8 @@ export class SapCommitmentService {
     newData.append('debitDate', new Date(newOne.debitDate).toISOString());
     newData.append('username', newOne.username);
     newData.append('remark', newOne.remark);
-    newData.append('isLocked', newOne.isLocked.toString() || 'false');
-    newData.append('isLinked', newOne.isLinked.toString() || 'true');
+    newData.append('isLocked', newOne.isLocked.toString());
+    newData.append('isLinked', newOne.isLinked.toString());
     return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, newData);
   }
 
@@ -134,10 +134,9 @@ export class SapCommitmentService {
     newData.append('debitDate', new Date(data.debitDate).toISOString());
     newData.append('username', data.username);
     newData.append('remark', data.remark);
-    newData.append('isLocked', data.isLocked ? 'true' : 'false');
-    newData.append('isLinked', data.isLinked ? 'true' : 'false');
-    console.log(newData);
-    return this.http.put<{ message: string; id: string }>(BACKEND_URL + data.id ? data.id : '', newData);
+    newData.append('isLocked', data.isLocked ? data.isLocked.toString() : 'false');
+    newData.append('isLinked', data.isLinked ? data.isLinked.toString() : 'true');
+    return this.http.put<{ message: string; id: string }>(BACKEND_URL + (data.id ? data.id : ''), newData);
   }
 
   deleteOne(id: string) {
