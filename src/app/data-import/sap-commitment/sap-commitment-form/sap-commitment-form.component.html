@@ -1,6 +1,5 @@
 <h3>DETAIL</h3>
-<mat-spinner *ngIf="isLoading"></mat-spinner>
-<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!isLoading">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div style="display: flex; justify-content: center;">
     <mat-card>
       <mat-card-title>{{ title }}</mat-card-title>
@@ -50,12 +49,12 @@
 
           <div style="flex-basis: 100%; height: 0;"></div>
 
-          <mat-form-field style="width: 4rem;">
+          <mat-form-field style="width: 6rem;">
             <input matInput placeholder="GL Account" formControlName="costElement" type="number">
             <mat-error *ngIf="form.get('costElement').invalid">Please enter GL Account.</mat-error>
           </mat-form-field>
 
-          <mat-form-field style="width: 5rem;">
+          <mat-form-field style="width: 6rem;">
             <input matInput placeholder="Currency" formControlName="currency" style="text-transform: uppercase;">
             <mat-error *ngIf="form.get('currency').invalid">Please enter currency.</mat-error>
           </mat-form-field>

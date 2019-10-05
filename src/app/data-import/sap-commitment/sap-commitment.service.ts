@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { SapCommitment } from './sap-commitment.model';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 const BACKEND_URL = environment.apiUrl + '/sap-commitments/';
 
@@ -13,8 +14,8 @@ export class SapCommitmentService {
 
   getMany(year: number) {
     const queryParams = `?year=${year}&sorts=orderNumber documentNumber position`;
-    return this.http.get<{ message: string; sapCommitments: any }>(BACKEND_URL + queryParams).pipe(map(result => {
-      return { message: result.message, sapCommitments: result.sapCommitments.map(data => {
+    return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
+      return { message: result.message, data: result.data.map(data => {
         return {
           id: data._id,
           year: new Date(data.debitDate).getFullYear(),
@@ -46,7 +47,7 @@ export class SapCommitmentService {
   getOne(id: string) {
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + id)
     .pipe(map(result => {
-      return { message: result.message, sapCommitment: {
+      return { message: result.message, data: {
           id: result.data._id,
           year: new Date(result.data.debitDate).getFullYear(),
           month: new Date(result.data.debitDate).getMonth(),
@@ -73,74 +74,68 @@ export class SapCommitmentService {
     }));
   }
 
-  createOne(newOne: SapCommitment) {
-    const newData = new FormData();
-    newData.append('orderNumber', newOne.orderNumber);
-    newData.append('category', newOne.category);
-    newData.append('documentNumber', newOne.documentNumber);
-    newData.append('position', newOne.position.toString());
-    newData.append('costElement', newOne.costElement);
-    newData.append('name', newOne.name);
-    newData.append('quantity', newOne.quantity.toString());
-    newData.append('uom', newOne.uom);
-    newData.append('currency', newOne.currency);
-    newData.append('actualValue', newOne.actualValue.toString());
-    newData.append('planValue', newOne.planValue.toString());
-    newData.append('documentDate', new Date(newOne.documentDate).toISOString());
-    newData.append('debitDate', new Date(newOne.debitDate).toISOString());
-    newData.append('username', newOne.username);
-    newData.append('remark', newOne.remark);
-    newData.append('isLocked', newOne.isLocked.toString() || 'false');
-    newData.append('isLinked', newOne.isLinked.toString() || 'true');
-    return this.http.post<{ message: string; id: string }>(BACKEND_URL, newData);
+  createOne(data: SapCommitment) {
+    const newForm = new FormData();
+    newForm.append('orderNumber', data.orderNumber);
+    newForm.append('category', data.category);
+    newForm.append('documentNumber', data.documentNumber);
+    newForm.append('position', data.position.toString());
+    newForm.append('costElement', data.costElement);
+    newForm.append('name', data.name);
+    newForm.append('quantity', data.quantity.toString());
+    newForm.append('uom', data.uom);
+    newForm.append('currency', data.currency);
+    newForm.append('actualValue', data.actualValue.toString());
+    newForm.append('planValue', data.planValue.toString());
+    newForm.append('documentDate', new Date(data.documentDate).toISOString());
+    newForm.append('debitDate', new Date(data.debitDate).toISOString());
+    newForm.append('username', data.username);
+    newForm.append('remark', data.remark);
+    newForm.append('isLocked', data.isLocked.toString() || 'false');
+    newForm.append('isLinked', data.isLinked.toString() || 'true');
+    return this.http.post<{ message: string; data: { _id: string }}>(BACKEND_URL, newForm)
+    .pipe(
+      map(result => { return { message: result.message, data: { id: result.data._id }};
+    }));
   }
 
-  patchOne(id: string, newOne: SapCommitment) {
-    const newData = new FormData();
-    newData.append('orderNumber', newOne.orderNumber);
-    newData.append('category', newOne.category);
-    newData.append('documentNumber', newOne.documentNumber);
-    newData.append('position', newOne.position.toString());
-    newData.append('costElement', newOne.costElement);
-    newData.append('name', newOne.name);
-    newData.append('quantity', newOne.quantity.toString());
-    newData.append('uom', newOne.uom);
-    newData.append('currency', newOne.currency);
-    newData.append('actualValue', newOne.actualValue.toString());
-    newData.append('planValue', newOne.planValue.toString());
-    newData.append('documentDate', new Date(newOne.documentDate).toISOString());
-    newData.append('debitDate', new Date(newOne.debitDate).toISOString());
-    newData.append('username', newOne.username);
-    newData.append('remark', newOne.remark);
-    newData.append('isLocked', newOne.isLocked.toString());
-    newData.append('isLinked', newOne.isLinked.toString());
-    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, newData);
+  patchOne(id: string, data: SapCommitment) {
+    const newForm = new FormData();
+    newForm.append('orderNumber', data.orderNumber);
+    newForm.append('category', data.category);
+    newForm.append('documentNumber', data.documentNumber);
+    newForm.append('position', data.position.toString());
+    newForm.append('costElement', data.costElement);
+    newForm.append('name', data.name);
+    newForm.append('quantity', data.quantity.toString());
+    newForm.append('uom', data.uom);
+    newForm.append('currency', data.currency);
+    newForm.append('actualValue', data.actualValue.toString());
+    newForm.append('planValue', data.planValue.toString());
+    newForm.append('documentDate', new Date(data.documentDate).toISOString());
+    newForm.append('debitDate', new Date(data.debitDate).toISOString());
+    newForm.append('username', data.username);
+    newForm.append('remark', data.remark);
+    newForm.append('isLocked', data.isLocked.toString());
+    newForm.append('isLinked', data.isLinked.toString());
+    return this.http.patch<{ message: string; data: { _id: string }}>(BACKEND_URL + id, newForm)
+    .pipe(
+      map(result => { return { message: result.message, data: { id: result.data._id }};
+    }));
   }
 
-  updateOne(data: SapCommitment) {
-    const newData = new FormData();
-    newData.append('orderNumber', data.orderNumber);
-    newData.append('category', data.category);
-    newData.append('documentNumber', data.documentNumber);
-    newData.append('position', data.position.toString());
-    newData.append('costElement', data.costElement);
-    newData.append('name', data.name);
-    newData.append('quantity', data.quantity.toString());
-    newData.append('uom', data.uom);
-    newData.append('currency', data.currency);
-    newData.append('actualValue', data.actualValue.toString());
-    newData.append('planValue', data.planValue.toString());
-    newData.append('documentDate', new Date(data.documentDate).toISOString());
-    newData.append('debitDate', new Date(data.debitDate).toISOString());
-    newData.append('username', data.username);
-    newData.append('remark', data.remark);
-    newData.append('isLocked', data.isLocked ? data.isLocked.toString() : 'false');
-    newData.append('isLinked', data.isLinked ? data.isLinked.toString() : 'true');
-    return this.http.put<{ message: string; id: string }>(BACKEND_URL + (data.id ? data.id : ''), newData);
+  upsertOne(data: SapCommitment) {
+    return this.http.put<{ message: string; data: { _id: string }}>(BACKEND_URL + (data.id ? data.id : ''), data)
+    .pipe(
+      map(result => { return { message: result.message, data: { id: result.data._id }};
+    }));
   }
 
   deleteOne(id: string) {
-    return this.http.delete<{ message: string }>(BACKEND_URL + id);
+    return this.http.delete<{ message: string; data: { _id: string }}>(BACKEND_URL + id)
+    .pipe(
+      map(result => { return { message: result.message, data: { id: result.data._id }};
+    }));
   }
 
   deleteMany() {
@@ -149,21 +144,30 @@ export class SapCommitmentService {
 
   setLink(id: string, value: boolean) {
     const set = { isLinked: value };
-    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
+    return this.http.patch<{ message: string; data: { _id: string }}>(BACKEND_URL + id, set)
+    .pipe(
+      map(result => { return { message: result.message, data: { id: result.data._id }};
+    }));
   }
 
   setLock(id: string, value: boolean) {
     const set = { isLocked: value };
-    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
+    return this.http.patch<{ message: string; data: { _id: string }}>(BACKEND_URL + id, set)
+    .pipe(
+      map(result => { return { message: result.message, data: { id: result.data._id }};
+    }));
   }
 
   setRemark(id: string, value: string) {
     const set = { remark: value };
-    return this.http.patch<{ message: string; id: string }>(BACKEND_URL + id, set);
+    return this.http.patch<{ message: string; data: { _id: string }}>(BACKEND_URL + id, set)
+    .pipe(
+      map(result => { return { message: result.message, data: { id: result.data._id }};
+    }));
   }
 
   getLock(orderNumber: string, documentNumber: string, position: number) {
     const queryParams = `?ordernumber=${orderNumber}&documentnumber=${documentNumber}&position=${position}&fields=isLocked`;
-    return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams);
+    return this.http.get<{ message: string; data: { isLocked: boolean } }>(BACKEND_URL + queryParams);
   }
 }

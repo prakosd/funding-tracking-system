@@ -17,6 +17,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'sap-commitment-list', pathMatch: 'full' },
       { path: 'sap-commitment-list', component: SapCommitmentListComponent },
       { path: 'sap-commitment-list/:id', component: SapCommitmentListComponent },
+      { path: 'sap-commitment-form', component: SapCommitmentFormComponent },
       { path: 'sap-commitment-form/:id/:mode', component: SapCommitmentFormComponent }
     ] },
     { path: 'sap-actual', component: SapActualComponent, children: [] },

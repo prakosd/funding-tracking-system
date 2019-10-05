@@ -9,6 +9,7 @@ import { DataImportService } from '../../data-import.service';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { ConfirmationDialogComponent } from '../../../shared/confirmation-dialog/confirmation-dialog.component';
 import { ExcelService } from '../../../shared/excel.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 const sapCommitmentKeyMap = {
   year: 'Fiscal Year',
@@ -65,7 +66,8 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private snackBar: MatSnackBar,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private spinner: NgxSpinnerService
     ) { }
 
   ngOnInit() {
@@ -98,19 +100,19 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   }
 
   fetchData(expandedId: string | null) {
-    const snackBarRef = this.snackBar.open('Please wait.', 'Updating list.');
+    this.spinner.show();
     this.sapCommitmentService.getMany(this.fiscalYear)
-    .subscribe((result: { message: string; sapCommitments: SapCommitment[] }) => {
-      this.sapCommitments = result.sapCommitments;
+    .subscribe((result: { message: string; data: SapCommitment[] }) => {
+      this.sapCommitments = result.data;
       this.dataSource = new MatTableDataSource(this.sapCommitments);
       this.dataSource.sort = this.sort;
       if (expandedId) {
         this.expandedElement = this.sapCommitments.filter(row => row.id === expandedId)[0];
       }
-      snackBarRef.dismiss();
+      this.spinner.hide();
     }, error => {
       console.log(error);
-      snackBarRef.dismiss();
+      this.spinner.hide();
     });
   }
 
@@ -128,7 +130,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
       this.snackBar.open('The data is locked!', 'Unlock it first.', { duration: 2000 });
       return;
     }
-    this.confirmationDialog('Delete Commitment.', 'Are you sure want to do this?').subscribe(result => {
+    const confSub: Subscription = this.confirmationDialog('Delete Commitment.', 'Are you sure want to do this?').subscribe(result => {
       if (result) {
         this.sapCommitmentService.deleteOne(id).subscribe(() => {
           this.fetchData(null);
@@ -137,29 +139,27 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
           console.log(error);
           this.snackBar.open('Delete Commitment', 'Failed!', { duration: 2000 });
         });
+      } else {
+        confSub.unsubscribe();
       }
     });
   }
 
   onDeleteMany() {
-    let snackBarRef;
-    this.confirmationDialog('WARNING!', 'You will delete all UNLOCKED commitment. ' + '<br />' + 'Are you sure want to do this?')
+    const confSub: Subscription = this.confirmationDialog('WARNING!', 'You will delete all UNLOCKED commitment. ' +
+    '<br />' + 'Are you sure want to do this?')
     .subscribe(result => {
       if (result) {
-        snackBarRef = this.snackBar.open('Please wait.', 'Deleting list.');
         this.sapCommitmentService.deleteMany().subscribe(() => {
         this.fetchData(null);
-        snackBarRef.dismiss();
         this.snackBar.open('Delete Commitment', 'Success', { duration: 2000 });
         }, error => {
           console.log(error);
-          snackBarRef.dismiss();
           this.snackBar.open('Delete Commitment', 'Failed!', { duration: 2000 });
         });
+      } else {
+        confSub.unsubscribe();
       }
-    }, error => {
-      console.log(error);
-      snackBarRef.dismiss();
     });
   }
 
@@ -174,7 +174,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   onLinkChange(id: string, slider: MatSlideToggleChange) {
     this.sapCommitmentService.setLink(id, slider.checked).subscribe(result => {
       this.fetchData(id);
-      this.snackBar.open('Link', 'Updated', { duration: 2000 });
+      this.snackBar.open('Link', 'updated', { duration: 2000 });
     }, error => {
       console.log(error);
     });
@@ -183,7 +183,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   onLockChange(id: string, slider: MatSlideToggleChange) {
     this.sapCommitmentService.setLock(id, slider.checked).subscribe(result => {
       this.fetchData(id);
-      this.snackBar.open('Lock', 'Updated', { duration: 2000 });
+      this.snackBar.open('Lock', 'updated', { duration: 2000 });
     }, error => {
       console.log(error);
     });
@@ -195,7 +195,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     }
     this.sapCommitmentService.setRemark(id, event.target.value).subscribe(result => {
       this.fetchData(id);
-      this.snackBar.open('Remark', 'Updated', { duration: 2000 });
+      this.snackBar.open('Remark', 'updated', { duration: 2000 });
     }, error => {
       console.log(error);
     });
@@ -230,40 +230,33 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
       };
     });
   }
-  exportToExcel() {
-    this.excelService.exportAsExcelFile(this.mapToExcel(), 'SapCommitment');
+  async exportToExcel() {
+    await this.excelService.exportAsExcelFile(this.mapToExcel(), 'SapCommitment');
   }
 
   importExcel(data: SapCommitment[]) {
-    this.confirmationDialog('Import from Excel',
-    'All UNLOCKED data will be updated and non existing will be inserted.<br />' + 'Are you sure want to do this?')
-    .subscribe(ok => {
-      if (ok) {
-        data.forEach((d, index) => {
-          this.sapCommitmentService.getLock(d.orderNumber, d.documentNumber, d.position).subscribe(isLocked => {
-            if (!isLocked.data || (isLocked.data && isLocked.data.isLocked === false)) {
-              this.sapCommitmentService.updateOne(d).subscribe(result => {
-                // console.log(result);
 
-              }, error => {
-                console.log(error);
-              });
-            }
-          });
-          console.log(index);
-          if (index >= data.length - 1) {
+      //   data.forEach((d, index) => {
+      //     this.sapCommitmentService.getLock(d.orderNumber, d.documentNumber, d.position).subscribe(isLocked => {
+      //       if (!isLocked.data || (isLocked.data && isLocked.data.isLocked === false)) {
+      //         this.sapCommitmentService.upsertOne(d).subscribe(result => {
+      //           // console.log(result);
 
-            // this.fetchData(null);
-          }
-        });
-      } else { return; }
-    }, error => {
-      console.log(error);
-      return;
-    });
+      //         }, error => {
+      //           console.log(error);
+      //         });
+      //       }
+      //     });
+      //     console.log(index);
+      //     if (index >= data.length - 1) {
+
+      //       // this.fetchData(null);
+      //     }
+      //   });
+      // } else { return; });
   }
 
-  onFilePicked(event: Event) {
+  async onFilePicked(event: Event) {
     const files = (event.target as HTMLInputElement).files;
     if (!files || files.length <= 0) {
       return;
@@ -275,21 +268,30 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     //   return;
     // }
 
-    let arrayBuffer: ArrayBuffer;
-    const reader = new FileReader();
-    reader.onload = () => {
-      arrayBuffer = reader.result as ArrayBuffer;
-      const json = this.excelService.importAsJson(arrayBuffer);
-      const data: SapCommitment[] = this.mapJsonFromExcel(json);
-      this.importExcel(data);
-    };
-
-    reader.readAsArrayBuffer(file);
+    const confSub: Subscription = this.confirmationDialog('Import from Excel',
+    'All UNLOCKED data will be updated<br />and non existing will be inserted.<br /><br />' + 'Are you sure want to do this?')
+    .subscribe(isOk => {
+      if (isOk) {
+        let arrayBuffer: ArrayBuffer;
+        const reader = new FileReader();
+        reader.onload = () => {
+          arrayBuffer = reader.result as ArrayBuffer;
+          this.excelService.importAsJson(arrayBuffer).then(json => {
+            this.mapJsonFromExcel(json).then((data: SapCommitment[]) => {
+              this.importExcel(data);
+            });
+          });
+        };
+        reader.readAsArrayBuffer(file);
+      } else {
+        confSub.unsubscribe();
+      }
+    });
   }
 
-  mapJsonFromExcel(json: any[]): any[] {
+  async mapJsonFromExcel(json: any[]): Promise<any[]> {
     const results: any[] = [];
-    json.forEach(data => {
+    for (const data of json) {
       const result = {};
       for (const key in data) {
         if (data.hasOwnProperty(key)) {
@@ -297,7 +299,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
         }
       }
       results.push(result);
-    });
+    }
     return results.filter(r => r.orderNumber !== null && r.orderNumber !== undefined);
   }
 

@@ -18,7 +18,6 @@ export class SapCommitmentFormComponent implements OnInit {
   mode: string;
   form: FormGroup;
   id: string;
-  isLoading: boolean;
   username: string;
 
   constructor(
@@ -31,7 +30,6 @@ export class SapCommitmentFormComponent implements OnInit {
 
   ngOnInit() {
     this.username = this.authService.getUserId();
-    this.isLoading = false;
     this.initForm();
 
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
@@ -60,9 +58,8 @@ export class SapCommitmentFormComponent implements OnInit {
 
   private setForm() {
     // get from REST API
-    this.isLoading = true;
     this.sapCommitmentService.getOne(this.id).subscribe(result => {
-      const data: SapCommitment = result.sapCommitment;
+      const data: SapCommitment = result.data;
       this.form.setValue({
           orderNumber: data.orderNumber,
           category: data.category,
@@ -82,10 +79,8 @@ export class SapCommitmentFormComponent implements OnInit {
           username: data.username,
           remark: data.remark
       });
-      this.isLoading = false;
     }, error => {
       console.log(error);
-      this.isLoading = false;
     });
   }
 
@@ -106,7 +101,7 @@ export class SapCommitmentFormComponent implements OnInit {
       debitDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       isLocked: new FormControl(true),
       isLinked: new FormControl(true),
-      remark: new FormControl(null),
+      remark: new FormControl(),
       username: new FormControl(this.username, { validators: Validators.required, updateOn: 'blur' })
     });
   }
@@ -123,8 +118,7 @@ export class SapCommitmentFormComponent implements OnInit {
   }
 
   private createOne() {
-    this.isLoading = true;
-    const newSapCommitment: SapCommitment = {
+    const data: SapCommitment = {
       id: null,
       year: null,
       month: null,
@@ -149,19 +143,16 @@ export class SapCommitmentFormComponent implements OnInit {
       isLinked: this.form.value.isLinked
     };
 
-    this.sapCommitmentService.createOne(newSapCommitment).subscribe((result: { message: string, id: string }) => {
-      this.id = result.id;
-      this.isLoading = false;
+    this.sapCommitmentService.createOne(data).subscribe((result: { message: string; data: { id: string }}) => {
+      this.id = result.data.id;
       this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
     }, error => {
-      this.isLoading = false;
       console.log(error);
     });
   }
 
   private updateOne() {
-    this.isLoading = true;
-    const newSapCommitment: SapCommitment = {
+    const data: SapCommitment = {
       id: null,
       year: null,
       month: null,
@@ -185,12 +176,10 @@ export class SapCommitmentFormComponent implements OnInit {
       isLocked: this.form.value.isLocked,
       isLinked: this.form.value.isLinked
     };
-    this.sapCommitmentService.patchOne(this.id, newSapCommitment).subscribe((result: { message: string, id: string }) => {
-      this.id = result.id;
-      this.isLoading = false;
+    this.sapCommitmentService.patchOne(this.id, data).subscribe((result: { message: string; data: { id: string }}) => {
+      this.id = result.data.id;
       this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
     }, error => {
-      this.isLoading = false;
       console.log(error);
     });
   }
@@ -200,6 +189,7 @@ export class SapCommitmentFormComponent implements OnInit {
   }
   onCancel() {
     // this.location.back();
+    if(!this.id) { this.id = ''; }
     this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
   }
 }

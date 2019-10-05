@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
+import { retry } from 'rxjs/operators';
 
 const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
 const EXCEL_EXTENSION = '.xlsx';
@@ -9,24 +10,24 @@ const EXCEL_EXTENSION = '.xlsx';
 export class ExcelService {
   constructor() { }
 
-  public exportAsExcelFile(json: any[], excelFileName: string): void {
+  public async exportAsExcelFile(json: any[], excelFileName: string) {
     const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(json);
     // console.log('worksheet', worksheet);
 
     const workbook: XLSX.WorkBook = { Sheets: { data: worksheet }, SheetNames: ['data'] };
     const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
     // const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'buffer' });
-    this.saveAsExcelFile(excelBuffer, excelFileName);
+    await this.saveAsExcelFile(excelBuffer, excelFileName);
   }
 
-  public importAsJson(arrayBuffer: ArrayBuffer): any[] {
+  public async importAsJson(arrayBuffer: ArrayBuffer): Promise<any[]> {
     const data = new Uint8Array(arrayBuffer);
     const workbook = XLSX.read(data, { type: 'array' });
     const worksheet: XLSX.WorkSheet = workbook.Sheets[workbook.SheetNames[0]];
     return XLSX.utils.sheet_to_json(worksheet, { raw: false });
   }
 
-  private saveAsExcelFile(buffer: any, fileName: string): void {
+  private async saveAsExcelFile(buffer: any, fileName: string) {
     const data: Blob = new Blob([buffer], {
       type: EXCEL_TYPE
     });
