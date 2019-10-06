@@ -99,21 +99,18 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-form', id, 'edit']);
   }
 
-  fetchData(expandedId: string | null) {
+  async fetchData(expandedId: string | null) {
     this.spinner.show();
-    this.sapCommitmentService.getMany(this.fiscalYear)
-    .subscribe((result: { message: string; data: SapCommitment[] }) => {
-      this.sapCommitments = result.data;
-      this.dataSource = new MatTableDataSource(this.sapCommitments);
-      this.dataSource.sort = this.sort;
-      if (expandedId) {
-        this.expandedElement = this.sapCommitments.filter(row => row.id === expandedId)[0];
-      }
-      this.spinner.hide();
-    }, error => {
-      console.log(error);
-      this.spinner.hide();
-    });
+    const result = await this.sapCommitmentService.getMany(this.fiscalYear).toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    this.sapCommitments = result.data;
+    this.dataSource = new MatTableDataSource(this.sapCommitments);
+    this.dataSource.sort = this.sort;
+    if (expandedId) {
+      this.expandedElement = this.sapCommitments.filter(row => row.id === expandedId)[0];
+    }
+    this.spinner.hide();
   }
 
   confirmationDialog(title: string, message: string): Observable<any> {
@@ -125,42 +122,30 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     return dialogRef.afterClosed();
   }
 
-  onDeleteOne(id: string, isLocked: boolean | true) {
+  async onDeleteOne(id: string, isLocked: boolean | true) {
     if (isLocked) {
       this.snackBar.open('The data is locked!', 'Unlock it first.', { duration: 2000 });
       return;
     }
-    const confSub: Subscription = this.confirmationDialog('Delete Commitment.', 'Are you sure want to do this?').subscribe(result => {
-      if (result) {
-        this.sapCommitmentService.deleteOne(id).subscribe(() => {
-          this.fetchData(null);
-          this.snackBar.open('Delete Commitment', 'Success', { duration: 2000 });
-        }, error => {
-          console.log(error);
-          this.snackBar.open('Delete Commitment', 'Failed!', { duration: 2000 });
-        });
-      } else {
-        confSub.unsubscribe();
-      }
-    });
+
+    const result = await this.confirmationDialog('Delete Commitment.',
+    'Are you sure want to do this?').toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    await this.sapCommitmentService.deleteOne(id).toPromise().catch(error => { console.log(error); });
+    this.fetchData(null);
+    this.snackBar.open('Delete Commitment', 'Success', { duration: 2000 });
   }
 
-  onDeleteMany() {
-    const confSub: Subscription = this.confirmationDialog('WARNING!', 'You will delete all UNLOCKED commitment. ' +
-    '<br />' + 'Are you sure want to do this?')
-    .subscribe(result => {
-      if (result) {
-        this.sapCommitmentService.deleteMany().subscribe(() => {
-        this.fetchData(null);
-        this.snackBar.open('Delete Commitment', 'Success', { duration: 2000 });
-        }, error => {
-          console.log(error);
-          this.snackBar.open('Delete Commitment', 'Failed!', { duration: 2000 });
-        });
-      } else {
-        confSub.unsubscribe();
-      }
-    });
+  async onDeleteMany() {
+    const result = await this.confirmationDialog('WARNING!', 'You will delete all UNLOCKED commitment. ' +
+    '<br />' + 'Are you sure want to do this?').toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    this.spinner.show();
+    await this.sapCommitmentService.deleteMany().toPromise().catch(error => { console.log(error); });
+    await this.fetchData(null);
+    this.snackBar.open('Delete Commitment', 'Success', { duration: 2000 });
   }
 
   applyFilter(filterValue: string) {
@@ -171,37 +156,34 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     this.fiscalYearSubs.unsubscribe();
   }
 
-  onLinkChange(id: string, slider: MatSlideToggleChange) {
-    this.sapCommitmentService.setLink(id, slider.checked).subscribe(result => {
-      this.fetchData(id);
-      this.snackBar.open('Link', 'updated', { duration: 2000 });
-    }, error => {
-      console.log(error);
-    });
+  async onLinkChange(id: string, slider: MatSlideToggleChange) {
+    const result = await this.sapCommitmentService.setLink(id, slider.checked).toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    await this.fetchData(id);
+    this.snackBar.open('Link', 'updated', { duration: 2000 });
   }
 
-  onLockChange(id: string, slider: MatSlideToggleChange) {
-    this.sapCommitmentService.setLock(id, slider.checked).subscribe(result => {
-      this.fetchData(id);
-      this.snackBar.open('Lock', 'updated', { duration: 2000 });
-    }, error => {
-      console.log(error);
-    });
+  async onLockChange(id: string, slider: MatSlideToggleChange) {
+    const result = await this.sapCommitmentService.setLock(id, slider.checked).toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    await this.fetchData(id);
+    this.snackBar.open('Lock', 'updated', { duration: 2000 });
   }
 
-  onBlurRemark(id: string, isLocked: boolean, event: any) {
+  async onBlurRemark(id: string, isLocked: boolean, event: any) {
     if (isLocked) {
       return;
     }
-    this.sapCommitmentService.setRemark(id, event.target.value).subscribe(result => {
-      this.fetchData(id);
-      this.snackBar.open('Remark', 'updated', { duration: 2000 });
-    }, error => {
-      console.log(error);
-    });
+    const result = await this.sapCommitmentService.setRemark(id, event.target.value).toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    await this.fetchData(id);
+    this.snackBar.open('Remark', 'updated', { duration: 2000 });
   }
 
-  mapToExcel(): any[] {
+  async mapToExcel(): Promise<any[]> {
     return this.sapCommitments.map((data, index) => {
       return {
           No: index + 1,
@@ -231,29 +213,20 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     });
   }
   async exportToExcel() {
-    await this.excelService.exportAsExcelFile(this.mapToExcel(), 'SapCommitment');
+    this.excelService.exportAsExcelFile(await this.mapToExcel(), 'SapCommitment');
   }
 
-  importExcel(data: SapCommitment[]) {
+  async importExcel(data: SapCommitment[]) {
+    for (const d of data) {
+      const result = await this.sapCommitmentService.getLock(d.orderNumber, d.documentNumber, d.position)
+      .toPromise().catch(error => { console.log(error); });
+      if (!result) { return; }
 
-      //   data.forEach((d, index) => {
-      //     this.sapCommitmentService.getLock(d.orderNumber, d.documentNumber, d.position).subscribe(isLocked => {
-      //       if (!isLocked.data || (isLocked.data && isLocked.data.isLocked === false)) {
-      //         this.sapCommitmentService.upsertOne(d).subscribe(result => {
-      //           // console.log(result);
-
-      //         }, error => {
-      //           console.log(error);
-      //         });
-      //       }
-      //     });
-      //     console.log(index);
-      //     if (index >= data.length - 1) {
-
-      //       // this.fetchData(null);
-      //     }
-      //   });
-      // } else { return; });
+      if (!result.data.isLocked) {
+        await this.sapCommitmentService.upsertOne(d).toPromise().catch(error => { console.log(error); });
+        if (!result) { return; }
+      }
+    }
   }
 
   async onFilePicked(event: Event) {
@@ -268,25 +241,29 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     //   return;
     // }
 
-    const confSub: Subscription = this.confirmationDialog('Import from Excel',
-    'All UNLOCKED data will be updated<br />and non existing will be inserted.<br /><br />' + 'Are you sure want to do this?')
-    .subscribe(isOk => {
-      if (isOk) {
-        let arrayBuffer: ArrayBuffer;
-        const reader = new FileReader();
-        reader.onload = () => {
-          arrayBuffer = reader.result as ArrayBuffer;
-          this.excelService.importAsJson(arrayBuffer).then(json => {
-            this.mapJsonFromExcel(json).then((data: SapCommitment[]) => {
-              this.importExcel(data);
-            });
-          });
-        };
-        reader.readAsArrayBuffer(file);
-      } else {
-        confSub.unsubscribe();
-      }
-    });
+    const result = await this.confirmationDialog('Import from Excel',
+    'All UNLOCKED data will be updated<br />' +
+    'and non existing will be inserted.<br /><br />' + 'Are you sure want to do this?')
+    .toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    this.spinner.show();
+    let arrayBuffer: ArrayBuffer;
+    const reader = new FileReader();
+
+    reader.onload = async () => {
+        arrayBuffer = reader.result as ArrayBuffer;
+        const json = await this.excelService.importAsJson(arrayBuffer).catch(error => { console.log(error); });
+        if (!json) { return; }
+
+        const data = await this.mapJsonFromExcel(json).catch(error => { console.log(error); });
+        if (!data) { return; }
+
+        await this.importExcel(data).catch(error => { console.log(error); });
+        await this.fetchData(null);
+        this.snackBar.open('Import from Excel', 'success', { duration: 2000 });
+      };
+    reader.readAsArrayBuffer(file);
   }
 
   async mapJsonFromExcel(json: any[]): Promise<any[]> {
@@ -295,7 +272,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
       const result = {};
       for (const key in data) {
         if (data.hasOwnProperty(key)) {
-          result[this.mapKey(key)] = data[key];
+          result[await this.mapKey(key)] = data[key];
         }
       }
       results.push(result);
@@ -303,7 +280,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     return results.filter(r => r.orderNumber !== null && r.orderNumber !== undefined);
   }
 
-  mapKey(findKey: string): string {
+  async mapKey(findKey: string): Promise<string> {
     for (const key in sapCommitmentKeyMap) {
       if (sapCommitmentKeyMap.hasOwnProperty(key)) {
         if (sapCommitmentKeyMap[key] === findKey) {
@@ -313,5 +290,3 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     }
   }
 }
-
-

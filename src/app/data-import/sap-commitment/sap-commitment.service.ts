@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { SapCommitment } from './sap-commitment.model';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { DataImportComponent } from '../data-import.component';
 
 const BACKEND_URL = environment.apiUrl + '/sap-commitments/';
 
@@ -168,6 +169,9 @@ export class SapCommitmentService {
 
   getLock(orderNumber: string, documentNumber: string, position: number) {
     const queryParams = `?ordernumber=${orderNumber}&documentnumber=${documentNumber}&position=${position}&fields=isLocked`;
-    return this.http.get<{ message: string; data: { isLocked: boolean } }>(BACKEND_URL + queryParams);
+    return this.http.get<{ message: string; data: { _id: string, isLocked: boolean } }>(BACKEND_URL + queryParams)
+    .pipe(
+      map(result => { return { message: result.message, data: { id: result.data._id, isLocked: result.data.isLocked }};
+    }));
   }
 }

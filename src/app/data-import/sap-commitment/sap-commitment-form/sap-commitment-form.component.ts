@@ -56,11 +56,12 @@ export class SapCommitmentFormComponent implements OnInit {
     }
   }
 
-  private setForm() {
-    // get from REST API
-    this.sapCommitmentService.getOne(this.id).subscribe(result => {
-      const data: SapCommitment = result.data;
-      this.form.setValue({
+  private async setForm() {
+    const result = await this.sapCommitmentService.getOne(this.id).toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    const data: SapCommitment = result.data;
+    this.form.setValue({
           orderNumber: data.orderNumber,
           category: data.category,
           documentNumber: data.documentNumber,
@@ -79,9 +80,6 @@ export class SapCommitmentFormComponent implements OnInit {
           username: data.username,
           remark: data.remark
       });
-    }, error => {
-      console.log(error);
-    });
   }
 
   private initForm() {
@@ -117,7 +115,7 @@ export class SapCommitmentFormComponent implements OnInit {
     }
   }
 
-  private createOne() {
+  private async createOne() {
     const data: SapCommitment = {
       id: null,
       year: null,
@@ -143,15 +141,14 @@ export class SapCommitmentFormComponent implements OnInit {
       isLinked: this.form.value.isLinked
     };
 
-    this.sapCommitmentService.createOne(data).subscribe((result: { message: string; data: { id: string }}) => {
-      this.id = result.data.id;
-      this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
-    }, error => {
-      console.log(error);
-    });
+    const result = await this.sapCommitmentService.createOne(data).toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    this.id = result.data.id || null;
+    this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
   }
 
-  private updateOne() {
+  private async updateOne() {
     const data: SapCommitment = {
       id: null,
       year: null,
@@ -176,12 +173,12 @@ export class SapCommitmentFormComponent implements OnInit {
       isLocked: this.form.value.isLocked,
       isLinked: this.form.value.isLinked
     };
-    this.sapCommitmentService.patchOne(this.id, data).subscribe((result: { message: string; data: { id: string }}) => {
-      this.id = result.data.id;
-      this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
-    }, error => {
-      console.log(error);
-    });
+
+    const result = await this.sapCommitmentService.patchOne(this.id, data).toPromise().catch(error => { console.log(error); });
+    if (!result) { return; }
+
+    this.id = result.data.id;
+    this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
   }
 
   onClear() {
@@ -189,7 +186,7 @@ export class SapCommitmentFormComponent implements OnInit {
   }
   onCancel() {
     // this.location.back();
-    if(!this.id) { this.id = ''; }
+    if (!this.id) { this.id = ''; }
     this.router.navigate(['data-import', 'sap-commitment', 'sap-commitment-list', this.id]);
   }
 }
