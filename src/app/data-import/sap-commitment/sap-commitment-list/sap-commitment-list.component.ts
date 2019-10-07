@@ -160,7 +160,8 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     const result = await this.sapCommitmentService.setLink(id, slider.checked).toPromise().catch(error => { console.log(error); });
     if (!result) { return; }
 
-    await this.fetchData(id);
+    const index = this.sapCommitments.findIndex(data => data.id === id);
+    this.sapCommitments[index].isLinked = slider.checked;
     this.snackBar.open('Link', 'updated', { duration: 2000 });
   }
 
@@ -168,18 +169,18 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     const result = await this.sapCommitmentService.setLock(id, slider.checked).toPromise().catch(error => { console.log(error); });
     if (!result) { return; }
 
-    await this.fetchData(id);
+    const index = this.sapCommitments.findIndex(data => data.id === id);
+    this.sapCommitments[index].isLocked = slider.checked;
     this.snackBar.open('Lock', 'updated', { duration: 2000 });
   }
 
   async onBlurRemark(id: string, isLocked: boolean, event: any) {
-    if (isLocked) {
-      return;
-    }
+    if (isLocked) { return; }
     const result = await this.sapCommitmentService.setRemark(id, event.target.value).toPromise().catch(error => { console.log(error); });
     if (!result) { return; }
 
-    await this.fetchData(id);
+    const index = this.sapCommitments.findIndex(data => data.id === id);
+    this.sapCommitments[index].remark = event.target.value;
     this.snackBar.open('Remark', 'updated', { duration: 2000 });
   }
 
