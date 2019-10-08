@@ -8,27 +8,9 @@ import { Subscription, Observable } from 'rxjs';
 import { DataImportService } from '../../data-import.service';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { ConfirmationDialogComponent } from '../../../shared/confirmation-dialog/confirmation-dialog.component';
-import { ExcelService } from '../../../shared/excel.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 
-const sapCommitmentKeyMap = {
-  year: 'Fiscal Year',
-  month: 'Period',
-  orderNumber: 'Order',
-  category: 'Reference document category',
-  documentNumber: 'Ref Document Number',
-  position: 'Reference item',
-  costElement: 'Cost element',
-  name: 'Name',
-  quantity: 'Quantity/plan',
-  uom: 'Unit of Measure',
-  currency: 'Report currency',
-  actualValue: 'Val.in rep.cur.',
-  planValue: 'Plan Val. RCrcy',
-  documentDate: 'Document Date',
-  debitDate: 'Debit date',
-  username: 'User Name'
-};
+
 
 
 @Component({
@@ -62,7 +44,6 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   constructor(
     private sapCommitmentService: SapCommitmentService,
     private dataImportService: DataImportService,
-    private excelService: ExcelService,
     private route: ActivatedRoute,
     private router: Router,
     private snackBar: MatSnackBar,
@@ -162,7 +143,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
     const index = this.sapCommitments.findIndex(data => data.id === id);
     this.sapCommitments[index].isLinked = slider.checked;
-    this.snackBar.open('Link', 'updated', { duration: 2000 });
+    this.snackBar.open('Data is', slider.checked ? 'linked' : 'unlinked', { duration: 2000 });
   }
 
   async onLockChange(id: string, slider: MatSlideToggleChange) {
@@ -171,7 +152,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
     const index = this.sapCommitments.findIndex(data => data.id === id);
     this.sapCommitments[index].isLocked = slider.checked;
-    this.snackBar.open('Lock', 'updated', { duration: 2000 });
+    this.snackBar.open('Lock', slider.checked ? 'locked' : 'unlocked', { duration: 2000 });
   }
 
   async onBlurRemark(id: string, isLocked: boolean, event: any) {
@@ -184,50 +165,9 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     this.snackBar.open('Remark', 'updated', { duration: 2000 });
   }
 
-  async mapToExcel(): Promise<any[]> {
-    return this.sapCommitments.map((data, index) => {
-      return {
-          No: index + 1,
-          Year: new Date(data.debitDate).getFullYear(),
-          Month: new Date(data.debitDate).getMonth(),
-          Order: data.orderNumber,
-          Category: data.category,
-          Document: data.documentNumber,
-          Position: +data.position,
-          'Cost Element': data.costElement,
-          Name: data.name,
-          Qty: +data.quantity,
-          UoM: data.uom,
-          Currency: data.currency,
-          'Actual Value': +data.actualValue,
-          'Plan Value': +data.planValue,
-          'Document Date': new Date(data.documentDate),
-          'Debit Date': new Date(data.debitDate),
-          Username: data.username,
-          Remark: data.remark,
-          Locked: data.isLocked ? 'Yes' : '' ,
-          Linked: data.isLinked ? 'Yes' : '' ,
-          id: data.id,
-          'Last Update At': new Date(data.lastUpdateAt),
-          'Last Update By': data.lastUpdateBy,
-      };
-    });
-  }
   async exportToExcel() {
-    this.excelService.exportAsExcelFile(await this.mapToExcel(), 'SapCommitment');
-  }
-
-  async importExcel(data: SapCommitment[]) {
-    for (const d of data) {
-      const result = await this.sapCommitmentService.getLock(d.orderNumber, d.documentNumber, d.position)
-      .toPromise().catch(error => { console.log(error); });
-      if (!result) { return; }
-
-      if (!result.data.isLocked) {
-        await this.sapCommitmentService.upsertOne(d).toPromise().catch(error => { console.log(error); });
-        if (!result) { return; }
-      }
-    }
+    await this.sapCommitmentService.exportToExcel(this.sapCommitments);
+    this.snackBar.open('Export to excel', 'succeed', { duration: 2000 });
   }
 
   async onFilePicked(event: Event) {
@@ -237,14 +177,18 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     }
 
     const file = files[0];
-    // if (file.type !== 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
-    //   this.snackBar.open('File type not allowed.', 'only *.xlsx', { duration: 2000 });
-    //   return;
-    // }
+    if (file.type !== 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+      this.snackBar.open('File type not allowed.', 'only *.xlsx', { duration: 2000 });
+      return;
+    }
 
     const result = await this.confirmationDialog('Import from Excel',
-    'All UNLOCKED data will be updated<br />' +
-    'and non existing will be inserted.<br /><br />' + 'Are you sure want to do this?')
+    'The followings will occur.<br />' +
+    '<ul>' +
+    '<li>Unlocked data will be replace with new one.</li>' +
+    '<li>New data will be added.</li>' +
+    '</ul>' +
+    'Are you sure want to do this?')
     .toPromise().catch(error => { console.log(error); });
     if (!result) { return; }
 
@@ -254,40 +198,10 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
     reader.onload = async () => {
         arrayBuffer = reader.result as ArrayBuffer;
-        const json = await this.excelService.importAsJson(arrayBuffer).catch(error => { console.log(error); });
-        if (!json) { return; }
-
-        const data = await this.mapJsonFromExcel(json).catch(error => { console.log(error); });
-        if (!data) { return; }
-
-        await this.importExcel(data).catch(error => { console.log(error); });
+        await this.sapCommitmentService.importFromExcel(arrayBuffer).catch(error => { console.log(error); });
         await this.fetchData(null);
         this.snackBar.open('Import from Excel', 'success', { duration: 2000 });
       };
     reader.readAsArrayBuffer(file);
-  }
-
-  async mapJsonFromExcel(json: any[]): Promise<any[]> {
-    const results: any[] = [];
-    for (const data of json) {
-      const result = {};
-      for (const key in data) {
-        if (data.hasOwnProperty(key)) {
-          result[await this.mapKey(key)] = data[key];
-        }
-      }
-      results.push(result);
-    }
-    return results.filter(r => r.orderNumber !== null && r.orderNumber !== undefined);
-  }
-
-  async mapKey(findKey: string): Promise<string> {
-    for (const key in sapCommitmentKeyMap) {
-      if (sapCommitmentKeyMap.hasOwnProperty(key)) {
-        if (sapCommitmentKeyMap[key] === findKey) {
-          return key;
-        }
-      }
-    }
   }
 }

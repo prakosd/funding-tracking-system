@@ -3,15 +3,53 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { SapCommitment } from './sap-commitment.model';
 import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import { DataImportComponent } from '../data-import.component';
+import { ExcelService } from '../../shared/excel.service';
 
 const BACKEND_URL = environment.apiUrl + '/sap-commitments/';
+const importKeyMap = {
+  year: 'Fiscal Year',
+  month: 'Period',
+  orderNumber: 'Order',
+  category: 'Reference document category',
+  documentNumber: 'Ref Document Number',
+  position: 'Reference item',
+  costElement: 'Cost element',
+  name: 'Name',
+  quantity: 'Quantity/plan',
+  uom: 'Unit of Measure',
+  currency: 'Report currency',
+  actualValue: 'Val.in rep.cur.',
+  planValue: 'Plan Val. RCrcy',
+  documentDate: 'Document Date',
+  debitDate: 'Debit date',
+  username: 'User Name'
+};
+const exportKeyMap = {
+  year: 'Fiscal Year',
+  month: 'Period',
+  orderNumber: 'Order',
+  category: 'Reference document category',
+  documentNumber: 'Ref Document Number',
+  position: 'Reference item',
+  costElement: 'Cost element',
+  name: 'Name',
+  quantity: 'Quantity/plan',
+  uom: 'Unit of Measure',
+  currency: 'Report currency',
+  actualValue: 'Val.in rep.cur.',
+  planValue: 'Plan Val. RCrcy',
+  documentDate: 'Document Date',
+  debitDate: 'Debit date',
+  username: 'User Name'
+};
 
 @Injectable({ providedIn: 'root' })
 
 export class SapCommitmentService {
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private excelService: ExcelService
+    ) {}
 
   getMany(year: number) {
     const queryParams = `?year=${year}&sorts=orderNumber documentNumber position`;
@@ -173,5 +211,87 @@ export class SapCommitmentService {
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id, isLocked: result.data.isLocked }};
     }));
+  }
+
+  async exportToExcel(data: SapCommitment[]) {
+    this.excelService.exportAsExcelFile(await this.mapToExcel(data), 'SapCommitment');
+  }
+
+  private async mapToExcel(data: SapCommitment[]): Promise<any[]> {
+    return data.map((d, index) => {
+      return {
+          No: index + 1,
+          Year: new Date(d.debitDate).getFullYear(),
+          Month: new Date(d.debitDate).getMonth(),
+          Order: d.orderNumber,
+          Category: d.category,
+          Document: d.documentNumber,
+          Position: +d.position,
+          'Cost Element': d.costElement,
+          Name: d.name,
+          Qty: +d.quantity,
+          UoM: d.uom,
+          Currency: d.currency,
+          'Actual Value': +d.actualValue,
+          'Plan Value': +d.planValue,
+          'Document Date': new Date(d.documentDate),
+          'Debit Date': new Date(d.debitDate),
+          Username: d.username,
+          Remark: d.remark,
+          Locked: d.isLocked ? 'Yes' : '' ,
+          Linked: d.isLinked ? 'Yes' : '' ,
+          id: d.id,
+          'Last Update At': new Date(d.lastUpdateAt),
+          'Last Update By': d.lastUpdateBy,
+      };
+    });
+  }
+
+  async importFromExcel(arrayBuffer: ArrayBuffer) {
+    const json = await this.excelService.toJson(arrayBuffer).catch(error => { console.log(error); });
+    if (!json) { return; }
+    const data = await this.mapJson(json).catch(error => { console.log(error); });
+    if (!data) { return; }
+
+    await this.upsertData(data).catch(error => { console.log(error); });
+  }
+
+
+  private async mapJson(json: any[]): Promise<any[]> {
+    const results: any[] = [];
+    for (const data of json) {
+      const result = {};
+      for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+          const newKey = await this.mapKey(key);
+          result[newKey] = data[key];
+        }
+      }
+      results.push(result);
+    }
+    return results.filter(r => r.orderNumber !== null && r.orderNumber !== undefined);
+  }
+
+  private async mapKey(findKey: string): Promise<string> {
+    for (const key in importKeyMap) {
+      if (importKeyMap.hasOwnProperty(key)) {
+        if (importKeyMap[key] === findKey) {
+          return key;
+        }
+      }
+    }
+  }
+
+  async upsertData(data: SapCommitment[]) {
+    for (const d of data) {
+      const result = await this.getLock(d.orderNumber, d.documentNumber, d.position)
+      .toPromise().catch(error => { console.log(error); });
+      if (!result) { return; }
+
+      if (!result.data.isLocked) {
+        await this.upsertOne(d).toPromise().catch(error => { console.log(error); });
+        if (!result) { return; }
+      }
+    }
   }
 }

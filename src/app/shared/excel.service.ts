@@ -19,7 +19,7 @@ export class ExcelService {
     this.saveAsExcelFile(excelBuffer, excelFileName);
   }
 
-  public async importAsJson(arrayBuffer: ArrayBuffer): Promise<any[]> {
+  public async toJson(arrayBuffer: ArrayBuffer): Promise<any[]> {
     const data = new Uint8Array(arrayBuffer);
     const workbook = XLSX.read(data, { type: 'array' });
     const worksheet: XLSX.WorkSheet = workbook.Sheets[workbook.SheetNames[0]];
