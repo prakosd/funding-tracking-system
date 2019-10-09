@@ -25,22 +25,28 @@ const importKeyMap = {
   username: 'User Name'
 };
 const exportKeyMap = {
-  year: 'Fiscal Year',
-  month: 'Period',
+  year: 'Year',
+  month: 'Month',
   orderNumber: 'Order',
-  category: 'Reference document category',
-  documentNumber: 'Ref Document Number',
-  position: 'Reference item',
+  category: 'Category',
+  documentNumber: 'Document',
+  position: 'Pos',
   costElement: 'Cost element',
   name: 'Name',
-  quantity: 'Quantity/plan',
-  uom: 'Unit of Measure',
-  currency: 'Report currency',
-  actualValue: 'Val.in rep.cur.',
-  planValue: 'Plan Val. RCrcy',
+  quantity: 'Qty',
+  uom: 'UoM',
+  currency: 'Currency',
+  actualValue: 'Actual Value',
+  planValue: 'Plan Value',
   documentDate: 'Document Date',
   debitDate: 'Debit date',
-  username: 'User Name'
+  isLocked: 'Locked',
+  isLinked: 'Linked',
+  username: 'Username',
+  remark: 'Remark',
+  lastUpdateAt: 'Last Update at',
+  lastUpdateBy: 'Last Update by',
+  id: 'id'
 };
 
 @Injectable({ providedIn: 'root' })
@@ -54,30 +60,31 @@ export class SapCommitmentService {
   getMany(year: number) {
     const queryParams = `?year=${year}&sorts=orderNumber documentNumber position`;
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
-      return { message: result.message, data: result.data.map(data => {
+      return { message: result.message, data: result.data.map((row, index) => {
         return {
-          id: data._id,
-          year: new Date(data.debitDate).getFullYear(),
-          month: new Date(data.debitDate).getMonth(),
-          lastUpdateAt: data.lastUpdateAt,
-          lastUpdateBy: data.lastUpdateBy,
-          orderNumber: data.orderNumber,
-          category: data.category,
-          documentNumber: data.documentNumber,
-          position: data.position,
-          costElement: data.costElement,
-          name: data.name,
-          quantity: data.quantity,
-          uom: data.uom,
-          currency: data.currency,
-          actualValue: data.actualValue,
-          planValue: data.planValue,
-          documentDate: data.documentDate,
-          debitDate: data.debitDate,
-          username: data.username,
-          remark: data.remark,
-          isLocked: data.isLocked,
-          isLinked: data.isLinked
+          no: index + 1,
+          id: row._id,
+          year: new Date(row.debitDate).getFullYear(),
+          month: new Date(row.debitDate).getMonth(),
+          lastUpdateAt: row.lastUpdateAt,
+          lastUpdateBy: row.lastUpdateBy,
+          orderNumber: row.orderNumber,
+          category: row.category,
+          documentNumber: row.documentNumber,
+          position: row.position,
+          costElement: row.costElement,
+          name: row.name,
+          quantity: row.quantity,
+          uom: row.uom,
+          currency: row.currency,
+          actualValue: row.actualValue,
+          planValue: row.planValue,
+          documentDate: row.documentDate,
+          debitDate: row.debitDate,
+          username: row.username,
+          remark: row.remark,
+          isLocked: row.isLocked,
+          isLinked: row.isLinked
         };
       })};
     }));
@@ -85,30 +92,30 @@ export class SapCommitmentService {
 
   getOne(id: string) {
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + id)
-    .pipe(map(result => {
-      return { message: result.message, data: {
-          id: result.data._id,
-          year: new Date(result.data.debitDate).getFullYear(),
-          month: new Date(result.data.debitDate).getMonth(),
-          lastUpdateAt: result.data.lastUpdateAt,
-          lastUpdateBy: result.data.lastUpdateBy,
-          orderNumber: result.data.orderNumber,
-          category: result.data.category,
-          documentNumber: result.data.documentNumber,
-          position: result.data.position,
-          costElement: result.data.costElement,
-          name: result.data.name,
-          quantity: result.data.quantity,
-          uom: result.data.uom,
-          currency: result.data.currency,
-          actualValue: result.data.actualValue,
-          planValue: result.data.planValue,
-          documentDate: result.data.documentDate,
-          debitDate: result.data.debitDate,
-          username: result.data.username,
-          remark: result.data.remark || '',
-          isLocked: result.data.isLocked,
-          isLinked: result.data.isLinked
+    .pipe(map(row => {
+      return { message: row.message, data: {
+          id: row.data._id,
+          year: new Date(row.data.debitDate).getFullYear(),
+          month: new Date(row.data.debitDate).getMonth(),
+          lastUpdateAt: row.data.lastUpdateAt,
+          lastUpdateBy: row.data.lastUpdateBy,
+          orderNumber: row.data.orderNumber,
+          category: row.data.category,
+          documentNumber: row.data.documentNumber,
+          position: row.data.position,
+          costElement: row.data.costElement,
+          name: row.data.name,
+          quantity: row.data.quantity,
+          uom: row.data.uom,
+          currency: row.data.currency,
+          actualValue: row.data.actualValue,
+          planValue: row.data.planValue,
+          documentDate: row.data.documentDate,
+          debitDate: row.data.debitDate,
+          username: row.data.username,
+          remark: row.data.remark || '',
+          isLocked: row.data.isLocked,
+          isLinked: row.data.isLinked
       }};
     }));
   }
@@ -213,58 +220,44 @@ export class SapCommitmentService {
     }));
   }
 
-  async exportToExcel(data: SapCommitment[]) {
-    this.excelService.exportAsExcelFile(await this.mapToExcel(data), 'SapCommitment');
+  exportToExcel(data: SapCommitment[]) {
+    this.excelService.exportAsExcelFile(this.mapToExcel(data), 'SapCommitment');
   }
 
-  private async mapToExcel(data: SapCommitment[]): Promise<any[]> {
+  private mapToExcel(data: SapCommitment[]) {
     return data.map((d, index) => {
-      return {
-          No: index + 1,
-          Year: new Date(d.debitDate).getFullYear(),
-          Month: new Date(d.debitDate).getMonth(),
-          Order: d.orderNumber,
-          Category: d.category,
-          Document: d.documentNumber,
-          Position: +d.position,
-          'Cost Element': d.costElement,
-          Name: d.name,
-          Qty: +d.quantity,
-          UoM: d.uom,
-          Currency: d.currency,
-          'Actual Value': +d.actualValue,
-          'Plan Value': +d.planValue,
-          'Document Date': new Date(d.documentDate),
-          'Debit Date': new Date(d.debitDate),
-          Username: d.username,
-          Remark: d.remark,
-          Locked: d.isLocked ? 'Yes' : '' ,
-          Linked: d.isLinked ? 'Yes' : '' ,
-          id: d.id,
-          'Last Update At': new Date(d.lastUpdateAt),
-          'Last Update By': d.lastUpdateBy,
-      };
+      const result = {};
+      let key = 'No';
+      result[key] = index + 1;
+      for (key in exportKeyMap) {
+        if (exportKeyMap.hasOwnProperty(key)) {
+          result[exportKeyMap[key]] = d[key];
+        }
+      }
+      return result;
     });
   }
 
   async importFromExcel(arrayBuffer: ArrayBuffer) {
     const json = await this.excelService.toJson(arrayBuffer).catch(error => { console.log(error); });
-    if (!json) { return; }
-    const data = await this.mapJson(json).catch(error => { console.log(error); });
-    if (!data) { return; }
+    if (!json) { return false; }
+    const data = this.mapJson(json);
 
-    await this.upsertData(data).catch(error => { console.log(error); });
+    const upsertRes =  await this.upsertData(data).catch(error => { console.log(error); });
+    if (!upsertRes) { return false; }
+
+    return true;
   }
 
 
-  private async mapJson(json: any[]): Promise<any[]> {
+  private mapJson(json: any[]) {
     const results: any[] = [];
     for (const data of json) {
       const result = {};
       for (const key in data) {
         if (data.hasOwnProperty(key)) {
-          const newKey = await this.mapKey(key);
-          result[newKey] = data[key];
+          const mappedKey = this.mapKey(key);
+          result[mappedKey] = data[key];
         }
       }
       results.push(result);
@@ -272,26 +265,28 @@ export class SapCommitmentService {
     return results.filter(r => r.orderNumber !== null && r.orderNumber !== undefined);
   }
 
-  private async mapKey(findKey: string): Promise<string> {
-    for (const key in importKeyMap) {
-      if (importKeyMap.hasOwnProperty(key)) {
-        if (importKeyMap[key] === findKey) {
-          return key;
+  private mapKey(findKey: string) {
+     for (const key in importKeyMap) {
+        if (importKeyMap.hasOwnProperty(key)) {
+          if (importKeyMap[key] === findKey) {
+            return key;
+          }
         }
       }
-    }
   }
 
   async upsertData(data: SapCommitment[]) {
     for (const d of data) {
-      const result = await this.getLock(d.orderNumber, d.documentNumber, d.position)
+      const lockRes = await this.getLock(d.orderNumber, d.documentNumber, d.position)
       .toPromise().catch(error => { console.log(error); });
-      if (!result) { return; }
+      if (!lockRes) { return false; }
+      console.log();
 
-      if (!result.data.isLocked) {
-        await this.upsertOne(d).toPromise().catch(error => { console.log(error); });
-        if (!result) { return; }
+      if (!lockRes.data.isLocked) {
+        const upsertRes = await this.upsertOne(d).toPromise().catch(error => { console.log(error); });
+        if (!upsertRes) { return false; }
       }
     }
+    return true;
   }
 }

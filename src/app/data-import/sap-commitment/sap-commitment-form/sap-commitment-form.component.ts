@@ -97,7 +97,7 @@ export class SapCommitmentFormComponent implements OnInit {
       planValue: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       documentDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       debitDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-      isLocked: new FormControl(true),
+      isLocked: new FormControl(false),
       isLinked: new FormControl(true),
       remark: new FormControl(),
       username: new FormControl(this.username, { validators: Validators.required, updateOn: 'blur' })

@@ -15,10 +15,10 @@ export interface SapCommitment {
   planValue: number;
   documentDate: Date;
   debitDate: Date;
+  isLocked: boolean;
+  isLinked: boolean;
   username: string;
   remark: string;
   lastUpdateAt: Date;
   lastUpdateBy: string;
-  isLocked: boolean;
-  isLinked: boolean;
 }

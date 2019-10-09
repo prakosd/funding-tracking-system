@@ -2,15 +2,13 @@ import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { SapCommitmentService } from '../sap-commitment.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { SapCommitment } from '../sap-commitment.model';
-import { MatTableDataSource, MatSlideToggleChange, MatSnackBar, MatDialog, MatDialogRef } from '@angular/material';
+import { MatTableDataSource, MatSlideToggleChange, MatSnackBar, MatDialog, MatPaginator } from '@angular/material';
 import { MatSort } from '@angular/material/sort';
 import { Subscription, Observable } from 'rxjs';
 import { DataImportService } from '../../data-import.service';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { ConfirmationDialogComponent } from '../../../shared/confirmation-dialog/confirmation-dialog.component';
 import { NgxSpinnerService } from 'ngx-spinner';
-
-
 
 
 @Component({
@@ -27,7 +25,9 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 
 export class SapCommitmentListComponent implements OnInit, OnDestroy {
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
   sapCommitments: SapCommitment[];
   fiscalYearSubs: Subscription;
   fiscalYear: number;
@@ -35,7 +35,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   expandedElement;
   expandedId: string | null;
   displayedColumns = [
-    'orderNumber', 'category',
+    'no', 'orderNumber', 'category',
     'documentNumber', 'position', 'name',
     'quantity', 'uom', 'currency', 'actualValue', 'planValue',
     'documentDate', 'debitDate', 'username', 'isLocked', 'isLinked'
@@ -58,12 +58,12 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
       }
     });
 
-    this.dataSource = new MatTableDataSource<SapCommitment[]>();
     this.fiscalYearSubs = this.dataImportService.getFiscalYear().subscribe(year => {
       this.fiscalYear = year;
       this.fetchData(this.expandedId);
     });
   }
+
   onRefresh() {
     this.fetchData(this.expandedId);
   }
@@ -83,15 +83,17 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   async fetchData(expandedId: string | null) {
     this.spinner.show();
     const result = await this.sapCommitmentService.getMany(this.fiscalYear).toPromise().catch(error => { console.log(error); });
-    if (!result) { return; }
+    if (!result) { return false; }
 
     this.sapCommitments = result.data;
     this.dataSource = new MatTableDataSource(this.sapCommitments);
     this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
     if (expandedId) {
       this.expandedElement = this.sapCommitments.filter(row => row.id === expandedId)[0];
     }
     this.spinner.hide();
+    return true;
   }
 
   confirmationDialog(title: string, message: string): Observable<any> {
@@ -139,7 +141,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
   async onLinkChange(id: string, slider: MatSlideToggleChange) {
     const result = await this.sapCommitmentService.setLink(id, slider.checked).toPromise().catch(error => { console.log(error); });
-    if (!result) { return; }
+    if (!result) { return false; }
 
     const index = this.sapCommitments.findIndex(data => data.id === id);
     this.sapCommitments[index].isLinked = slider.checked;
@@ -148,7 +150,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
   async onLockChange(id: string, slider: MatSlideToggleChange) {
     const result = await this.sapCommitmentService.setLock(id, slider.checked).toPromise().catch(error => { console.log(error); });
-    if (!result) { return; }
+    if (!result) { return false; }
 
     const index = this.sapCommitments.findIndex(data => data.id === id);
     this.sapCommitments[index].isLocked = slider.checked;
@@ -156,9 +158,9 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   }
 
   async onBlurRemark(id: string, isLocked: boolean, event: any) {
-    if (isLocked) { return; }
+    if (isLocked) { return false; }
     const result = await this.sapCommitmentService.setRemark(id, event.target.value).toPromise().catch(error => { console.log(error); });
-    if (!result) { return; }
+    if (!result) { return false; }
 
     const index = this.sapCommitments.findIndex(data => data.id === id);
     this.sapCommitments[index].remark = event.target.value;
@@ -198,7 +200,8 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
     reader.onload = async () => {
         arrayBuffer = reader.result as ArrayBuffer;
-        await this.sapCommitmentService.importFromExcel(arrayBuffer).catch(error => { console.log(error); });
+        const importRes = await this.sapCommitmentService.importFromExcel(arrayBuffer).catch(error => { console.log(error); });
+        if (!importRes) { return false; }
         await this.fetchData(null);
         this.snackBar.open('Import from Excel', 'success', { duration: 2000 });
       };

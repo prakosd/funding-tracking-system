@@ -1,6 +1,5 @@
-<h3>COMMITMENT LIST</h3>
 <div class="flex-container" style="margin-top: 0rem;">
-  <div class="flex-container" style="justify-content: flex-start; width: 50%;">
+  <div class="flex-container" style="justify-content: flex-start; width: 50%; padding: 0; margin: 0;">
     <div style="width: fit-content; padding-right: 1rem;">
       <button mat-raised-button (click)="onRefresh()" type="button" style="padding: 0; margin: 0;" color="primary">
         <mat-icon style="padding: 0; margin: 0;">refresh</mat-icon>
@@ -18,10 +17,6 @@
           <mat-icon>add_circle</mat-icon>Add New
       </button>
       </div>
-      <!-- <div>
-        <button mat-stroked-button type="button" (click)="filePicker.click()">Pick Image</button>
-        <input type="file" #filePicker (change)="onImagePicked($event)">
-      </div> -->
       <div style="padding-left: 1rem;">
           <button mat-raised-button color="primary" (click)="filePicker.click()">
            <mat-icon>cloud_upload</mat-icon>Upload Data
@@ -32,6 +27,11 @@
 </div>
 
 <table mat-table matSort [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+    <ng-container matColumnDef="no">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="no"> No. </th>
+        <td mat-cell *matCellDef="let element" class="no"> {{ element.no }} </td>
+    </ng-container>
+
   <ng-container matColumnDef="orderNumber">
     <th mat-header-cell mat-sort-header *matHeaderCellDef class="order-number"> Order No. </th>
     <td mat-cell *matCellDef="let element" class="order-number"> {{ element.orderNumber }} </td>
@@ -190,6 +190,7 @@
       </tr>
       <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 </table>
+<mat-paginator showFirstLastButtons [length]="sapCommitments?.length" [pageSize]="15" [pageSizeOptions]="[5, 10, 15, 20, 25, 30]"></mat-paginator>
 
 <div class="flex-container">
     <div>
