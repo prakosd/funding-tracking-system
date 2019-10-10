@@ -38,20 +38,18 @@ th.mat-sort-header-sorted {
   padding-right: 1rem;
 }
 
-/* .mat-row:nth-child(even){
-  background-color: #4fe9b6;
-}
-.mat-row:not(:nth-child(odd)){
-  background-color:#c96363;
-} */
-
 .mat-row {
-  height: 2.1rem;
+  height: 2.2rem;
 }
 
-.mat-row:nth-child(2n+1){
+.mat-header-row th {
+  padding-top: 0.7rem;
+}
+
+.mat-row:nth-child(2n+1) {
   background-color: #f3f3f3;
 }
-.mat-row:not(:nth-child(4n+1)){
+
+.mat-row:not(:nth-child(4n+1)) {
   background-color: #ffffff;
 }
