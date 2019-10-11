@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../angular-material.module';
 import { SapActualComponent } from './sap-actual/sap-actual.component';
-import { EasComponent } from './eas/eas.component';
+import { SapEasComponent } from './sap-eas/sap-eas.component';
 import { CommonModule } from '@angular/common';
 import { SapCommitmentListComponent } from './sap-commitment/sap-commitment-list/sap-commitment-list.component';
 import { SapCommitmentFormComponent } from './sap-commitment/sap-commitment-form/sap-commitment-form.component';
@@ -17,7 +17,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     SapCommitmentListComponent,
     SapCommitmentFormComponent,
     SapActualComponent,
-    EasComponent,
+    SapEasComponent,
   ],
   imports: [
     AngularMaterialModule,
@@ -32,7 +32,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     SapCommitmentListComponent,
     SapCommitmentFormComponent,
     SapActualComponent,
-    EasComponent,
+    SapEasComponent,
   ],
   entryComponents: [
   ]

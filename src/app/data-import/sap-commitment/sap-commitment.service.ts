@@ -243,7 +243,7 @@ export class SapCommitmentService {
     if (!json) { return false; }
     const data = this.mapJson(json);
 
-    const upsertRes =  await this.upsertData(data).catch(error => { console.log(error); });
+    const upsertRes =  await this.upsertMany(data).catch(error => { console.log(error); });
     if (!upsertRes) { return false; }
 
     return true;
@@ -275,12 +275,11 @@ export class SapCommitmentService {
       }
   }
 
-  async upsertData(data: SapCommitment[]) {
+  async upsertMany(data: SapCommitment[]) {
     for (const d of data) {
       const lockRes = await this.getLock(d.orderNumber, d.documentNumber, d.position)
       .toPromise().catch(error => { console.log(error); });
       if (!lockRes) { return false; }
-      console.log();
 
       if (!lockRes.data.isLocked) {
         const upsertRes = await this.upsertOne(d).toPromise().catch(error => { console.log(error); });

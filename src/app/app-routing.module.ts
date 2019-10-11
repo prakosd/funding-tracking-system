@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { DataImportComponent } from './data-import/data-import.component';
 import { SapCommitmentListComponent } from './data-import/sap-commitment/sap-commitment-list/sap-commitment-list.component';
 import { SapActualComponent } from './data-import/sap-actual/sap-actual.component';
-import { EasComponent } from './data-import/eas/eas.component';
+import { SapEasComponent } from './data-import/sap-eas/sap-eas.component';
 import { SapCommitmentFormComponent } from './data-import/sap-commitment/sap-commitment-form/sap-commitment-form.component';
 import { SapCommitmentComponent } from './data-import/sap-commitment/sap-commitment.component';
 
@@ -21,7 +21,7 @@ const routes: Routes = [
       { path: 'sap-commitment-form/:id/:mode', component: SapCommitmentFormComponent }
     ] },
     { path: 'sap-actual', component: SapActualComponent, children: [] },
-    { path: 'eas', component: EasComponent, children: [] }
+    { path: 'sap-eas', component: SapEasComponent, children: [] }
 ] },
 ];
 
