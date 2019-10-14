@@ -28,7 +28,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-  searchString: string;
+  searchField;
   sapCommitments: SapCommitment[];
   fiscalYearSubs: Subscription;
   fiscalYear: number;
@@ -53,7 +53,6 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     ) { }
 
   ngOnInit() {
-    this.searchString = '';
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has('id')) {
         this.expandedId = paramMap.get('id');
@@ -96,6 +95,18 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     }
     this.spinner.hide();
     return true;
+  }
+
+  clearSearchField() {
+    this.searchField = '';
+    this.applyFilter('');
+  }
+
+  getTotalActualValue() {
+    return this.sapCommitments.map(d => d.actualValue).reduce((acc, value) => acc + value, 0);
+  }
+  getTotalPlanValue() {
+    return this.sapCommitments.map(d => d.planValue).reduce((acc, value) => acc + value, 0);
   }
 
   confirmationDialog(title: string, message: string): Observable<any> {
