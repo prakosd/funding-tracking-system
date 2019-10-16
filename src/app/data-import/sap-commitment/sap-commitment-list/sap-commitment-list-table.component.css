@@ -46,6 +46,10 @@ th.mat-sort-header-sorted {
   padding-top: 0.7rem;
 }
 
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
 .mat-row:nth-child(2n+1) {
   background-color: #f3f3f3;
 }

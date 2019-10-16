@@ -32,7 +32,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   sapCommitments: SapCommitment[];
   fiscalYearSubs: Subscription;
   fiscalYear: number;
-  dataSource;
+  dataSource: MatTableDataSource<SapCommitment>;
   expandedElement;
   expandedId: string | null;
   displayedColumns = [
@@ -97,16 +97,24 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     return true;
   }
 
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
   clearSearchField() {
     this.searchField = '';
     this.applyFilter('');
   }
 
   getTotalActualValue() {
-    return this.sapCommitments.map(d => d.actualValue).reduce((acc, value) => acc + value, 0);
+    if (this.dataSource) {
+      return this.dataSource.filteredData.map(row => row.actualValue).reduce((acc, value) => acc + value, 0);
+    }
   }
   getTotalPlanValue() {
-    return this.sapCommitments.map(d => d.planValue).reduce((acc, value) => acc + value, 0);
+    if (this.dataSource) {
+      return this.dataSource.filteredData.map(row => row.planValue).reduce((acc, value) => acc + value, 0);
+    }
   }
 
   confirmationDialog(title: string, message: string): Observable<any> {
@@ -158,10 +166,6 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     if (!fetched) { return false; }
 
     this.snackBar.open('Delete commitment', 'success', { duration: 2000 });
-  }
-
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   ngOnDestroy() {
