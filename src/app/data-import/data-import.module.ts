@@ -10,6 +10,7 @@ import { SapCommitmentComponent } from './sap-commitment/sap-commitment.componen
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { SapActualListComponent } from './sap-actual/sap-actual-list/sap-actual-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     SapCommitmentListComponent,
     SapCommitmentFormComponent,
     SapActualComponent,
-    SapEasComponent,
+    SapActualListComponent,
+    SapEasComponent
   ],
   imports: [
     AngularMaterialModule,
@@ -33,7 +35,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     SapCommitmentListComponent,
     SapCommitmentFormComponent,
     SapActualComponent,
-    SapEasComponent,
+    SapActualListComponent,
+    SapEasComponent
   ],
   entryComponents: [
   ]

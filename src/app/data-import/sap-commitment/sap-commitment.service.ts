@@ -66,8 +66,6 @@ export class SapCommitmentService {
           id: row._id,
           year: new Date(row.debitDate).getFullYear(),
           month: new Date(row.debitDate).getMonth(),
-          lastUpdateAt: row.lastUpdateAt,
-          lastUpdateBy: row.lastUpdateBy,
           orderNumber: row.orderNumber,
           category: row.category,
           documentNumber: row.documentNumber,
@@ -84,7 +82,9 @@ export class SapCommitmentService {
           username: row.username,
           remark: row.remark,
           isLocked: row.isLocked,
-          isLinked: row.isLinked
+          isLinked: row.isLinked,
+          lastUpdateAt: row.lastUpdateAt,
+          lastUpdateBy: row.lastUpdateBy
         };
       })};
     }));
@@ -97,8 +97,6 @@ export class SapCommitmentService {
           id: row.data._id,
           year: new Date(row.data.debitDate).getFullYear(),
           month: new Date(row.data.debitDate).getMonth(),
-          lastUpdateAt: row.data.lastUpdateAt,
-          lastUpdateBy: row.data.lastUpdateBy,
           orderNumber: row.data.orderNumber,
           category: row.data.category,
           documentNumber: row.data.documentNumber,
@@ -115,7 +113,9 @@ export class SapCommitmentService {
           username: row.data.username,
           remark: row.data.remark || '',
           isLocked: row.data.isLocked,
-          isLinked: row.data.isLinked
+          isLinked: row.data.isLinked,
+          lastUpdateAt: row.data.lastUpdateAt,
+          lastUpdateBy: row.data.lastUpdateBy
       }};
     }));
   }

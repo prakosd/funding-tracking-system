@@ -108,7 +108,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
   onRowClicked() {
     if (this.expandedElement) {
-      console.log(this.expandedElement);
+      // console.log(this.expandedElement);
     }
   }
 
@@ -138,7 +138,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
       return false;
     }
 
-    const isContinue = await this.confirmationDialog('Delete Commitment.',
+    const isContinue = await this.confirmationDialog('Delete commitment.',
     'Are you sure want to do this?').toPromise().catch(error => { console.log(error); });
     if (!isContinue) { return false; }
 

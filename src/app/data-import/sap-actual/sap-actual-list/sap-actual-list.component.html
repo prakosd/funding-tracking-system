@@ -1,0 +1,228 @@
+<div class="flex-container">
+  <div class="flex-container" style="justify-content: flex-start; width: 50%;">
+    <div>
+      <button mat-raised-button (click)="onRefresh()" type="button" color="primary">
+        <mat-icon>refresh</mat-icon>
+        </button>
+   </div>
+    <div style="width: 100%;">
+      <mat-form-field style="width: 100%;">
+        <input [(ngModel)]="searchField" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+        <button mat-button mat-icon-button matSuffix (click)="clearSearchField()" *ngIf="searchField">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="flex-container" style="justify-content: flex-start; margin-right: 0rem;">
+      <div>
+          <button mat-raised-button color="primary" routerLink="/data-import/sap-actual/sap-actual-form" routerLinkActive="mat-accent">
+          <mat-icon>add_circle</mat-icon>&nbsp;Add New
+      </button>
+      </div>
+      <div style="margin-right: 0rem;">
+          <button mat-raised-button color="primary" (click)="filePicker.click()">
+           <mat-icon>cloud_upload</mat-icon>&nbsp;Upload Data
+          </button>
+          <input type="file" #filePicker (change)="onFilePicked($event)" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+    </div>
+  </div>
+</div>
+
+<table mat-table matSort [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+    <ng-container matColumnDef="no">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="no">No.</th>
+        <td mat-cell *matCellDef="let element" class="no">{{ element.no }}</td>
+        <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+  <ng-container matColumnDef="orderNumber">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="order-number">Order No.</th>
+    <td mat-cell *matCellDef="let element" class="order-number">{{ element.orderNumber }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="purchasingNumber">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="purchasing-number">PO No.</th>
+    <td mat-cell *matCellDef="let element" class="purchasing-number">{{ element.purchasingNumber }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="referenceNumber">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="reference-number">Ref. No.</th>
+    <td mat-cell *matCellDef="let element" class="reference-number">{{ element.referenceNumber }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="position">Pos</th>
+    <td mat-cell *matCellDef="let element" class="position">{{ element.position }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="name">Name</th>
+    <td mat-cell *matCellDef="let element" class="name">{{ element.name }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="qty">Qty</th>
+    <td mat-cell *matCellDef="let element" class="qty">{{ element.quantity }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="uom">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="uom">UoM</th>
+    <td mat-cell *matCellDef="let element" class="uom">{{ element.uom }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="currency">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="currency">Curr.</th>
+    <td mat-cell *matCellDef="let element" class="currency">{{ element.currency }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="actualValue">
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="actual-value">Value</th>
+    <td mat-cell *matCellDef="let element" class="actual-value">{{ element.actualValue | number:'':'' }}</td>
+    <td mat-footer-cell *matFooterCellDef class="actual-value">{{ getTotalActualValue() | number:'':'' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="documentDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="document-date">Issue Date</th>
+    <td mat-cell *matCellDef="let element" class="document-date">{{ element.documentDate | date:'dd MMM yyy' }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="postingDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="posting-date">Posting Date</th>
+    <td mat-cell *matCellDef="let element" class="posting-date">{{ element.postingDate | date:'dd MMM yyy' }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="username">User Name</th>
+    <td mat-cell *matCellDef="let element" class="username">{{ element.username }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="isLocked">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef class="is-locked">Lock</th>
+      <td mat-cell *matCellDef="let element" class="is-locked">
+        <mat-icon *ngIf="element.isLocked">lock</mat-icon>
+        <mat-icon *ngIf="!element.isLocked">lock_open</mat-icon>
+     </td>
+     <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="isLinked">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="is-linked">Link</th>
+        <td mat-cell *matCellDef="let element" class="is-linked">
+            <mat-icon *ngIf="element.isLinked">link</mat-icon>
+            <mat-icon *ngIf="!element.isLinked">link_off</mat-icon>
+        </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+
+      <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+          <div class="example-element-detail"
+               [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
+               <div class="flex-container" style="width: 100%;">
+                <div>
+                  <div class="flex-container" style="justify-content: flex-start;">
+                      <div>
+                          <button mat-raised-button color="primary" type="button" (click)="onUpdateOne(element.id, element.isLocked)">
+                              <mat-icon>edit</mat-icon>&nbsp;Edit
+                          </button>
+                      </div>
+                      <div>
+                        <mat-form-field style="width: 6rem;">
+                          <input matInput placeholder="Fiscal Year - Month" value="{{ element.year }} - {{ element.month }}" [readonly]="true">
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field style="width: 4rem;">
+                          <input matInput placeholder="GL Account" value="{{ element.costElement }}" [readonly]="true">
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field style="width: 3rem;">
+                          <input matInput placeholder="Doc. Type" value="{{ element.documentType }}" [readonly]="true">
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field style="width: 10rem;">
+                          <input matInput placeholder="Header Text" value="{{ element.headerText }}" [readonly]="true">
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field style="width: 10rem;">
+                          <input matInput placeholder="Last Update" value="{{ element.lastUpdateAt | date:'dd MMM yyy' }} - {{ element.lastUpdateBy }}" [readonly]="true">
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field style="width: 10rem;">
+                          <input matInput placeholder="Remark" value="{{ element.remark }}" (blur)="onBlurRemark(element.id, element.isLocked, $event)" [readonly]="element.isLocked">
+                        </mat-form-field>
+                      </div>
+                  </div>
+                </div>
+                <div>
+                    <div class="flex-container" style="justify-content: flex-end;">
+                        <div>
+                          <button mat-raised-button type="button" (click)="onCloneOne(element.id)" color="accent">
+                              <mat-icon>library_add</mat-icon>&nbsp;Clone
+                          </button>
+                      </div>
+                        <div>
+                            <mat-slide-toggle checked="{{ element.isLocked }}" (change)="onLockChange(element.id, $event)">
+                              Lock
+                            </mat-slide-toggle>
+                         </div>
+                         <div>
+                            <mat-slide-toggle  checked="{{ element.isLinked }}" (change)="onLinkChange(element.id, $event)">
+                                Link
+                            </mat-slide-toggle>
+                         </div>
+                      <div>
+                          <button mat-raised-button color="warn" type="button" (click)="onDeleteOne(element.id, element.isLocked)">
+                              <mat-icon>delete</mat-icon>&nbsp;Delete
+                          </button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
+
+      <tr mat-row *matRowDef="let element; columns: displayedColumns;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element; onRowClicked();">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+      <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+</table>
+<mat-paginator showFirstLastButtons [length]="sapActuals?.length" [pageSize]="15" [pageSizeOptions]="[5, 10, 15, 20, 25, 30]" class="mat-elevation-z8"></mat-paginator>
+
+<div class="flex-container">
+    <div>
+        <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
+          <mat-icon>cloud_download</mat-icon>&nbsp;Export
+        </button>
+    </div>
+    <div style="margin-right: 0rem;">
+        <button mat-raised-button color="warn" type="button" (click)="onDeleteMany()">
+        <mat-icon>delete_forever</mat-icon>&nbsp;Delete All
+        </button>
+    </div>
+</div>
+<ngx-spinner>
+  <p style="font-size: 20px; color: whitesmoke">Loading...</p>
+</ngx-spinner>
