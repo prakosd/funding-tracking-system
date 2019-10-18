@@ -106,6 +106,12 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     this.applyFilter('');
   }
 
+  onRowClicked() {
+    if (this.expandedElement) {
+      console.log(this.expandedElement);
+    }
+  }
+
   getTotalActualValue() {
     if (this.dataSource) {
       return this.dataSource.filteredData.map(row => row.actualValue).reduce((acc, value) => acc + value, 0);
@@ -177,7 +183,6 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
     const result = await this.sapCommitmentService.setLink(id, slider.checked).toPromise().catch(error => { console.log(error); });
     if (!result) {
-      slider.checked = !slider.checked;
       this.spinner.hide();
       this.snackBar.open('Updating', 'failed', { duration: 2000 });
       return false;
@@ -194,7 +199,6 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
 
     const result = await this.sapCommitmentService.setLock(id, slider.checked).toPromise().catch(error => { console.log(error); });
     if (!result) {
-      slider.checked = !slider.checked;
       this.spinner.hide();
       this.snackBar.open('Updating', 'failed', { duration: 2000 });
       return false;
@@ -210,17 +214,14 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
     if (isLocked) { return false; }
 
     this.spinner.show();
-    const index = this.sapCommitments.findIndex(data => data.id === id);
-    const oldValue = this.sapCommitments[index].remark;
-
     const result = await this.sapCommitmentService.setRemark(id, event.target.value).toPromise().catch(error => { console.log(error); });
     if (!result) {
-      this.sapCommitments[index].remark = oldValue;
       this.spinner.hide();
       this.snackBar.open('Updating', 'failed', { duration: 2000 });
       return false;
     }
 
+    const index = this.sapCommitments.findIndex(data => data.id === id);
     this.sapCommitments[index].remark = event.target.value;
     this.spinner.hide();
     this.snackBar.open('Remark', 'updated', { duration: 2000 });

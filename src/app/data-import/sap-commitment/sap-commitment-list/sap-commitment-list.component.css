@@ -4,24 +4,12 @@
 }
 
 .flex-container > div {
-  line-height: 5rem;
-}
-
-mat-icon {
-  margin-right: 0.5rem;
-  margin-top: 0.25rem;
+  margin-right: 1rem;
+  line-height: 4rem;
 }
 
 mat-spinner {
   margin: auto;
-}
-
-mat-slide-toggle {
-  padding: 0;
-  margin: 0;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-top: 1.8rem;
 }
 
 input[type="file"] {

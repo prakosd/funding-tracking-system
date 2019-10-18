@@ -13,7 +13,7 @@
     <li *ngIf="isUserAuthenticated">
       <button mat-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu" routerLink="/data-import"  routerLinkActive="mat-accent">
       <!-- [disabled]="false" (mouseenter)="menuTrigger.openMenu()"> -->
-        <mat-icon>cloud</mat-icon>
+        <mat-icon>cloud</mat-icon>&nbsp;
         Data Import</button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item routerLink="/data-import/sap-commitment" routerLinkActive="mat-accent">SAP Commitment</button>

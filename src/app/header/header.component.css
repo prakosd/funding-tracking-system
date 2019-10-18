@@ -16,8 +16,3 @@ ul {
 .spacer {
   flex: 1 1 auto;
 }
-
-mat-icon {
-  margin-right: 0.2rem;
-  margin-bottom: 0.1rem;
-}

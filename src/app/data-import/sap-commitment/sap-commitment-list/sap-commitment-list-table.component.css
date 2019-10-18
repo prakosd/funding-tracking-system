@@ -1,6 +1,4 @@
 table {
-  padding: 0;
-  margin: 0;
   width: 100%;
 }
 
@@ -25,6 +23,18 @@ tr.example-element-row:not(.example-expanded-row):active {
   display: flex;
 }
 
+.example-element-detail .flex-container > div {
+  line-height: 2rem;
+}
+
+.example-element-detail mat-form-field, button {
+  margin-top: 1rem;
+}
+
+.example-element-detail mat-slide-toggle {
+  margin-top: 1.4rem;
+}
+
 th.mat-sort-header-sorted {
   color: black;
 }
@@ -39,11 +49,20 @@ th.mat-sort-header-sorted {
 }
 
 .mat-row {
-  height: 2.2rem;
+  height: 2rem;
 }
 
-.mat-header-row th {
-  padding-top: 0.7rem;
+.mat-row mat-icon {
+  margin-top: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.mat-footer-row {
+  height: 2rem;
+}
+
+.mat-header-row {
+  height: 2.4em;
 }
 
 tr.mat-footer-row {

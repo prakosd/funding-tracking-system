@@ -1,8 +1,8 @@
-<div class="flex-container" style="margin-top: 0rem;">
-  <div class="flex-container" style="justify-content: flex-start; width: 50%; padding: 0; margin: 0;">
-    <div style="width: fit-content; padding-right: 1rem;">
-      <button mat-raised-button (click)="onRefresh()" type="button" style="padding: 0; margin: 0;" color="primary">
-        <mat-icon style="padding: 0; margin: 0;">refresh</mat-icon>
+<div class="flex-container">
+  <div class="flex-container" style="justify-content: flex-start; width: 50%;">
+    <div>
+      <button mat-raised-button (click)="onRefresh()" type="button" color="primary">
+        <mat-icon>refresh</mat-icon>
         </button>
    </div>
     <div style="width: 100%;">
@@ -14,15 +14,15 @@
       </mat-form-field>
     </div>
   </div>
-  <div class="flex-container" style="justify-content: flex-start;">
+  <div class="flex-container" style="justify-content: flex-start; margin-right: 0rem;">
       <div>
           <button mat-raised-button color="primary" routerLink="/data-import/sap-commitment/sap-commitment-form" routerLinkActive="mat-accent">
-          <mat-icon>add_circle</mat-icon>Add New
+          <mat-icon>add_circle</mat-icon>&nbsp;Add New
       </button>
       </div>
-      <div style="padding-left: 1rem;">
+      <div style="margin-right: 0rem;">
           <button mat-raised-button color="primary" (click)="filePicker.click()">
-           <mat-icon>cloud_upload</mat-icon>Upload Data
+           <mat-icon>cloud_upload</mat-icon>&nbsp;Upload Data
           </button>
           <input type="file" #filePicker (change)="onFilePicked($event)" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
     </div>
@@ -135,32 +135,32 @@
       <ng-container matColumnDef="expandedDetail">
         <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
           <div class="example-element-detail"
-               [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+               [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
                <div class="flex-container" style="width: 100%;">
                 <div>
                   <div class="flex-container" style="justify-content: flex-start;">
                       <div>
-                          <button mat-raised-button color="primary" style="margin-right: 1rem;" type="button" (click)="onUpdateOne(element.id, element.isLocked)">
-                              <mat-icon>edit</mat-icon>Edit
+                          <button mat-raised-button color="primary" type="button" (click)="onUpdateOne(element.id, element.isLocked)">
+                              <mat-icon>edit</mat-icon>&nbsp;Edit
                           </button>
                       </div>
                       <div>
-                        <mat-form-field style="margin: 1.3rem 1rem 0 0; width: 6rem;">
+                        <mat-form-field style="width: 6rem;">
                           <input matInput placeholder="Fiscal Year - Month" value="{{ element.year }} - {{ element.month }}" [readonly]="true">
                         </mat-form-field>
                       </div>
                       <div>
-                        <mat-form-field style="margin: 1.3rem 1rem 0 0; width: 6rem;">
+                        <mat-form-field style="width: 6rem;">
                           <input matInput placeholder="GL Account" value="{{ element.costElement }}" [readonly]="true">
                         </mat-form-field>
                       </div>
                       <div>
-                        <mat-form-field style="margin: 1.3rem 1rem 0 0; width: 10rem;">
+                        <mat-form-field style="width: 10rem;">
                           <input matInput placeholder="Last Update" value="{{ element.lastUpdateAt | date:'dd MMM yyy' }} - {{ element.lastUpdateBy }}" [readonly]="true">
                         </mat-form-field>
                       </div>
                       <div>
-                        <mat-form-field style="margin: 1.3rem 1rem 0 0; width: 15rem;">
+                        <mat-form-field style="width: 15rem;">
                           <input matInput placeholder="Remark" value="{{ element.remark }}" (blur)="onBlurRemark(element.id, element.isLocked, $event)" [readonly]="element.isLocked">
                         </mat-form-field>
                       </div>
@@ -170,7 +170,7 @@
                     <div class="flex-container" style="justify-content: flex-end;">
                         <div>
                           <button mat-raised-button type="button" (click)="onCloneOne(element.id)" color="accent">
-                              <mat-icon>library_add</mat-icon>Clone
+                              <mat-icon>library_add</mat-icon>&nbsp;Clone
                           </button>
                       </div>
                         <div>
@@ -185,7 +185,7 @@
                          </div>
                       <div>
                           <button mat-raised-button color="warn" type="button" (click)="onDeleteOne(element.id, element.isLocked)">
-                              <mat-icon>delete</mat-icon>Delete
+                              <mat-icon>delete</mat-icon>&nbsp;Delete
                           </button>
                       </div>
                     </div>
@@ -200,7 +200,7 @@
       <tr mat-row *matRowDef="let element; columns: displayedColumns;"
       class="example-element-row"
       [class.example-expanded-row]="expandedElement === element"
-      (click)="expandedElement = expandedElement === element ? null : element">
+      (click)="expandedElement = expandedElement === element ? null : element; onRowClicked();">
       </tr>
       <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
       <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
@@ -209,14 +209,14 @@
 
 <div class="flex-container">
     <div>
-        <button mat-raised-button color="primary" (click)="exportToExcel()">
-        <mat-icon>cloud_download</mat-icon>Export
-    </button>
+        <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
+          <mat-icon>cloud_download</mat-icon>&nbsp;Export
+        </button>
     </div>
-    <div>
+    <div style="margin-right: 0rem;">
         <button mat-raised-button color="warn" type="button" (click)="onDeleteMany()">
-        <mat-icon>delete_forever</mat-icon>Delete All
-    </button>
+        <mat-icon>delete_forever</mat-icon>&nbsp;Delete All
+        </button>
     </div>
 </div>
 <ngx-spinner>
