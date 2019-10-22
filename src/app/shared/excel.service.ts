@@ -21,7 +21,7 @@ export class ExcelService {
 
   public async toJson(arrayBuffer: ArrayBuffer): Promise<any[]> {
     const data = new Uint8Array(arrayBuffer);
-    const workbook = XLSX.read(data, { type: 'array' });
+    const workbook = XLSX.read(data, { type: 'array', cellText: false });
     const worksheet: XLSX.WorkSheet = workbook.Sheets[workbook.SheetNames[0]];
     return XLSX.utils.sheet_to_json(worksheet, { raw: false });
   }

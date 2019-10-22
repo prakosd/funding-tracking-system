@@ -11,17 +11,17 @@
             <mat-error *ngIf="form.get('orderNumber').invalid">Please enter an order number.</mat-error>
           </mat-form-field>
 
-          <mat-form-field style="width: 10rem;">
-            <input matInput placeholder="Purchasing No." formControlName="purchasingNumber" [readonly]="mode==='edit'" style="text-transform: uppercase;">
+          <mat-form-field style="width: 8rem;">
+            <input matInput placeholder="Purchasing No." formControlName="purchasingNumber" style="text-transform: uppercase;">
             <mat-error *ngIf="form.get('purchasingNumber').invalid">Please enter purchasing number.</mat-error>
           </mat-form-field>
 
-          <mat-form-field style="width: 10rem;">
+          <mat-form-field style="width: 8rem;">
             <input matInput placeholder="Reference No." formControlName="referenceNumber" [readonly]="mode==='edit'" style="text-transform: uppercase;">
             <mat-error *ngIf="form.get('referenceNumber').invalid">Please enter reference number.</mat-error>
           </mat-form-field>
 
-          <mat-form-field style="width: 6rem;">
+          <mat-form-field style="width: 4rem;">
             <input matInput placeholder="Position" formControlName="position" type="number" [readonly]="mode==='edit'">
             <mat-error *ngIf="form.get('position').invalid">Please enter position in document.</mat-error>
           </mat-form-field>
@@ -63,10 +63,10 @@
           <div style="flex-basis: 100%; height: 0;"></div>
 
           <mat-form-field style="width: 10rem;">
-            <input matInput [matDatepicker]="pickerIssue" placeholder="Issue Date" formControlName="documentDate">
+            <input matInput [matDatepicker]="pickerIssue" placeholder="Doc. Date" formControlName="documentDate">
             <mat-datepicker-toggle matSuffix [for]="pickerIssue"></mat-datepicker-toggle>
             <mat-datepicker #pickerIssue></mat-datepicker>
-            <mat-error *ngIf="form.get('documentDate').invalid">Please select issue date.</mat-error>
+            <mat-error *ngIf="form.get('documentDate').invalid">Please select doc. date.</mat-error>
           </mat-form-field>
 
           <mat-form-field style="width: 10rem;">
@@ -76,12 +76,12 @@
             <mat-error *ngIf="form.get('postingDate').invalid">Please select posting date.</mat-error>
           </mat-form-field>
 
-          <mat-form-field style="width: 25rem;">
-            <input matInput placeholder="Document Type" formControlName="documentType">
+          <mat-form-field style="width: 4rem;">
+            <input matInput placeholder="Doc. Type" formControlName="documentType">
             <mat-error *ngIf="form.get('documentType').invalid">Please enter document type.</mat-error>
           </mat-form-field>
 
-          <mat-form-field style="width: 25rem;">
+          <mat-form-field style="width: 8rem;">
             <input matInput placeholder="Header Text" formControlName="headerText">
             <mat-error *ngIf="form.get('headerText').invalid">Please enter header text.</mat-error>
           </mat-form-field>
@@ -89,6 +89,7 @@
           <mat-slide-toggle checked="true" formControlName="isLocked">
             Locked
           </mat-slide-toggle>
+
           <mat-slide-toggle checked="true" formControlName="isLinked">
             Linked
           </mat-slide-toggle>

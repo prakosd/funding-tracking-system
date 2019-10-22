@@ -9,6 +9,8 @@ import { SapCommitmentFormComponent } from './data-import/sap-commitment/sap-com
 import { SapCommitmentComponent } from './data-import/sap-commitment/sap-commitment.component';
 import { SapActualListComponent } from './data-import/sap-actual/sap-actual-list/sap-actual-list.component';
 import { SapActualFormComponent } from './data-import/sap-actual/sap-actual-form/sap-actual-form.component';
+import { SapEasListComponent } from './data-import/sap-eas/sap-eas-list/sap-eas-list.component';
+import { SapEasFormComponent } from './data-import/sap-eas/sap-eas-form/sap-eas-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,7 +31,13 @@ const routes: Routes = [
       { path: 'sap-actual-form', component: SapActualFormComponent },
       { path: 'sap-actual-form/:id/:mode', component: SapActualFormComponent }
     ] },
-    { path: 'sap-eas', component: SapEasComponent, children: [] }
+    { path: 'sap-eas', component: SapEasComponent, children: [
+      { path: '', redirectTo: 'sap-eas-list', pathMatch: 'full' },
+      { path: 'sap-eas-list', component: SapEasListComponent },
+      { path: 'sap-eas-list/:id', component: SapEasListComponent },
+      { path: 'sap-eas-form', component: SapEasFormComponent },
+      { path: 'sap-eas-form/:id/:mode', component: SapEasFormComponent }
+    ] }
 ] },
 ];
 

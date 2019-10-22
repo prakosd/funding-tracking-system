@@ -1,51 +1,42 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { SapActual } from './sap-actual.model';
+import { SapEas } from './sap-eas.model';
 import { map } from 'rxjs/operators';
 import { ExcelService } from '../../shared/excel.service';
 
-const BACKEND_URL = environment.apiUrl + '/sap-actuals/';
+const BACKEND_URL = environment.apiUrl + '/sap-eas/';
 const importKeyMap = {
-  year: 'Fiscal Year',
-  month: 'Period',
-  orderNumber: 'Order',
-  purchasingNumber: 'Purchasing Document',
-  referenceNumber: 'Ref Document Number',
-  position: 'Posting row',
-  costElement: 'Cost Element',
-  name: 'Name',
-  quantity: 'Total quantity',
-  uom: 'Posted unit of meas.',
-  currency: 'Report currency',
-  actualValue: 'Val.in rep.cur.',
-  documentDate: 'Document Date',
-  postingDate: 'Posting Date',
-  documentType: 'Document type',
-  headerText: 'Document Header Text',
-  username: 'User Name',
+  requisitionNumber: 'Requisition No',
+  subject: 'Subject',
+  amount: 'Amount',
+  dept: 'Dept',
+  costCenter: 'Cost Center',
+  requestor: 'Requestor',
+  status: 'Status',
+  creationDate: 'Creation Date',
+  approver: 'Current Approver',
+  recipient: 'Recipient',
+  etaRequest: 'ETA Request'
 };
 
 const exportKeyMap = {
   year: 'Year',
   month: 'Month',
-  orderNumber: 'Order',
-  purchasingNumber: 'PO No.',
-  referenceNumber: 'GR No.',
-  position: 'Pos',
-  costElement: 'Cost Element',
-  name: 'Name',
-  quantity: 'Qty',
-  uom: 'UoM',
-  currency: 'Currency',
-  actualValue: 'Actual Value',
-  documentDate: 'Document Date',
-  postingDate: 'Posting Date',
-  documentType: 'Doc. Type',
-  headerText: 'Header Text',
+  requisitionNumber: 'PR No.',
+  subject: 'Subject',
+  currency: 'Curr.',
+  amount: 'Amount',
+  dept: 'Dept.',
+  costCenter: 'Cost Center',
+  requestor: 'Requestor',
+  status: 'Status',
+  creationDate: 'Creation Date',
+  approver: 'Approval',
+  recipient: 'Recipient',
+  etaRequest: 'ETA Request',
   isLocked: 'Locked',
   isLinked: 'Linked',
-  username: 'Username',
   remark: 'Remark',
   lastUpdateAt: 'Last Update at',
   lastUpdateBy: 'Last Update by',
@@ -54,36 +45,33 @@ const exportKeyMap = {
 
 @Injectable({ providedIn: 'root' })
 
-export class SapActualService {
-   constructor(
-     private http: HttpClient,
-     private excelService: ExcelService
-     ) {}
+export class SapEasService {
+  constructor(
+    private http: HttpClient,
+    private excelService: ExcelService
+    ) {}
 
   getMany(year: number) {
-    const queryParams = `?year=${year}&sorts=orderNumber purchasingNumber referenceNumber position`;
+    const queryParams = `?year=${year}&sorts=requisitionNumber`;
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, data: result.data.map((row, index) => {
         return {
           no: index + 1,
           id: row._id,
-          year: new Date(row.postingDate).getFullYear(),
-          month: new Date(row.postingDate).getMonth(),
-          orderNumber: row.orderNumber,
-          purchasingNumber: row.purchasingNumber,
-          referenceNumber: row.referenceNumber,
-          position: row.position,
-          costElement: row.costElement,
-          name: row.name,
-          quantity: row.quantity,
-          uom: row.uom,
+          year: new Date(row.etaRequest).getFullYear(),
+          month: new Date(row.etaRequest).getMonth(),
+          requisitionNumber: row.requisitionNumber,
+          subject: row.subject,
           currency: row.currency,
-          actualValue: row.actualValue,
-          documentDate: row.documentDate,
-          postingDate: row.postingDate,
-          documentType: row.documentType,
-          headerText: row.headerText,
-          username: row.username,
+          amount: row.amount,
+          dept: row.dept,
+          costCenter: row.costCenter,
+          requestor: row.requestor,
+          status: row.status,
+          creationDate: row.creationDate,
+          approver: row.approver,
+          recipient: row.recipient,
+          etaRequest: row.etaRequest,
           remark: row.remark,
           isLocked: row.isLocked,
           isLinked: row.isLinked,
@@ -99,24 +87,21 @@ export class SapActualService {
     .pipe(map(row => {
       return { message: row.message, data: {
           id: row.data._id,
-          year: new Date(row.data.postingDate).getFullYear(),
-          month: new Date(row.data.postingDate).getMonth(),
-          orderNumber: row.data.orderNumber,
-          purchasingNumber: row.data.purchasingNumber,
-          referenceNumber: row.data.referenceNumber,
-          position: row.data.position,
-          costElement: row.data.costElement,
-          name: row.data.name,
-          quantity: row.data.quantity,
-          uom: row.data.uom,
+          year: new Date(row.data.etaRequest).getFullYear(),
+          month: new Date(row.data.etaRequest).getMonth(),
+          requisitionNumber: row.data.requisitionNumber,
+          subject: row.data.subject,
           currency: row.data.currency,
-          actualValue: row.data.actualValue,
-          documentDate: row.data.documentDate,
-          postingDate: row.data.postingDate,
-          documentType: row.data.documentType,
-          headerText: row.data.headerText,
-          username: row.data.username,
-          remark: row.data.remark || '',
+          amount: row.data.amount,
+          dept: row.data.dept,
+          costCenter: row.data.costCenter,
+          requestor: row.data.requestor,
+          status: row.data.status,
+          creationDate: row.data.creationDate,
+          approver: row.data.approver,
+          recipient: row.data.recipient,
+          etaRequest: row.data.etaRequest,
+          remark: row.data.remark,
           isLocked: row.data.isLocked,
           isLinked: row.data.isLinked,
           lastUpdateAt: row.data.lastUpdateAt,
@@ -125,23 +110,20 @@ export class SapActualService {
     }));
   }
 
-  createOne(data: SapActual) {
+  createOne(data: SapEas) {
     const newForm = new FormData();
-    newForm.append('orderNumber', data.orderNumber);
-    newForm.append('purchasingNumber', data.purchasingNumber);
-    newForm.append('referenceNumber', data.referenceNumber);
-    newForm.append('position', data.position.toString());
-    newForm.append('costElement', data.costElement);
-    newForm.append('name', data.name);
-    newForm.append('quantity', data.quantity.toString());
-    newForm.append('uom', data.uom);
+    newForm.append('requisitionNumber', data.requisitionNumber);
+    newForm.append('subject', data.subject);
     newForm.append('currency', data.currency);
-    newForm.append('actualValue', data.actualValue.toString());
-    newForm.append('documentDate', new Date(data.documentDate).toISOString());
-    newForm.append('postingDate', new Date(data.postingDate).toISOString());
-    newForm.append('documentType', data.documentType);
-    newForm.append('headerText', data.headerText);
-    newForm.append('username', data.username);
+    newForm.append('amount', data.amount.toString());
+    newForm.append('dept', data.dept);
+    newForm.append('costCenter', data.costCenter);
+    newForm.append('requestor', data.requestor);
+    newForm.append('status', data.status);
+    newForm.append('creationDate', new Date(data.creationDate).toISOString());
+    newForm.append('approver', data.approver);
+    newForm.append('recipient', data.recipient);
+    newForm.append('etaRequest', new Date(data.etaRequest).toISOString());
     newForm.append('remark', data.remark);
     newForm.append('isLocked', data.isLocked.toString() || 'false');
     newForm.append('isLinked', data.isLinked.toString() || 'true');
@@ -151,33 +133,30 @@ export class SapActualService {
     }));
   }
 
-  patchOne(id: string, data: SapActual) {
+  patchOne(id: string, data: SapEas) {
     const newForm = new FormData();
-    newForm.append('orderNumber', data.orderNumber);
-    newForm.append('purchasingNumber', data.purchasingNumber);
-    newForm.append('referenceNumber', data.referenceNumber);
-    newForm.append('position', data.position.toString());
-    newForm.append('costElement', data.costElement);
-    newForm.append('name', data.name);
-    newForm.append('quantity', data.quantity.toString());
-    newForm.append('uom', data.uom);
+    newForm.append('requisitionNumber', data.requisitionNumber);
+    newForm.append('subject', data.subject);
     newForm.append('currency', data.currency);
-    newForm.append('actualValue', data.actualValue.toString());
-    newForm.append('documentDate', new Date(data.documentDate).toISOString());
-    newForm.append('postingDate', new Date(data.postingDate).toISOString());
-    newForm.append('documentType', data.documentType);
-    newForm.append('headerText', data.headerText);
-    newForm.append('username', data.username);
+    newForm.append('amount', data.amount.toString());
+    newForm.append('dept', data.dept);
+    newForm.append('costCenter', data.costCenter);
+    newForm.append('requestor', data.requestor);
+    newForm.append('status', data.status);
+    newForm.append('creationDate', new Date(data.creationDate).toISOString());
+    newForm.append('approver', data.approver);
+    newForm.append('recipient', data.recipient);
+    newForm.append('etaRequest', new Date(data.etaRequest).toISOString());
     newForm.append('remark', data.remark);
-    newForm.append('isLocked', data.isLocked.toString());
-    newForm.append('isLinked', data.isLinked.toString());
+    newForm.append('isLocked', data.isLocked.toString() || 'false');
+    newForm.append('isLinked', data.isLinked.toString() || 'true');
     return this.http.patch<{ message: string; data: { _id: string }}>(BACKEND_URL + id, newForm)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id }};
     }));
   }
 
-  upsertOne(data: SapActual) {
+  upsertOne(data: SapEas) {
     return this.http.put<{ message: string; data: { _id: string }}>(BACKEND_URL + (data.id ? data.id : ''), data)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id }};
@@ -219,19 +198,19 @@ export class SapActualService {
     }));
   }
 
-  getLock(orderNumber: string, referenceNumber: string, position: number) {
-    const queryParams = `?ordernumber=${orderNumber}&referenceNumber=${referenceNumber}&position=${position}&fields=isLocked`;
+  getLock(requisitionNumber: string) {
+    const queryParams = `?requisitionNumber=${requisitionNumber}&fields=isLocked`;
     return this.http.get<{ message: string; data: { _id: string, isLocked: boolean } }>(BACKEND_URL + queryParams)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id, isLocked: result.data.isLocked }};
     }));
   }
 
-  exportToExcel(data: SapActual[]) {
-    this.excelService.exportAsExcelFile(this.mapToExcel(data), 'SapActual');
+  exportToExcel(data: SapEas[]) {
+    this.excelService.exportAsExcelFile(this.mapToExcel(data), 'SapEas');
   }
 
-  private mapToExcel(data: SapActual[]) {
+  private mapToExcel(data: SapEas[]) {
     return data.map((d, index) => {
       const result = {};
       let key = 'No';
@@ -249,7 +228,6 @@ export class SapActualService {
     const json = await this.excelService.toJson(arrayBuffer).catch(error => { console.log(error); });
     if (!json) { return false; }
     const data = this.mapJson(json);
-
     const upsertRes =  await this.upsertMany(data).catch(error => { console.log(error); });
     if (!upsertRes) { return false; }
 
@@ -269,7 +247,7 @@ export class SapActualService {
       }
       results.push(result);
     }
-    return results.filter(r => r.orderNumber !== null && r.orderNumber !== undefined);
+    return results.filter(r => r.requisitionNumber !== null && r.requisitionNumber !== undefined);
   }
 
   private mapKey(findKey: string) {
@@ -282,9 +260,9 @@ export class SapActualService {
       }
   }
 
-  async upsertMany(data: SapActual[]) {
+  async upsertMany(data: SapEas[]) {
     for (const d of data) {
-      const lockRes = await this.getLock(d.orderNumber, d.referenceNumber, d.position)
+      const lockRes = await this.getLock(d.requisitionNumber)
       .toPromise().catch(error => { console.log(error); });
       if (!lockRes) { return false; }
 

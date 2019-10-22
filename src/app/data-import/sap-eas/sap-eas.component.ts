@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sap-eas',
@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SapEasComponent implements OnInit {
+  @Input() fiscalYear: number;
+
+  constructor() {
+
+  }
+
   ngOnInit() {
 
   }
