@@ -23,6 +23,6 @@ mat-spinner {
 
 .flex-container {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1;
   flex-flow: row wrap;
 }

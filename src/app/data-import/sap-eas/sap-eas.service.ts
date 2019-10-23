@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { SapEas } from './sap-eas.model';
 import { map } from 'rxjs/operators';
 import { ExcelService } from '../../shared/excel.service';
+import { ProgressDataService } from '../../shared/progress-data.service';
 
 const BACKEND_URL = environment.apiUrl + '/sap-eas/';
 const importKeyMap = {
@@ -48,11 +49,12 @@ const exportKeyMap = {
 export class SapEasService {
   constructor(
     private http: HttpClient,
-    private excelService: ExcelService
+    private excelService: ExcelService,
+    private progressDataService: ProgressDataService
     ) {}
 
   getMany(year: number) {
-    const queryParams = `?year=${year}&sorts=requisitionNumber`;
+    const queryParams = `?year=${year}&sorts=-creationDate`;
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, data: result.data.map((row, index) => {
         return {
@@ -261,6 +263,9 @@ export class SapEasService {
   }
 
   async upsertMany(data: SapEas[]) {
+    const length = data.length;
+    let index = 0;
+    this.progressDataService.resetLoadingProgress();
     for (const d of data) {
       const lockRes = await this.getLock(d.requisitionNumber)
       .toPromise().catch(error => { console.log(error); });
@@ -270,7 +275,10 @@ export class SapEasService {
         const upsertRes = await this.upsertOne(d).toPromise().catch(error => { console.log(error); });
         if (!upsertRes) { return false; }
       }
+      index += 1;
+      this.progressDataService.setLoadingProgress(index, length);
     }
+    this.progressDataService.resetLoadingProgress();
     return true;
   }
 }

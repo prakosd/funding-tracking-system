@@ -1,6 +1,6 @@
 <h3>DETAIL</h3>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div style="display: flex; justify-content: center;">
+  <div style="display: flex; flex: 1; justify-content: center;">
     <mat-card>
       <mat-card-title>{{ title }}</mat-card-title>
       <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>
@@ -87,7 +87,7 @@
 
         </div>
       </mat-card-content>
-      <div style="display: flex; justify-content: space-between; height: 2.5rem;">
+      <div style="display: flex; flex: 1; justify-content: space-between; height: 2.5rem;">
           <mat-card-actions>
               <button mat-raised-button color="primary" type="submit">SAVE</button>
               <button mat-raised-button color="accent" (click)="onClear()" type="reset" *ngIf="mode!=='edit'">CLEAR</button>

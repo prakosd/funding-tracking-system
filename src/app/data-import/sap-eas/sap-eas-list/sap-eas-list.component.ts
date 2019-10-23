@@ -9,6 +9,7 @@ import { DataImportService } from '../../data-import.service';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { ConfirmationDialogComponent } from '../../../shared/confirmation-dialog/confirmation-dialog.component';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ProgressDataService, ProgressData } from '../../../shared/progress-data.service';
 
 
 @Component({
@@ -35,6 +36,8 @@ export class SapEasListComponent implements OnInit, OnDestroy {
   dataSource: MatTableDataSource<SapEas>;
   expandedElement;
   expandedId: string | null;
+  progressData: ProgressData;
+  progressDataSubs: Subscription;
   displayedColumns = [
     'no', 'requisitionNumber', 'subject',
     'currency', 'amount', 'costCenter', 'requestor', 'recipient', 'status',
@@ -44,6 +47,7 @@ export class SapEasListComponent implements OnInit, OnDestroy {
   constructor(
     private sapEasService: SapEasService,
     private dataImportService: DataImportService,
+    private progressDataService: ProgressDataService,
     private route: ActivatedRoute,
     private router: Router,
     private snackBar: MatSnackBar,
@@ -61,6 +65,10 @@ export class SapEasListComponent implements OnInit, OnDestroy {
     this.fiscalYearSubs = this.dataImportService.getFiscalYear().subscribe(year => {
       this.fiscalYear = year;
       this.fetchData(this.expandedId);
+    });
+
+    this.progressDataSubs = this.progressDataService.getLoadingProgress().subscribe(progress => {
+      this.progressData = progress;
     });
   }
 
@@ -170,6 +178,7 @@ export class SapEasListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.fiscalYearSubs.unsubscribe();
+    this.progressDataSubs.unsubscribe();
   }
 
   async onLinkChange(id: string, slider: MatSlideToggleChange) {

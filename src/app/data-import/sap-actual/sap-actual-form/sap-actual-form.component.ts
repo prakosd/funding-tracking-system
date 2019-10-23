@@ -67,7 +67,7 @@ export class SapActualFormComponent implements OnInit {
           referenceNumber: data.referenceNumber,
           position: data.position,
           costElement: data.costElement,
-          name: data.name,
+          name: data.name || '',
           quantity: data.quantity,
           uom: data.uom || '',
           currency: data.currency,

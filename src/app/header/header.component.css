@@ -11,8 +11,10 @@ a {
 
 ul {
   display: flex;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .spacer {
-  flex: 1 1 auto;
+  flex: 1;
 }

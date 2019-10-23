@@ -6,7 +6,7 @@
         </button>
    </div>
     <div style="width: 100%;">
-      <mat-form-field style="width: 100%;">
+      <mat-form-field style="width: 100%; margin-top: 0.3rem;">
         <input [(ngModel)]="searchField" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
         <button mat-button mat-icon-button matSuffix (click)="clearSearchField()" *ngIf="searchField">
           <mat-icon>close</mat-icon>
@@ -14,7 +14,7 @@
       </mat-form-field>
     </div>
   </div>
-  <div class="flex-container" style="justify-content: flex-start; margin-right: 0rem;">
+  <div class="flex-container" style="justify-content: flex-end; margin-right: 0rem;">
       <div>
           <button mat-raised-button color="primary" routerLink="/data-import/sap-eas/sap-eas-form" routerLinkActive="mat-accent">
           <mat-icon>add_circle</mat-icon>&nbsp;Add New
@@ -207,5 +207,7 @@
     </div>
 </div>
 <ngx-spinner>
-  <p style="font-size: 20px; color: whitesmoke">Loading...</p>
+  <div style="font-size: 1.2rem; color: whitesmoke">{{ progressData.message }}</div>
+  <div style="font-size: 2.2rem; color: whitesmoke">{{ progressData.percentage }}</div>
+  <div style="font-size: 0.8rem; color: whitesmoke">{{ progressData.progress }}</div>
 </ngx-spinner>

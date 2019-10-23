@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { SapActual } from './sap-actual.model';
 import { map } from 'rxjs/operators';
 import { ExcelService } from '../../shared/excel.service';
+import { ProgressDataService } from '../../shared/progress-data.service';
 
 const BACKEND_URL = environment.apiUrl + '/sap-actuals/';
 const importKeyMap = {
@@ -57,11 +58,12 @@ const exportKeyMap = {
 export class SapActualService {
    constructor(
      private http: HttpClient,
-     private excelService: ExcelService
+     private excelService: ExcelService,
+     private progressDataService: ProgressDataService
      ) {}
 
   getMany(year: number) {
-    const queryParams = `?year=${year}&sorts=orderNumber purchasingNumber referenceNumber position`;
+    const queryParams = `?year=${year}&sorts=orderNumber -postingDate purchasingNumber referenceNumber position`;
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, data: result.data.map((row, index) => {
         return {
@@ -283,6 +285,9 @@ export class SapActualService {
   }
 
   async upsertMany(data: SapActual[]) {
+    const length = data.length;
+    let index = 0;
+    this.progressDataService.resetLoadingProgress();
     for (const d of data) {
       const lockRes = await this.getLock(d.orderNumber, d.referenceNumber, d.position)
       .toPromise().catch(error => { console.log(error); });
@@ -292,7 +297,10 @@ export class SapActualService {
         const upsertRes = await this.upsertOne(d).toPromise().catch(error => { console.log(error); });
         if (!upsertRes) { return false; }
       }
+      index += 1;
+      this.progressDataService.setLoadingProgress(index, length);
     }
+    this.progressDataService.resetLoadingProgress();
     return true;
   }
 }

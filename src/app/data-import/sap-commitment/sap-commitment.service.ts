@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { SapCommitment } from './sap-commitment.model';
 import { map } from 'rxjs/operators';
 import { ExcelService } from '../../shared/excel.service';
+import { ProgressData, ProgressDataService } from '../../shared/progress-data.service';
 
 const BACKEND_URL = environment.apiUrl + '/sap-commitments/';
 const importKeyMap = {
@@ -54,7 +55,8 @@ const exportKeyMap = {
 export class SapCommitmentService {
   constructor(
     private http: HttpClient,
-    private excelService: ExcelService
+    private excelService: ExcelService,
+    private progressDataService: ProgressDataService
     ) {}
 
   getMany(year: number) {
@@ -276,6 +278,9 @@ export class SapCommitmentService {
   }
 
   async upsertMany(data: SapCommitment[]) {
+    const length = data.length;
+    let index = 0;
+    this.progressDataService.resetLoadingProgress();
     for (const d of data) {
       const lockRes = await this.getLock(d.orderNumber, d.documentNumber, d.position)
       .toPromise().catch(error => { console.log(error); });
@@ -285,7 +290,10 @@ export class SapCommitmentService {
         const upsertRes = await this.upsertOne(d).toPromise().catch(error => { console.log(error); });
         if (!upsertRes) { return false; }
       }
+      index += 1;
+      this.progressDataService.setLoadingProgress(index, length);
     }
+    this.progressDataService.resetLoadingProgress();
     return true;
   }
 }

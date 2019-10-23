@@ -1,5 +1,6 @@
 .flex-container {
   display: flex;
+  flex: 1;
   justify-content: space-between;
 }
 
@@ -8,8 +9,12 @@
   line-height: 4rem;
 }
 
-mat-spinner {
-  margin: auto;
+ngx-spinner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 input[type="file"] {

@@ -21,6 +21,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 .example-element-detail {
   overflow: hidden;
   display: flex;
+  flex: 1;
 }
 
 .example-element-detail .flex-container > div {
