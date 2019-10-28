@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { ExcelService } from '../../shared/excel.service';
 import { ProgressData, ProgressDataService } from '../../shared/progress-data.service';
 
-const BACKEND_URL = environment.apiUrl + '/sap-commitments/';
+const BACKEND_URL = environment.apiUrl + '/sap/commitments/';
 const importKeyMap = {
   year: 'Fiscal Year',
   month: 'Period',

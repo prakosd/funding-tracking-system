@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { ExcelService } from '../../shared/excel.service';
 import { ProgressDataService } from '../../shared/progress-data.service';
 
-const BACKEND_URL = environment.apiUrl + '/sap-eas/';
+const BACKEND_URL = environment.apiUrl + '/sap/eas/';
 const importKeyMap = {
   requisitionNumber: 'Requisition No',
   subject: 'Subject',
