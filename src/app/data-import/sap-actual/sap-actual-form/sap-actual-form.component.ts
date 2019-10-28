@@ -76,7 +76,7 @@ export class SapActualFormComponent implements OnInit {
           postingDate: data.postingDate,
           documentType: data.documentType,
           headerText: data.headerText || '',
-          isLocked: data.isLocked,
+          isLocked: this.mode === 'edit' ? data.isLocked : true,
           isLinked: data.isLinked,
           username: data.username,
           remark: data.remark
@@ -99,7 +99,7 @@ export class SapActualFormComponent implements OnInit {
       postingDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       documentType: new FormControl(null),
       headerText: new FormControl(null),
-      isLocked: new FormControl(false),
+      isLocked: new FormControl(true),
       isLinked: new FormControl(true),
       remark: new FormControl(),
       username: new FormControl(this.username, { validators: Validators.required, updateOn: 'blur' })

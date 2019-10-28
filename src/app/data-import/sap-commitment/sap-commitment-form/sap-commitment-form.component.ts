@@ -75,7 +75,7 @@ export class SapCommitmentFormComponent implements OnInit {
           planValue: data.planValue,
           documentDate: data.documentDate,
           debitDate: data.debitDate,
-          isLocked: data.isLocked,
+          isLocked: this.mode === 'edit' ? data.isLocked : true,
           isLinked: data.isLinked,
           username: data.username,
           remark: data.remark
@@ -97,7 +97,7 @@ export class SapCommitmentFormComponent implements OnInit {
       planValue: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       documentDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       debitDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
-      isLocked: new FormControl(false),
+      isLocked: new FormControl(true),
       isLinked: new FormControl(true),
       remark: new FormControl(),
       username: new FormControl(this.username, { validators: Validators.required, updateOn: 'blur' })

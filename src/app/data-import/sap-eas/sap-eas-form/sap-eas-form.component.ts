@@ -75,7 +75,7 @@ export class SapEasFormComponent implements OnInit {
         creationDate: data.creationDate,
         etaRequest: data.etaRequest,
         remark: data.remark || '',
-        isLocked: data.isLocked,
+        isLocked: this.mode === 'edit' ? data.isLocked : true,
         isLinked: data.isLinked
       });
   }
@@ -95,7 +95,7 @@ export class SapEasFormComponent implements OnInit {
       creationDate: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       etaRequest: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       remark: new FormControl(),
-      isLocked: new FormControl(false),
+      isLocked: new FormControl(true),
       isLinked: new FormControl(true)
     });
   }
