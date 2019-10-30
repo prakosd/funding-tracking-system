@@ -138,7 +138,8 @@ export class SapCommitmentFormComponent implements OnInit {
       username: this.form.value.username,
       remark: this.form.value.remark,
       isLocked: this.form.value.isLocked,
-      isLinked: this.form.value.isLinked
+      isLinked: this.form.value.isLinked,
+      isImported: false
     };
 
     const result = await this.sapCommitmentService.createOne(data).toPromise().catch(error => { console.log(error); });
@@ -171,7 +172,8 @@ export class SapCommitmentFormComponent implements OnInit {
       username: this.form.value.username,
       remark: this.form.value.remark,
       isLocked: this.form.value.isLocked,
-      isLinked: this.form.value.isLinked
+      isLinked: this.form.value.isLinked,
+      isImported: false
     };
 
     const result = await this.sapCommitmentService.patchOne(this.id, data).toPromise().catch(error => { console.log(error); });

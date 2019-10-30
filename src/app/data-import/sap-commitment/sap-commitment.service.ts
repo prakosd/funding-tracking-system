@@ -82,9 +82,10 @@ export class SapCommitmentService {
           documentDate: row.documentDate,
           debitDate: row.debitDate,
           username: row.username,
-          remark: row.remark,
+          remark: row.remark || '',
           isLocked: row.isLocked,
           isLinked: row.isLinked,
+          isImported: row.isImported || false,
           lastUpdateAt: row.lastUpdateAt,
           lastUpdateBy: row.lastUpdateBy
         };
@@ -116,6 +117,7 @@ export class SapCommitmentService {
           remark: row.data.remark || '',
           isLocked: row.data.isLocked,
           isLinked: row.data.isLinked,
+          isImported: row.data.isImported || false,
           lastUpdateAt: row.data.lastUpdateAt,
           lastUpdateBy: row.data.lastUpdateBy
       }};
@@ -262,6 +264,7 @@ export class SapCommitmentService {
           result[mappedKey] = data[key];
         }
       }
+      result[`isImported`] = true;
       results.push(result);
     }
     return results.filter(r => r.orderNumber !== null && r.orderNumber !== undefined);
