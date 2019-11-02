@@ -16,6 +16,7 @@ export interface SapEas {
   etaRequest: Date;
   isLocked: boolean;
   isLinked: boolean;
+  isImported: boolean;
   remark: string;
   lastUpdateAt: Date;
   lastUpdateBy: string;

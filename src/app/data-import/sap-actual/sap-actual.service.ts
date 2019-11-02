@@ -89,6 +89,7 @@ export class SapActualService {
           remark: row.remark,
           isLocked: row.isLocked,
           isLinked: row.isLinked,
+          isImported: row.isImported || false,
           lastUpdateAt: row.lastUpdateAt,
           lastUpdateBy: row.lastUpdateBy
         };
@@ -121,6 +122,7 @@ export class SapActualService {
           remark: row.data.remark || '',
           isLocked: row.data.isLocked,
           isLinked: row.data.isLinked,
+          isImported: row.data.isImported || false,
           lastUpdateAt: row.data.lastUpdateAt,
           lastUpdateBy: row.data.lastUpdateBy
       }};
@@ -147,6 +149,7 @@ export class SapActualService {
     newForm.append('remark', data.remark);
     newForm.append('isLocked', data.isLocked.toString() || 'false');
     newForm.append('isLinked', data.isLinked.toString() || 'true');
+    newForm.append('isImported', data.isImported.toString() || 'false');
     return this.http.post<{ message: string; data: { _id: string }}>(BACKEND_URL, newForm)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id }};
@@ -173,6 +176,7 @@ export class SapActualService {
     newForm.append('remark', data.remark);
     newForm.append('isLocked', data.isLocked.toString());
     newForm.append('isLinked', data.isLinked.toString());
+    newForm.append('isImported', data.isImported.toString());
     return this.http.patch<{ message: string; data: { _id: string }}>(BACKEND_URL + id, newForm)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id }};
@@ -269,6 +273,7 @@ export class SapActualService {
           result[mappedKey] = data[key];
         }
       }
+      result[`isImported`] = true;
       results.push(result);
     }
     return results.filter(r => r.orderNumber !== null && r.orderNumber !== undefined);

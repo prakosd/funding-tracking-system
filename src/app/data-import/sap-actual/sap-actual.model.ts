@@ -18,6 +18,7 @@ export interface SapActual {
   headerText: string;
   isLocked: boolean;
   isLinked: boolean;
+  isImported: boolean;
   username: string;
   remark: string;
   lastUpdateAt: Date;

@@ -241,10 +241,10 @@ export class SapEasListComponent implements OnInit, OnDestroy {
     }
 
     const file = files[0];
-    if (file.type !== 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
-      this.snackBar.open('File type not allowed.', 'only *.xlsx', { duration: 2000 });
-      return false;
-    }
+    // if (file.type !== 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+    //   this.snackBar.open('File type not allowed.', 'only *.xlsx', { duration: 2000 });
+    //   return false;
+    // }
 
     const isContinue = await this.confirmationDialog('Import from Excel',
     'The followings will occur.<br />' +

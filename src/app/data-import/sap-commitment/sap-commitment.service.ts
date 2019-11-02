@@ -143,6 +143,7 @@ export class SapCommitmentService {
     newForm.append('remark', data.remark);
     newForm.append('isLocked', data.isLocked.toString() || 'false');
     newForm.append('isLinked', data.isLinked.toString() || 'true');
+    newForm.append('isImported', data.isImported.toString() || 'false');
     return this.http.post<{ message: string; data: { _id: string }}>(BACKEND_URL, newForm)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id }};
@@ -168,6 +169,7 @@ export class SapCommitmentService {
     newForm.append('remark', data.remark);
     newForm.append('isLocked', data.isLocked.toString());
     newForm.append('isLinked', data.isLinked.toString());
+    newForm.append('isImported', data.isImported.toString());
     return this.http.patch<{ message: string; data: { _id: string }}>(BACKEND_URL + id, newForm)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id }};

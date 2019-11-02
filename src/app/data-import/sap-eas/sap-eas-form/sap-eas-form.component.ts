@@ -132,7 +132,8 @@ export class SapEasFormComponent implements OnInit {
       etaRequest: new Date(this.form.value.etaRequest),
       remark: this.form.value.remark,
       isLocked: this.form.value.isLocked,
-      isLinked: this.form.value.isLinked
+      isLinked: this.form.value.isLinked,
+      isImported: false
     };
 
     const result = await this.sapEasService.createOne(data).toPromise().catch(error => { console.log(error); });
@@ -163,7 +164,8 @@ export class SapEasFormComponent implements OnInit {
       etaRequest: new Date(this.form.value.etaRequest),
       remark: this.form.value.remark,
       isLocked: this.form.value.isLocked,
-      isLinked: this.form.value.isLinked
+      isLinked: this.form.value.isLinked,
+      isImported: false
     };
 
     const result = await this.sapEasService.patchOne(this.id, data).toPromise().catch(error => { console.log(error); });

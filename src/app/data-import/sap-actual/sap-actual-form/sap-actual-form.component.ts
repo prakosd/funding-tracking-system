@@ -141,7 +141,8 @@ export class SapActualFormComponent implements OnInit {
       username: this.form.value.username,
       remark: this.form.value.remark,
       isLocked: this.form.value.isLocked,
-      isLinked: this.form.value.isLinked
+      isLinked: this.form.value.isLinked,
+      isImported: false
     };
 
     const result = await this.sapActualService.createOne(data).toPromise().catch(error => { console.log(error); });
@@ -175,7 +176,8 @@ export class SapActualFormComponent implements OnInit {
       username: this.form.value.username,
       remark: this.form.value.remark,
       isLocked: this.form.value.isLocked,
-      isLinked: this.form.value.isLinked
+      isLinked: this.form.value.isLinked,
+      isImported: false
     };
 
     const result = await this.sapActualService.patchOne(this.id, data).toPromise().catch(error => { console.log(error); });

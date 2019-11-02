@@ -77,6 +77,7 @@ export class SapEasService {
           remark: row.remark,
           isLocked: row.isLocked,
           isLinked: row.isLinked,
+          isImported: row.isLinked || false,
           lastUpdateAt: row.lastUpdateAt,
           lastUpdateBy: row.lastUpdateBy
         };
@@ -106,6 +107,7 @@ export class SapEasService {
           remark: row.data.remark,
           isLocked: row.data.isLocked,
           isLinked: row.data.isLinked,
+          isImported: row.data.isLinked || false,
           lastUpdateAt: row.data.lastUpdateAt,
           lastUpdateBy: row.data.lastUpdateBy
       }};
@@ -129,6 +131,7 @@ export class SapEasService {
     newForm.append('remark', data.remark);
     newForm.append('isLocked', data.isLocked.toString() || 'false');
     newForm.append('isLinked', data.isLinked.toString() || 'true');
+    newForm.append('isImported', data.isImported.toString() || 'false');
     return this.http.post<{ message: string; data: { _id: string }}>(BACKEND_URL, newForm)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id }};
@@ -152,6 +155,7 @@ export class SapEasService {
     newForm.append('remark', data.remark);
     newForm.append('isLocked', data.isLocked.toString() || 'false');
     newForm.append('isLinked', data.isLinked.toString() || 'true');
+    newForm.append('isImported', data.isImported.toString() || 'false');
     return this.http.patch<{ message: string; data: { _id: string }}>(BACKEND_URL + id, newForm)
     .pipe(
       map(result => { return { message: result.message, data: { id: result.data._id }};
@@ -247,6 +251,7 @@ export class SapEasService {
           result[mappedKey] = data[key];
         }
       }
+      result[`isImported`] = true;
       results.push(result);
     }
     return results.filter(r => r.requisitionNumber !== null && r.requisitionNumber !== undefined);
