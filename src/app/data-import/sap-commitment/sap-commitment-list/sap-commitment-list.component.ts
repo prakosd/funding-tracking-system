@@ -29,7 +29,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-  searchField;
+  searchField = '';
   sapCommitments: SapCommitment[];
   fiscalYearSubs: Subscription;
   fiscalYear: number;
@@ -63,9 +63,19 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
       }
     });
 
+    this.route.queryParams.subscribe(params => {
+      if (params.filter) {
+        this.searchField = params.filter;
+      }
+    });
+
     this.fiscalYearSubs = this.dataImportService.getFiscalYear().subscribe(year => {
       this.fiscalYear = year;
-      this.fetchData(this.expandedId);
+      this.fetchData(this.expandedId).then(isFetched => {
+        if (isFetched) {
+          this.applyFilter(this.searchField);
+        }
+      });
     });
 
     this.progressDataSubs = this.progressDataService.getLoadingProgress().subscribe(progress => {
