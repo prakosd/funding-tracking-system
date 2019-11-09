@@ -296,11 +296,10 @@ export class SapActualService {
     for (const d of data) {
       const lockRes = await this.getLock(d.orderNumber, d.referenceNumber, d.position)
       .toPromise().catch(error => { console.log(error); });
-      if (!lockRes) { return false; }
 
-      if (!lockRes.data.isLocked) {
+      if (lockRes && !lockRes.data.isLocked) {
         const upsertRes = await this.upsertOne(d).toPromise().catch(error => { console.log(error); });
-        if (!upsertRes) { return false; }
+        if (upsertRes && !upsertRes.data.id) { console.log(d); }
       }
       index += 1;
       this.progressDataService.setLoadingProgress(index, length);
