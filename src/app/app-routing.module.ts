@@ -11,12 +11,19 @@ import { SapActualListComponent } from './data-import/sap-actual/sap-actual-list
 import { SapActualFormComponent } from './data-import/sap-actual/sap-actual-form/sap-actual-form.component';
 import { SapEasListComponent } from './data-import/sap-eas/sap-eas-list/sap-eas-list.component';
 import { SapEasFormComponent } from './data-import/sap-eas/sap-eas-form/sap-eas-form.component';
+import { SapComponent } from './data-import/sap/sap.component';
+import { SapListComponent } from './data-import/sap/sap-list/sap-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'data-import', component: DataImportComponent , children: [
-    { path: '', redirectTo: 'sap-commitment', pathMatch: 'full' },
+    { path: '', redirectTo: 'sap', pathMatch: 'full' },
+    { path: 'sap', component: SapComponent, children: [
+      { path: '', redirectTo: 'sap-list', pathMatch: 'full' },
+      { path: 'sap-list', component: SapListComponent },
+      { path: 'sap-list/:orderNumber', component: SapListComponent }
+    ] },
     { path: 'sap-commitment', component: SapCommitmentComponent, children: [
       { path: '', redirectTo: 'sap-commitment-list', pathMatch: 'full' },
       { path: 'sap-commitment-list', component: SapCommitmentListComponent },

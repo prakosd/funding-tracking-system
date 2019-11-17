@@ -1,0 +1,23 @@
+.flex-container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.flex-container > div {
+  margin-right: 1rem;
+  line-height: 4rem;
+}
+
+ngx-spinner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+input[type="file"] {
+  visibility: hidden;
+  width: 0;
+}
