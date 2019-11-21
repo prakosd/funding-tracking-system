@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
+import { Sap } from './sap.model';
+import { ExcelService } from 'src/app/shared/excel.service';
 
 const BACKEND_URL = environment.apiUrl + '/sap/';
 @Injectable({ providedIn: 'root' })
 
 export class SapService {
    constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private excelService: ExcelService
    ) {}
 
    getMany(year: number) {
@@ -77,5 +80,25 @@ export class SapService {
         };
       })};
     }));
+  }
+
+  exportToExcel(data: Sap[]) {
+    this.excelService.exportAsExcelFile(this.mapToExcel(data), 'SapQuery');
+  }
+
+  private mapToExcel(data: Sap[]) {
+    // return data.map((d, index) => {
+    //   const result = {};
+    //   let key = 'No';
+    //   result[key] = index + 1;
+    //   for (key in exportKeyMap) {
+    //     if (exportKeyMap.hasOwnProperty(key)) {
+    //       result[exportKeyMap[key]] = d[key];
+    //     }
+    //   }
+    //   return result;
+    // });
+
+    return data;
   }
 }

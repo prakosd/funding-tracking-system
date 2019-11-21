@@ -15,7 +15,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 }
 
 .example-element-row td {
-  border-bottom-width: 0;
+  font-size: 1.2rem;
 }
 
 .example-element-detail {
@@ -40,26 +40,25 @@ th.mat-sort-header-sorted {
   color: black;
 }
 
-.actual-value {
+.pr-plan, .pr-actual, .po-plan, .po-actual, .actualized {
   text-align: right;
   padding-right: 1rem;
 }
 
 .mat-row {
-  height: 2rem;
+  height: 2.2rem;
 }
 
 .mat-row mat-icon {
   margin-top: 0.3rem;
-  font-size: 1.4rem;
 }
 
 .mat-footer-row {
-  height: 2rem;
+  height: 2.5rem;
 }
 
 .mat-header-row {
-  height: 2.4em;
+  height: 2.5em;
 }
 
 tr.mat-footer-row {
@@ -73,3 +72,11 @@ tr.mat-footer-row {
 .mat-row:not(:nth-child(4n+1)) {
   background-color: #ffffff;
 }
+
+.mat-header-cell {
+  font-size: 1.1rem;
+}
+.mat-footer-cell {
+  font-size: 1.4rem;
+}
+

@@ -82,8 +82,57 @@ export class SapListComponent implements OnInit, OnDestroy {
     return true;
   }
 
+  onRefresh() {
+    this.fetchData(this.expandedId);
+  }
+
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  clearSearchField() {
+    this.searchField = '';
+    this.applyFilter('');
+  }
+
+  onRowClicked() {
+    if (this.expandedElement) {
+      // console.log(this.expandedElement);
+    }
+  }
+
+  getTotalPrActual() {
+    if (this.dataSource) {
+      return this.dataSource.filteredData.map(row => row.prActual).reduce((acc, value) => acc + value, 0);
+    }
+  }
+
+  getTotalPrPlan() {
+    if (this.dataSource) {
+      return this.dataSource.filteredData.map(row => row.prPlan).reduce((acc, value) => acc + value, 0);
+    }
+  }
+
+  getTotalPoActual() {
+    if (this.dataSource) {
+      return this.dataSource.filteredData.map(row => row.poActual).reduce((acc, value) => acc + value, 0);
+    }
+  }
+
+  getTotalPoPlan() {
+    if (this.dataSource) {
+      return this.dataSource.filteredData.map(row => row.poPlan).reduce((acc, value) => acc + value, 0);
+    }
+  }
+
+  getTotalActualized() {
+    if (this.dataSource) {
+      return this.dataSource.filteredData.map(row => row.actualized).reduce((acc, value) => acc + value, 0);
+    }
+  }
+
+  exportToExcel() {
+    this.sapService.exportToExcel(this.saps);
   }
 
   ngOnDestroy() {
