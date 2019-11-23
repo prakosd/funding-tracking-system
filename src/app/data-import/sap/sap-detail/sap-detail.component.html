@@ -36,50 +36,14 @@
   </ng-container>
 
   <ng-container matColumnDef="subject">
-      <th mat-header-cell mat-sort-header *matHeaderCellDef class="subject">Subject</th>
+      <th mat-header-cell mat-sort-header *matHeaderCellDef class="po-no">Subject.</th>
       <td mat-cell *matCellDef="let element" class="subject">{{ element.subject }}</td>
       <td mat-footer-cell *matFooterCellDef></td>
-    </ng-container>
-
-    <ng-container matColumnDef="items">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef class="items">Items</th>
-        <td mat-cell *matCellDef="let element" class="items">
-          <mat-form-field>
-            <mat-select>
-              <mat-option *ngFor="let item of element.items" [value]="item">{{ item }}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </td>
-        <td mat-footer-cell *matFooterCellDef></td>
-      </ng-container>
+  </ng-container>
 
   <ng-container matColumnDef="grNumber">
     <th mat-header-cell mat-sort-header *matHeaderCellDef class="gr-no">GR No.</th>
     <td mat-cell *matCellDef="let element" class="gr-number">{{ element.grNumber }}</td>
-    <td mat-footer-cell *matFooterCellDef></td>
-  </ng-container>
-
-  <ng-container matColumnDef="remarks">
-    <th mat-header-cell mat-sort-header *matHeaderCellDef class="remarks">Remarks</th>
-    <td mat-cell *matCellDef="let element" class="remarks">
-      <mat-form-field>
-        <mat-select>
-          <mat-option *ngFor="let remark of element.remarks" [value]="remark">{{ remark }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </td>
-    <td mat-footer-cell *matFooterCellDef></td>
-  </ng-container>
-
-  <ng-container matColumnDef="headerTexts">
-    <th mat-header-cell mat-sort-header *matHeaderCellDef class="header-texts">Header Text</th>
-    <td mat-cell *matCellDef="let element" class="header-texts">
-      <mat-form-field>
-        <mat-select>
-          <mat-option *ngFor="let headerText of element.headerTexts" [value]="headerText">{{ headerText }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </td>
     <td mat-footer-cell *matFooterCellDef></td>
   </ng-container>
 
@@ -138,6 +102,31 @@
                <div class="flex-container" style="width: 100%;">
                 <div>
                     <div class="flex-container" style="justify-content: flex-start;">
+                        <div>
+                          <mat-form-field>
+                            <mat-label>Items</mat-label>
+                            <mat-select [(value)]="element.subject">
+                              <mat-option [value]="element.subject">{{ element.subject }}</mat-option>
+                              <mat-option *ngFor="let item of element.items" [value]="item">{{ item }}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field>
+                              <mat-label>Header Texts</mat-label>
+                              <mat-select>
+                                <mat-option *ngFor="let headerText of element.headerTexts" [value]="headerText">{{ headerText }}</mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field>
+                              <mat-label>Remarks</mat-label>
+                              <mat-select>
+                                <mat-option *ngFor="let remark of element.remarks" [value]="remark">{{ remark }}</mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                        </div>
                         <div>
                             <mat-form-field style="width: 10rem;">
                               <input matInput placeholder="Requestor" value="{{ element.requestor }}" [readonly]="true">

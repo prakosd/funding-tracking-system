@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, ViewChild, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { trigger, state, transition, style, animate } from '@angular/animations';
 import { MatSort, MatPaginator, MatTableDataSource } from '@angular/material';
-import { Subscription } from 'rxjs';
 import { Transaction } from '../sap.model';
 import { SapService } from '../sap.service';
 import { DataImportService } from '../../data-import.service';
@@ -20,22 +19,23 @@ import { NgxSpinnerService } from 'ngx-spinner';
   ]
 })
 
-export class SapDetailComponent implements OnInit, OnDestroy {
+export class SapDetailComponent implements OnInit {
   @Input() orderNumber: string;
+  @Input() fiscalYear: number;
+
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   searchField = '';
   transactions: Transaction[];
-  fiscalYearSubs: Subscription;
-  fiscalYear: number;
+
   dataSource: MatTableDataSource<Transaction>;
   expandedElement;
   expandedId: string | null;
   displayedColumns = [
-    'prNumber', 'poNumber', 'grNumber', 'subject', 'items', 'remarks',
-    'headerTexts', 'prValue', 'prPlan', 'poValue', 'poPlan', 'grValue',
+    'prNumber', 'poNumber', 'grNumber', 'subject',
+    'prValue', 'prPlan', 'poValue', 'poPlan', 'grValue',
     'issueDate', 'etaDate', 'actualDate'
   ];
 
@@ -46,14 +46,7 @@ export class SapDetailComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.fiscalYearSubs = this.dataImportService.getFiscalYear().subscribe(year => {
-      this.fiscalYear = year;
-      this.fetchData(this.expandedId).then(isFetched => {
-        if (isFetched) {
-          this.applyFilter(this.searchField);
-        }
-      });
-    });
+    this.fetchData(this.expandedId);
   }
 
   async fetchData(expandedId: string | null) {
@@ -124,9 +117,5 @@ export class SapDetailComponent implements OnInit, OnDestroy {
 
   exportToExcel() {
     this.sapService.exportToExcel(this.transactions);
-  }
-
-  ngOnDestroy() {
-    this.fiscalYearSubs.unsubscribe();
   }
 }
