@@ -29,6 +29,12 @@
     <td mat-footer-cell *matFooterCellDef></td>
   </ng-container>
 
+  <ng-container matColumnDef="budget">
+      <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="budget">Budget</th>
+      <td mat-cell *matCellDef="let element" class="budget">{{ element.budget | number:'':'' }}</td>
+      <td mat-footer-cell *matFooterCellDef class="budget">{{ getTotalBudget() | number:'':'' }}</td>
+  </ng-container>
+
   <ng-container matColumnDef="prActual">
     <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="pr-actual">PR Actual</th>
     <td mat-cell *matCellDef="let element" class="pr-actual">{{ element.prActual | number:'':'' }}</td>
@@ -59,23 +65,17 @@
     <td mat-footer-cell *matFooterCellDef class="actualized">{{ getTotalActualized() | number:'':'' }}</td>
   </ng-container>
 
+  <ng-container matColumnDef="remaining">
+      <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="remaining">Remaining</th>
+      <td mat-cell *matCellDef="let element" class="remaining">{{ element.remaining | number:'':'' }}</td>
+      <td mat-footer-cell *matFooterCellDef class="remaining">{{ getTotalRemaining() | number:'':'' }}</td>
+  </ng-container>
+
       <ng-container matColumnDef="expandedDetail">
         <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
           <div class="example-element-detail"
                [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
-               <div class="flex-container" style="width: 100%;">
-                <div>
-                  <div class="flex-container" style="justify-content: flex-start;">
-                      Detail one
-
-                  </div>
-                </div>
-                <div>
-                    <div class="flex-container" style="justify-content: flex-end;">
-                        detail two
-                    </div>
-                </div>
-              </div>
+            <app-sap-detail [orderNumber]="element.orderNumber"></app-sap-detail>
           </div>
         </td>
       </ng-container>
@@ -93,16 +93,18 @@
 <mat-paginator showFirstLastButtons [length]="saps?.length" [pageSize]="15" [pageSizeOptions]="[5, 10, 15, 20, 25, 30]" class="mat-elevation-z8"></mat-paginator>
 
 <div class="flex-container">
-    <div>
-        <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
-          <mat-icon>cloud_download</mat-icon>&nbsp;Summary Export
-        </button>
+    <div class="flex-container" style="justify-content: flex-start;">
+        <div>
+            <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
+              <mat-icon>cloud_download</mat-icon>&nbsp;Summary
+            </button>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
+            <mat-icon>cloud_download</mat-icon>&nbsp;Complete
+          </button>
+      </div>
     </div>
-    <div>
-      <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
-        <mat-icon>cloud_download</mat-icon>&nbsp;Complete Export
-      </button>
-  </div>
 </div>
 <ngx-spinner>
 </ngx-spinner>

@@ -1,0 +1,185 @@
+<div class="flex-container">
+  <div class="flex-container" style="justify-content: flex-start; width: 50%;">
+    <div>
+      <button mat-raised-button (click)="onRefresh()" type="button" color="primary">
+        <mat-icon>refresh</mat-icon>
+        </button>
+   </div>
+    <div style="width: 100%;">
+      <mat-form-field style="width: 100%; margin-top: 0.3rem;">
+        <input [(ngModel)]="searchField" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+        <button mat-button mat-icon-button matSuffix (click)="clearSearchField()" *ngIf="searchField">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<table mat-table matSort [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+    <ng-container matColumnDef="no">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="no">No.</th>
+        <td mat-cell *matCellDef="let element" class="no">{{ element.no }}</td>
+        <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+  <ng-container matColumnDef="prNumber">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="pr-no">PR No.</th>
+    <td mat-cell *matCellDef="let element" class="pr-number">{{ element.prNumber }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="poNumber">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="po-no">PO No.</th>
+    <td mat-cell *matCellDef="let element" class="po-number">{{ element.poNumber }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="subject">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef class="subject">Subject</th>
+      <td mat-cell *matCellDef="let element" class="subject">{{ element.subject }}</td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="items">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="items">Items</th>
+        <td mat-cell *matCellDef="let element" class="items">
+          <mat-form-field>
+            <mat-select>
+              <mat-option *ngFor="let item of element.items" [value]="item">{{ item }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+
+  <ng-container matColumnDef="grNumber">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="gr-no">GR No.</th>
+    <td mat-cell *matCellDef="let element" class="gr-number">{{ element.grNumber }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="remarks">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="remarks">Remarks</th>
+    <td mat-cell *matCellDef="let element" class="remarks">
+      <mat-form-field>
+        <mat-select>
+          <mat-option *ngFor="let remark of element.remarks" [value]="remark">{{ remark }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="headerTexts">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="header-texts">Header Text</th>
+    <td mat-cell *matCellDef="let element" class="header-texts">
+      <mat-form-field>
+        <mat-select>
+          <mat-option *ngFor="let headerText of element.headerTexts" [value]="headerText">{{ headerText }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="prValue">
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="pr-value">PR Value</th>
+    <td mat-cell *matCellDef="let element" class="pr-value">{{ element.prValue | number:'':'' }}</td>
+    <td mat-footer-cell *matFooterCellDef class="pr-value">{{ getTotalPrValue() | number:'':'' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="prPlan">
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="pr-plan">PR Plan</th>
+    <td mat-cell *matCellDef="let element" class="pr-plan">{{ element.prPlan | number:'':'' }}</td>
+    <td mat-footer-cell *matFooterCellDef class="pr-plan">{{ getTotalPrPlan() | number:'':'' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="poValue">
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="po-value">PO Value</th>
+    <td mat-cell *matCellDef="let element" class="po-value">{{ element.poValue | number:'':'' }}</td>
+    <td mat-footer-cell *matFooterCellDef class="po-value">{{ getTotalPoValue() | number:'':'' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="poPlan">
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="po-plan">PO Plan</th>
+    <td mat-cell *matCellDef="let element" class="po-plan">{{ element.poPlan | number:'':'' }}</td>
+    <td mat-footer-cell *matFooterCellDef class="po-plan">{{ getTotalPoPlan() | number:'':'' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="grValue">
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="gr-value">GR Value</th>
+    <td mat-cell *matCellDef="let element" class="gr-value">{{ element.grValue | number:'':'' }}</td>
+    <td mat-footer-cell *matFooterCellDef class="gr-value">{{ getTotalGrValue() | number:'':'' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="issueDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="issue-date">Issue Date</th>
+    <td mat-cell *matCellDef="let element" class="issue-date">{{ element.issueDate | date:'dd MMM yyy' }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="etaDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="eta-date">ETA Date</th>
+    <td mat-cell *matCellDef="let element" class="eta-date">{{ element.etaDate | date:'dd MMM yyy' }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+  <ng-container matColumnDef="actualDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="actual-date">GR Date</th>
+    <td mat-cell *matCellDef="let element" class="actual-date">{{ element.actualDate | date:'dd MMM yyy' }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
+      <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+          <div class="example-element-detail"
+               [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
+               <div class="flex-container" style="width: 100%;">
+                <div>
+                    <div class="flex-container" style="justify-content: flex-start;">
+                        <div>
+                            <mat-form-field style="width: 10rem;">
+                              <input matInput placeholder="Requestor" value="{{ element.requestor }}" [readonly]="true">
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field style="width: 10rem;">
+                              <input matInput placeholder="Last Update" value="{{ element.lastUpdateAt | date:'dd MMM yyy' }} - {{ element.lastUpdateBy }}" [readonly]="true">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
+
+      <tr mat-row *matRowDef="let element; columns: displayedColumns;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element; onRowClicked();">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+      <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+</table>
+<mat-paginator showFirstLastButtons [length]="transactions?.length" [pageSize]="15" [pageSizeOptions]="[5, 10, 15, 20, 25, 30]" class="mat-elevation-z8"></mat-paginator>
+
+<div class="flex-container">
+    <div class="flex-container" style="justify-content: flex-start;">
+        <div>
+            <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
+              <mat-icon>cloud_download</mat-icon>&nbsp;Summary
+            </button>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
+            <mat-icon>cloud_download</mat-icon>&nbsp;Complete
+          </button>
+      </div>
+    </div>
+</div>
+<ngx-spinner>
+</ngx-spinner>

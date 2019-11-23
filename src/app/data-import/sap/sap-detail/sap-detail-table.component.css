@@ -15,7 +15,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 }
 
 .example-element-row td {
-  font-size: 1.2rem;
+  border-bottom-width: 0;
 }
 
 .example-element-detail {
@@ -40,25 +40,30 @@ th.mat-sort-header-sorted {
   color: black;
 }
 
-.budget, .pr-plan, .pr-actual, .po-plan, .po-actual, .actualized, .remaining {
+.actual-value {
+  text-align: right;
+}
+
+.plan-value {
   text-align: right;
   padding-right: 1rem;
 }
 
 .mat-row {
-  height: 2.3rem;
+  height: 2rem;
 }
 
 .mat-row mat-icon {
   margin-top: 0.3rem;
+  font-size: 1.4rem;
 }
 
 .mat-footer-row {
-  height: 2.5rem;
+  height: 2rem;
 }
 
 .mat-header-row {
-  height: 2.5em;
+  height: 2.4em;
 }
 
 tr.mat-footer-row {
@@ -72,11 +77,3 @@ tr.mat-footer-row {
 .mat-row:not(:nth-child(4n+1)) {
   background-color: #ffffff;
 }
-
-.mat-header-cell {
-  font-size: 1.1rem;
-}
-.mat-footer-cell {
-  font-size: 1.4rem;
-}
-

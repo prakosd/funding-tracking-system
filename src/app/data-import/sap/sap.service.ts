@@ -22,11 +22,13 @@ export class SapService {
           no: index + 1,
           year: row.year,
           orderNumber: row.orderNumber,
+          budget: 10000000,
           prActual: row.totalPrActual,
           prPlan: row.totalPrPlan,
           poActual: row.totalPoActual,
           poPlan: row.totalPoPlan,
-          actualized: row.totalGrActual
+          actualized: row.totalGrActual,
+          remaining: 10000000 - ( row.totalPrActual + row.totalPoActual + row.totalGrActual)
         };
       })};
     }));
@@ -51,7 +53,7 @@ export class SapService {
   }
 
 
-  getDetails(year: number, orderNumber: string) {
+  getTransactions(year: number, orderNumber: string) {
     const queryParams = `${year}/details/${orderNumber}`;
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, data: result.data.map((row, index) => {
@@ -82,7 +84,7 @@ export class SapService {
     }));
   }
 
-  exportToExcel(data: Sap[]) {
+  exportToExcel(data) {
     this.excelService.exportAsExcelFile(this.mapToExcel(data), 'SapQuery');
   }
 

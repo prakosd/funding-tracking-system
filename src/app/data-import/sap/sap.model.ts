@@ -2,11 +2,13 @@ export interface Sap {
     no: number;
     year: number;
     orderNumber: string;
+    budget: number;
     prActual: number;
     prPlan: number;
     poActual: number;
     poPlan: number;
     actualized: number;
+    remaining: number;
     transactions: Transaction[];
 }
 

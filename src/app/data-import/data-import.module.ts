@@ -16,6 +16,7 @@ import { SapEasListComponent } from './sap-eas/sap-eas-list/sap-eas-list.compone
 import { SapEasFormComponent } from './sap-eas/sap-eas-form/sap-eas-form.component';
 import { SapComponent } from './sap/sap.component';
 import { SapListComponent } from './sap/sap-list/sap-list.component';
+import { SapDetailComponent } from './sap/sap-detail/sap-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SapListComponent } from './sap/sap-list/sap-list.component';
     SapEasListComponent,
     SapEasFormComponent,
     SapComponent,
-    SapListComponent
+    SapListComponent,
+    SapDetailComponent
   ],
   imports: [
     AngularMaterialModule,
@@ -51,7 +53,8 @@ import { SapListComponent } from './sap/sap-list/sap-list.component';
     SapEasListComponent,
     SapEasFormComponent,
     SapComponent,
-    SapListComponent
+    SapListComponent,
+    SapDetailComponent
   ],
   entryComponents: [
   ]
