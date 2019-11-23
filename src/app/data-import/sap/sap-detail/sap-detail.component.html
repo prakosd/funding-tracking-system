@@ -104,25 +104,21 @@
                     <div class="flex-container" style="justify-content: flex-start;">
                         <div>
                           <mat-form-field>
-                            <mat-label>Items</mat-label>
-                            <mat-select [(value)]="element.subject">
-                              <mat-option [value]="element.subject">{{ element.subject }}</mat-option>
+                            <mat-select placeholder="Items" [(value)]="element.items[0]">
                               <mat-option *ngFor="let item of element.items" [value]="item">{{ item }}</mat-option>
                             </mat-select>
                           </mat-form-field>
                         </div>
                         <div>
                             <mat-form-field>
-                              <mat-label>Header Texts</mat-label>
-                              <mat-select>
+                              <mat-select placeholder="Header Texts">
                                 <mat-option *ngFor="let headerText of element.headerTexts" [value]="headerText">{{ headerText }}</mat-option>
                               </mat-select>
                             </mat-form-field>
                         </div>
                         <div>
                             <mat-form-field>
-                              <mat-label>Remarks</mat-label>
-                              <mat-select>
+                              <mat-select placeholder="Remarks">
                                 <mat-option *ngFor="let remark of element.remarks" [value]="remark">{{ remark }}</mat-option>
                               </mat-select>
                             </mat-form-field>
