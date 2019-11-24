@@ -76,7 +76,7 @@
           <div class="example-element-detail"
                [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
                <div class="flex-container" style="width: 100%; justify-content: center;">
-                  <app-sap-detail [orderNumber]="element.orderNumber" [fiscalYear]="element.year" style="width: 98%;"></app-sap-detail>
+                  <app-sap-detail [fiscalYear]="element.year" [orderNumber]="element.orderNumber" style="width: 98%;"></app-sap-detail>
               </div>
           </div>
         </td>

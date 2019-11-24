@@ -40,11 +40,11 @@ th.mat-sort-header-sorted {
   color: black;
 }
 
-.actual-value {
+.pr-value, .pr-plan, .po-value, .po-plan, .due-day {
   text-align: right;
 }
 
-.plan-value {
+.gr-value {
   text-align: right;
   padding-right: 1rem;
 }

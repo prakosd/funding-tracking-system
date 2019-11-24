@@ -14,8 +14,61 @@ export class SapService {
     private excelService: ExcelService
    ) {}
 
-   getMany(year: number) {
-    const queryParams = `${year}/sum`;
+  //  getData(year: number, orderNumber: string) {
+  //    let queryParams = `${year}/full`;
+  //    if (orderNumber) {
+  //     queryParams = `${year}/full/${orderNumber}`;
+  //   }
+
+  //    return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
+  //     return { message: result.message, data: result.data.map((row, index) => {
+  //       return {
+  //         no: index + 1,
+  //         year: row.year,
+  //         orderNumber: row.orderNumber,
+  //         budget: 10000000,
+  //         prActual: row.totalPrActual,
+  //         prPlan: row.totalPrPlan,
+  //         poActual: row.totalPoActual,
+  //         poPlan: row.totalPoPlan,
+  //         actualized: row.totalGrActual,
+  //         remaining: 10000000 - ( row.totalPrActual + row.totalPoActual + row.totalGrActual),
+  //         transactions: row.transactions.map((trx, idx) => {
+  //           return {
+  //             no: idx + 1,
+  //             year,
+  //             orderNumber: row.orderNumber,
+  //             prNumber: trx.prNumber,
+  //             poNumber: trx.poNumber,
+  //             grNumber: trx.grNumber,
+  //             subject: trx.subject,
+  //             items: trx.items,
+  //             remarks: trx.remarks,
+  //             headerTexts: trx.headerTexts,
+  //             prValue: trx.prValue,
+  //             prPlan: trx.prPlan,
+  //             poValue: trx.poValue,
+  //             poPlan: trx.poPlan,
+  //             grValue: trx.grValue,
+  //             requestor: trx.requestor,
+  //             issueDate: trx.issueDate,
+  //             etaDate: trx.etaDate,
+  //             actualDate: trx.actualDate,
+  //             dueDay: trx.actualDate ? null : this.getDueDay(trx.etaDate),
+  //             lastUpdateAt: trx.lastUpdateAt,
+  //             lastUpdateBy: trx.lastUpdateBy
+  //           };
+  //         })
+  //       };
+  //     })};
+  //   }));
+  //  }
+
+   getData(year: number, orderNumber: string) {
+    let queryParams = `${year}/sum`;
+    if (orderNumber) {
+      queryParams = `${year}/sum/${orderNumber}`;
+    }
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, data: result.data.map((row, index) => {
         return {
@@ -33,25 +86,6 @@ export class SapService {
       })};
     }));
   }
-
-  getOne(year: number, orderNumber: string) {
-    const queryParams = `${year}/sum/${orderNumber}`;
-    return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
-      return { message: result.message, data: result.data.map((row, index) => {
-        return {
-          no: index + 1,
-          year: row.year,
-          orderNumber: row.orderNumber,
-          prActual: row.totalPrActual,
-          prPlan: row.totalPrPlan,
-          poActual: row.totalPoActual,
-          poPlan: row.totalPoPlan,
-          actualized: row.totalGrActual
-        };
-      })};
-    }));
-  }
-
 
   getTransactions(year: number, orderNumber: string) {
     const queryParams = `${year}/details/${orderNumber}`;
@@ -77,11 +111,16 @@ export class SapService {
           issueDate: row.issueDate,
           etaDate: row.etaDate,
           actualDate: row.actualDate,
+          dueDay: row.actualDate ? null : this.getDueDay(row.etaDate),
           lastUpdateAt: row.lastUpdateAt,
           lastUpdateBy: row.lastUpdateBy
         };
       })};
     }));
+  }
+
+  getDueDay(etaDate: Date) {
+    return Math.floor((new Date(etaDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24));
   }
 
   exportToExcel(data) {

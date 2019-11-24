@@ -68,7 +68,7 @@ export class SapListComponent implements OnInit, OnDestroy {
 
   async fetchData(expandedId: string | null) {
     this.spinner.show();
-    const result = await this.sapService.getMany(this.fiscalYear).toPromise().catch(error => { console.log(error); });
+    const result = await this.sapService.getData(this.fiscalYear, null).toPromise().catch(error => { console.log(error); });
     if (!result) { return false; }
 
     this.saps = result.data;

@@ -20,23 +20,21 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 
 export class SapDetailComponent implements OnInit {
-  @Input() orderNumber: string;
   @Input() fiscalYear: number;
-
+  @Input() orderNumber: string;
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   searchField = '';
   transactions: Transaction[];
-
   dataSource: MatTableDataSource<Transaction>;
   expandedElement;
   expandedId: string | null;
   displayedColumns = [
     'prNumber', 'poNumber', 'grNumber', 'subject',
-    'prValue', 'prPlan', 'poValue', 'poPlan', 'grValue',
-    'issueDate', 'etaDate', 'actualDate'
+    'prValue', 'poValue', 'grValue',
+    'issueDate', 'etaDate', 'actualDate', 'dueDay'
   ];
 
   constructor(
@@ -117,5 +115,22 @@ export class SapDetailComponent implements OnInit {
 
   exportToExcel() {
     this.sapService.exportToExcel(this.transactions);
+  }
+
+  async onBlurPrNumber(poNumber: string, event: any) {
+    // if (isLocked) { return false; }
+
+    // this.spinner.show();
+    // const result = await this.sapCommitmentService.setRemark(id, event.target.value).toPromise().catch(error => { console.log(error); });
+    // if (!result) {
+    //   this.spinner.hide();
+    //   this.snackBar.open('Updating', 'failed', { duration: 2000 });
+    //   return false;
+    // }
+
+    // const index = this.sapCommitments.findIndex(data => data.id === id);
+    // this.sapCommitments[index].remark = event.target.value;
+    // this.spinner.hide();
+    // this.snackBar.open('Remark', 'updated', { duration: 2000 });
   }
 }

@@ -95,6 +95,12 @@
     <td mat-footer-cell *matFooterCellDef></td>
   </ng-container>
 
+  <ng-container matColumnDef="dueDay">
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="due-day">Due Day(s)</th>
+    <td mat-cell *matCellDef="let element" class="due-day">{{ element.dueDay | number:'':'' }}</td>
+    <td mat-footer-cell *matFooterCellDef></td>
+  </ng-container>
+
       <ng-container matColumnDef="expandedDetail">
         <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
           <div class="example-element-detail"
@@ -103,28 +109,28 @@
                 <div>
                     <div class="flex-container" style="justify-content: flex-start;">
                         <div>
-                          <mat-form-field>
-                            <mat-select placeholder="Items" [(value)]="element.items[0]">
+                          <mat-form-field style="width: 18rem">
+                            <mat-select placeholder="Item x{{ element.items.length }}" [(value)]="element.items[0]">
                               <mat-option *ngFor="let item of element.items" [value]="item">{{ item }}</mat-option>
                             </mat-select>
                           </mat-form-field>
                         </div>
                         <div>
-                            <mat-form-field>
-                              <mat-select placeholder="Header Texts">
+                            <mat-form-field style="width: 15rem">
+                              <mat-select placeholder="Header Text x{{ element.headerTexts.length }}">
                                 <mat-option *ngFor="let headerText of element.headerTexts" [value]="headerText">{{ headerText }}</mat-option>
                               </mat-select>
                             </mat-form-field>
                         </div>
                         <div>
-                            <mat-form-field>
-                              <mat-select placeholder="Remarks">
+                            <mat-form-field style="width: 15rem">
+                              <mat-select placeholder="Remark x{{ element.remarks.length }}">
                                 <mat-option *ngFor="let remark of element.remarks" [value]="remark">{{ remark }}</mat-option>
                               </mat-select>
                             </mat-form-field>
                         </div>
                         <div>
-                            <mat-form-field style="width: 10rem;">
+                            <mat-form-field style="width: 12rem;">
                               <input matInput placeholder="Requestor" value="{{ element.requestor }}" [readonly]="true">
                             </mat-form-field>
                         </div>
@@ -133,6 +139,11 @@
                               <input matInput placeholder="Last Update" value="{{ element.lastUpdateAt | date:'dd MMM yyy' }} - {{ element.lastUpdateBy }}" [readonly]="true">
                             </mat-form-field>
                         </div>
+                        <div *ngIf="!element.prNumber">
+                          <mat-form-field style="width: 8rem;">
+                            <input matInput placeholder="PR Number" (blur)="onBlurPrNumber(element.poNumber, $event)">
+                          </mat-form-field>
+                      </div>
                     </div>
                 </div>
               </div>
