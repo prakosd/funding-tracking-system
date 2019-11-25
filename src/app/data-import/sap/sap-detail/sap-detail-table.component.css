@@ -71,7 +71,7 @@ tr.mat-footer-row {
 }
 
 .mat-row:nth-child(2n+1) {
-  background-color: #f3f3f3;
+  background-color: #E1EDEB;
 }
 
 .mat-row:not(:nth-child(4n+1)) {

@@ -1,10 +1,10 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { trigger, state, transition, style, animate } from '@angular/animations';
-import { MatSort, MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatSort, MatPaginator, MatTableDataSource, MatSnackBar } from '@angular/material';
 import { Transaction } from '../sap.model';
 import { SapService } from '../sap.service';
-import { DataImportService } from '../../data-import.service';
-import { NgxSpinnerService } from 'ngx-spinner';
+// import { DataImportService } from '../../data-import.service';
+// import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-sap-detail',
@@ -39,8 +39,7 @@ export class SapDetailComponent implements OnInit {
 
   constructor(
     private sapService: SapService,
-    private dataImportService: DataImportService,
-    private spinner: NgxSpinnerService
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {
@@ -48,7 +47,6 @@ export class SapDetailComponent implements OnInit {
   }
 
   async fetchData(expandedId: string | null) {
-    this.spinner.show();
     const result = await this.sapService.getTransactions(this.fiscalYear, this.orderNumber)
     .toPromise().catch(error => { console.log(error); });
     if (!result) { return false; }
@@ -60,7 +58,7 @@ export class SapDetailComponent implements OnInit {
     if (expandedId) {
       this.expandedElement = this.transactions.filter(row => row.orderNumber === expandedId)[0];
     }
-    this.spinner.hide();
+    this.applyFilter(this.searchField);
     return true;
   }
 
@@ -118,19 +116,13 @@ export class SapDetailComponent implements OnInit {
   }
 
   async onBlurPrNumber(poNumber: string, event: any) {
-    // if (isLocked) { return false; }
-
-    // this.spinner.show();
-    // const result = await this.sapCommitmentService.setRemark(id, event.target.value).toPromise().catch(error => { console.log(error); });
-    // if (!result) {
-    //   this.spinner.hide();
-    //   this.snackBar.open('Updating', 'failed', { duration: 2000 });
-    //   return false;
-    // }
-
-    // const index = this.sapCommitments.findIndex(data => data.id === id);
-    // this.sapCommitments[index].remark = event.target.value;
-    // this.spinner.hide();
-    // this.snackBar.open('Remark', 'updated', { duration: 2000 });
+    const result = await this.sapService.updatePrToPo(this.orderNumber, event.target.value, poNumber)
+    .toPromise().catch(error => { console.log(error); });
+    if (!result) {
+      this.snackBar.open('Updating', 'failed', { duration: 2000 });
+      return false;
+    }
+    await this.fetchData(this.expandedId);
+    this.snackBar.open('Updating', 'success', { duration: 2000 });
   }
 }

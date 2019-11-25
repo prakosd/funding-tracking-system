@@ -111,7 +111,7 @@ export class SapService {
           issueDate: row.issueDate,
           etaDate: row.etaDate,
           actualDate: row.actualDate,
-          dueDay: row.actualDate ? null : this.getDueDay(row.etaDate),
+          dueDay: this.getDueDay(row.etaDate, row.actualDate, (row.prValue + row.poValue)),
           lastUpdateAt: row.lastUpdateAt,
           lastUpdateBy: row.lastUpdateBy
         };
@@ -119,7 +119,22 @@ export class SapService {
     }));
   }
 
-  getDueDay(etaDate: Date) {
+  updatePrToPo(orderNumber: string, prNumber: string, poNumber: string) {
+    const queryParams = `prtopos/${orderNumber}/${prNumber}/${poNumber}`;
+
+    return this.http.put<{ message: string; data: any}>(BACKEND_URL + queryParams, null)
+    .pipe(
+      map(result => { return { message: result.message, data: result};
+    }));
+  }
+
+  getDueDay(etaDate: Date, actualDate: Date, commitmentValue: number) {
+    if (commitmentValue <= 0) {
+      return null;
+    }
+    if (actualDate) {
+      return null;
+    }
     return Math.floor((new Date(etaDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24));
   }
 
