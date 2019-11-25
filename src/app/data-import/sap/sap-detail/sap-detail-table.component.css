@@ -44,7 +44,7 @@ th.mat-sort-header-sorted {
   text-align: right;
 }
 
-.gr-value {
+.gr-value  {
   text-align: right;
   padding-right: 1rem;
 }
@@ -77,3 +77,9 @@ tr.mat-footer-row {
 .mat-row:not(:nth-child(4n+1)) {
   background-color: #ffffff;
 }
+
+.mat-badge-content {
+  font-weight: normal;
+  font-size: 0.6rem;
+}
+

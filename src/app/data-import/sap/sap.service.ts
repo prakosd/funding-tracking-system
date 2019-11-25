@@ -112,6 +112,7 @@ export class SapService {
           etaDate: row.etaDate,
           actualDate: row.actualDate,
           dueDay: this.getDueDay(row.etaDate, row.actualDate, (row.prValue + row.poValue)),
+          status: this.getStatus(row.actualDate, row.prValue, row.poValue),
           lastUpdateAt: row.lastUpdateAt,
           lastUpdateBy: row.lastUpdateBy
         };
@@ -124,18 +125,57 @@ export class SapService {
 
     return this.http.put<{ message: string; data: any}>(BACKEND_URL + queryParams, null)
     .pipe(
-      map(result => { return { message: result.message, data: result};
+      map(result => { return { message: result.message, data: result.data};
     }));
+  }
+
+  deletePrToPo(orderNumber: string, prNumber: string, poNumber: string) {
+    const queryParams = `prtopos/${orderNumber}/${prNumber}/${poNumber}`;
+
+    return this.http.delete<{ message: string; data: any}>(BACKEND_URL + queryParams)
+    .pipe(
+      map(result => { return { message: result.message, data: result.data};
+    }));
+  }
+
+  updatePrToGr(orderNumber: string, prNumber: string, grNumber: string) {
+    const queryParams = `prtogrs/${orderNumber}/${prNumber}/${grNumber}`;
+
+    return this.http.put<{ message: string; data: any}>(BACKEND_URL + queryParams, null)
+    .pipe(
+      map(result => { return { message: result.message, data: result.data};
+    }));
+  }
+
+  deletePrToGr(orderNumber: string, prNumber: string, grNumber: string) {
+    const queryParams = `prtogrs/${orderNumber}/${prNumber}/${grNumber}`;
+
+    return this.http.delete<{ message: string; data: any}>(BACKEND_URL + queryParams)
+    .pipe(
+      map(result => { return { message: result.message, data: result.data};
+    }));
+  }
+
+  getStatus(actualDate: Date, prValue: number, poValue: number) {
+    if ((prValue + poValue) > 0) {
+      if (poValue <= 0) {
+        return 'PR';
+      } else {
+        return 'PO';
+      }
+    }
+    if (actualDate) {
+      return 'GR';
+    } else {
+      return '';
+    }
   }
 
   getDueDay(etaDate: Date, actualDate: Date, commitmentValue: number) {
     if (commitmentValue <= 0) {
       return null;
     }
-    if (actualDate) {
-      return null;
-    }
-    return Math.floor((new Date(etaDate).getTime() - new Date().getTime()) / (1000 * 3600 * 24));
+    return Math.floor((new Date().getTime() - new Date(etaDate).getTime()) / (1000 * 3600 * 24));
   }
 
   exportToExcel(data) {

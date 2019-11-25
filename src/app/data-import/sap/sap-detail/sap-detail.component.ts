@@ -32,7 +32,7 @@ export class SapDetailComponent implements OnInit {
   expandedElement;
   expandedId: string | null;
   displayedColumns = [
-    'prNumber', 'poNumber', 'grNumber', 'subject',
+    'no', 'prNumber', 'poNumber', 'grNumber', 'subject',
     'prValue', 'poValue', 'grValue',
     'issueDate', 'etaDate', 'actualDate', 'dueDay'
   ];
@@ -115,14 +115,64 @@ export class SapDetailComponent implements OnInit {
     this.sapService.exportToExcel(this.transactions);
   }
 
-  async onBlurPrNumber(poNumber: string, event: any) {
-    const result = await this.sapService.updatePrToPo(this.orderNumber, event.target.value, poNumber)
-    .toPromise().catch(error => { console.log(error); });
-    if (!result) {
-      this.snackBar.open('Updating', 'failed', { duration: 2000 });
-      return false;
+  async onBlurPrNumber(prNumber: string, poNumber: string, grNumber: string, event: any) {
+    if (poNumber) {
+      const newPrNumber: string = event.target.value.trim();
+      let result = await this.sapService.deletePrToPo(this.orderNumber, prNumber, poNumber)
+      .toPromise().catch(error => { console.log(error); });
+
+      if (newPrNumber.length > 0) {
+        result = await this.sapService.updatePrToPo(this.orderNumber, newPrNumber, poNumber)
+        .toPromise().catch(error => { console.log(error); });
+        if (!result) {
+            this.snackBar.open('Updating', 'failed', { duration: 2000 });
+            return false;
+        }
+      }
+      await this.fetchData(this.expandedId);
+      this.snackBar.open('Updating', 'success', { duration: 2000 });
+    } else {
+      const newPrNumber: string = event.target.value.trim();
+      let result = await this.sapService.deletePrToGr(this.orderNumber, prNumber, grNumber)
+      .toPromise().catch(error => { console.log(error); });
+
+      if (newPrNumber.length > 0) {
+        result = await this.sapService.updatePrToGr(this.orderNumber, newPrNumber, grNumber)
+        .toPromise().catch(error => { console.log(error); });
+        if (!result) {
+            this.snackBar.open('Updating', 'failed', { duration: 2000 });
+            return false;
+        }
+      }
+      await this.fetchData(this.expandedId);
+      this.snackBar.open('Updating', 'success', { duration: 2000 });
     }
-    await this.fetchData(this.expandedId);
-    this.snackBar.open('Updating', 'success', { duration: 2000 });
+  }
+
+  getStatusColor(status: string) {
+    let result;
+    switch (status) {
+        case 'PR': {
+          result = 'accent';
+          break;
+        }
+        case 'PO': {
+            result = 'warn';
+            break;
+        }
+        case 'GR': {
+          result = 'primary';
+          break;
+        }
+        default: {
+          result = 'accent';
+          break;
+        }
+    }
+    return result;
+  }
+
+  onSelectedChangeEtaDate(event: any) {
+    console.log(event);
   }
 }

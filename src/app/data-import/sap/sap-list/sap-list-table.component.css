@@ -66,7 +66,7 @@ tr.mat-footer-row {
 }
 
 .mat-row:nth-child(2n+1) {
-  background-color: #DAE6EF;
+  background-color: #D0E1F4;
 }
 
 .mat-row:not(:nth-child(4n+1)) {

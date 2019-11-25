@@ -16,7 +16,8 @@ import {
   MatMenuModule,
   MatCardModule,
   MatDatepickerModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatBadgeModule
 } from '@angular/material';
 
 @NgModule({
@@ -37,7 +38,8 @@ import {
     MatMenuModule,
     MatCardModule,
     MatDatepickerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatBadgeModule
   ]
 })
 

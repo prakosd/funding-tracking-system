@@ -33,6 +33,7 @@ export interface Transaction {
     etaDate: Date;
     actualDate: Date;
     dueDay: number;
+    status: string;
     lastUpdateAt: Date;
     lastUpdateBy: string;
 }
