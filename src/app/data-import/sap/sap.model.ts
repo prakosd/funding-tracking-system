@@ -13,6 +13,7 @@ export interface Sap {
 }
 
 export interface Transaction {
+    id: string;
     no: number;
     year: number;
     orderNumber: string;

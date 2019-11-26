@@ -92,6 +92,7 @@ export class SapService {
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, data: result.data.map((row, index) => {
         return {
+          id: orderNumber + row.prNumber + row.poNumber + row.grNumber,
           no: index + 1,
           year,
           orderNumber,
@@ -129,8 +130,8 @@ export class SapService {
     }));
   }
 
-  deletePrToPo(orderNumber: string, prNumber: string, poNumber: string) {
-    const queryParams = `prtopos/${orderNumber}/${prNumber}/${poNumber}`;
+  deletePrToPo(orderNumber: string, poNumber: string) {
+    const queryParams = `prtopos/${orderNumber}/prs/${poNumber}`;
 
     return this.http.delete<{ message: string; data: any}>(BACKEND_URL + queryParams)
     .pipe(
@@ -147,8 +148,26 @@ export class SapService {
     }));
   }
 
-  deletePrToGr(orderNumber: string, prNumber: string, grNumber: string) {
-    const queryParams = `prtogrs/${orderNumber}/${prNumber}/${grNumber}`;
+  deletePrToGr(orderNumber: string, grNumber: string) {
+    const queryParams = `prtogrs/${orderNumber}/prs/${grNumber}`;
+
+    return this.http.delete<{ message: string; data: any}>(BACKEND_URL + queryParams)
+    .pipe(
+      map(result => { return { message: result.message, data: result.data};
+    }));
+  }
+
+  updateEtaDate(orderNumber: string, documentNumber: string, etaDate: Date) {
+    const queryParams = `commitmenteta/${orderNumber}/${documentNumber}/${new Date(etaDate).toISOString()}`;
+
+    return this.http.put<{ message: string; data: any}>(BACKEND_URL + queryParams, null)
+    .pipe(
+      map(result => { return { message: result.message, data: result.data};
+    }));
+  }
+
+  deleteEtaDate(orderNumber: string, documentNumber: string) {
+    const queryParams = `commitmenteta/${orderNumber}/${documentNumber}`;
 
     return this.http.delete<{ message: string; data: any}>(BACKEND_URL + queryParams)
     .pipe(

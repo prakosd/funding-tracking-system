@@ -123,7 +123,7 @@
               </div>
               <div>
                 <mat-form-field style="width: 10rem">
-                  <mat-select placeholder="Header Text x{{ element.headerTexts.length }}">
+                  <mat-select placeholder="Header Text x{{ element.headerTexts.length }}" [(value)]="element.headerTexts[0]">
                     <mat-option *ngFor="let headerText of element.headerTexts" [value]="headerText">{{ headerText }}
                     </mat-option>
                   </mat-select>
@@ -131,13 +131,13 @@
               </div>
               <div>
                 <mat-form-field style="width: 10rem">
-                  <mat-select placeholder="Remark x{{ element.remarks.length }}">
+                  <mat-select placeholder="Remark x{{ element.remarks.length }}" [(value)]="element.remarks[0]">
                     <mat-option *ngFor="let remark of element.remarks" [value]="remark">{{ remark }}</mat-option>
                   </mat-select>
                 </mat-form-field>
               </div>
               <div>
-                <mat-form-field style="width: 12rem;">
+                <mat-form-field style="width: 8.5rem;">
                   <input matInput placeholder="Requestor" value="{{ element.requestor }}" [readonly]="true">
                 </mat-form-field>
               </div>
@@ -149,16 +149,22 @@
                 </mat-form-field>
               </div>
               <div>
-                <mat-form-field style="width: 7rem;">
-                  <input matInput placeholder="PR Number" value="{{ element.prNumber }}"
-                    (blur)="onBlurPrNumber(element.prNumber, element.poNumber, element.grNumber, $event)">
+                <mat-form-field style="width: 6.5rem;">
+                  <input matInput placeholder="PR Number" value="{{ element.prNumber }}" #matPrNumber
+                    (blur)="onBlurPrNumber(element.id, element.orderNumber, element.poNumber, element.grNumber, $event)">
+                    <button mat-button mat-icon-button matSuffix (click)="onBlurPrNumber(element.id, element.orderNumber, element.poNumber, element.grNumber, $event)">
+                      <mat-icon>close</mat-icon>
+                    </button>
                 </mat-form-field>
               </div>
               <div>
-                  <mat-form-field style="width: 7rem;">
-                      <input matInput [matDatepicker]="picker" placeholder="ETA Date" [value]="element.etaDate">
+                  <mat-form-field style="width: 7.5rem;">
+                      <input #matEtaDateInput matInput [matDatepicker]="picker" placeholder="ETA Date" [value]="element.etaDate" (dateChange)="onEtaDateChange(element.id, element.orderNumber, element.prNumber, element.poNumber, matEtaDateInput.value)">
                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                      <mat-datepicker #picker (selectedChanged)="onSelectedChangeEtaDate($event)"></mat-datepicker>
+                      <mat-datepicker #picker></mat-datepicker>
+                      <button mat-button mat-icon-button matSuffix (click)="onClearEtaDate(element.id, element.orderNumber, element.prNumber, element.poNumber)">
+                        <mat-icon>close</mat-icon>
+                      </button>
                   </mat-form-field>
               </div>
             </div>

@@ -56,7 +56,7 @@ export class SapDetailComponent implements OnInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     if (expandedId) {
-      this.expandedElement = this.transactions.filter(row => row.orderNumber === expandedId)[0];
+      this.expandedElement = this.transactions.filter(row => row.id === expandedId)[0];
     }
     this.applyFilter(this.searchField);
     return true;
@@ -115,15 +115,21 @@ export class SapDetailComponent implements OnInit {
     this.sapService.exportToExcel(this.transactions);
   }
 
-  async onBlurPrNumber(prNumber: string, poNumber: string, grNumber: string, event: any) {
+  async onBlurPrNumber(id: string, orderNumber: string, poNumber: string, grNumber: string, event: any) {
+    this.expandedId = id;
+    let newPrNumber = '';
+    if (event.target.value) {
+      newPrNumber = event.target.value.trim();
+    }
+
     if (poNumber) {
-      const newPrNumber: string = event.target.value.trim();
-      let result = await this.sapService.deletePrToPo(this.orderNumber, prNumber, poNumber)
+      let result = await this.sapService.deletePrToPo(orderNumber, poNumber)
       .toPromise().catch(error => { console.log(error); });
 
       if (newPrNumber.length > 0) {
-        result = await this.sapService.updatePrToPo(this.orderNumber, newPrNumber, poNumber)
+        result = await this.sapService.updatePrToPo(orderNumber, newPrNumber, poNumber)
         .toPromise().catch(error => { console.log(error); });
+
         if (!result) {
             this.snackBar.open('Updating', 'failed', { duration: 2000 });
             return false;
@@ -132,12 +138,11 @@ export class SapDetailComponent implements OnInit {
       await this.fetchData(this.expandedId);
       this.snackBar.open('Updating', 'success', { duration: 2000 });
     } else {
-      const newPrNumber: string = event.target.value.trim();
-      let result = await this.sapService.deletePrToGr(this.orderNumber, prNumber, grNumber)
+      let result = await this.sapService.deletePrToGr(orderNumber, grNumber)
       .toPromise().catch(error => { console.log(error); });
 
       if (newPrNumber.length > 0) {
-        result = await this.sapService.updatePrToGr(this.orderNumber, newPrNumber, grNumber)
+        result = await this.sapService.updatePrToGr(orderNumber, newPrNumber, grNumber)
         .toPromise().catch(error => { console.log(error); });
         if (!result) {
             this.snackBar.open('Updating', 'failed', { duration: 2000 });
@@ -172,7 +177,50 @@ export class SapDetailComponent implements OnInit {
     return result;
   }
 
-  onSelectedChangeEtaDate(event: any) {
-    console.log(event);
+  async onEtaDateChange(id: string, orderNumber: string, prNumber: string, poNumber: string, etaDate: any) {
+    this.expandedId = id;
+    if (prNumber) {
+      const result = await this.sapService.updateEtaDate(orderNumber, prNumber, etaDate)
+      .toPromise().catch(error => { console.log(error); });
+
+      if (!result) {
+        this.snackBar.open('Updating PO', 'failed', { duration: 2000 });
+      }
+    }
+
+    if (poNumber) {
+      const result = await this.sapService.updateEtaDate(orderNumber, poNumber, etaDate)
+      .toPromise().catch(error => { console.log(error); });
+
+      if (!result) {
+        this.snackBar.open('Updating PO', 'failed', { duration: 2000 });
+      }
+    }
+    await this.fetchData(this.expandedId);
+    this.snackBar.open('Updating', 'success', { duration: 2000 });
+  }
+
+  async onClearEtaDate(id: string, orderNumber: string, prNumber: string, poNumber: string) {
+    this.expandedId = id;
+    if (prNumber) {
+      const result = await this.sapService.deleteEtaDate(orderNumber, prNumber)
+      .toPromise().catch(error => { console.log(error); });
+
+      if (!result) {
+        this.snackBar.open('Deleting PO', 'failed', { duration: 2000 });
+      }
+    }
+
+    if (poNumber) {
+      const result = await this.sapService.deleteEtaDate(orderNumber, poNumber)
+      .toPromise().catch(error => { console.log(error); });
+
+      if (!result) {
+        this.snackBar.open('Deleting PO', 'failed', { duration: 2000 });
+      }
+    }
+
+    await this.fetchData(this.expandedId);
+    this.snackBar.open('Deleting', 'success', { duration: 2000 });
   }
 }
