@@ -21,7 +21,3 @@ input[type="file"] {
   visibility: hidden;
   width: 0;
 }
-
-.pr-plan {
-  font-size: 0.1rem;
-}
