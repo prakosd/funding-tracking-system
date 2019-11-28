@@ -36,7 +36,7 @@
   </ng-container>
 
   <ng-container matColumnDef="prActual">
-    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="pr-actual">PR Actual</th>
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="pr-actual">PR</th>
     <td mat-cell *matCellDef="let element" class="pr-actual">{{ element.prActual | number:'':'' }}</td>
     <td mat-footer-cell *matFooterCellDef class="pr-actual">{{ getTotalPrActual() | number:'':'' }}</td>
   </ng-container>
@@ -48,7 +48,7 @@
   </ng-container>
 
   <ng-container matColumnDef="poActual">
-    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="po-actual">PO Actual</th>
+    <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="po-actual">PO</th>
     <td mat-cell *matCellDef="let element" class="po-actual">{{ element.poActual | number:'':''  }}</td>
     <td mat-footer-cell *matFooterCellDef class="po-actual">{{ getTotalPoActual() | number:'':'' }}</td>
   </ng-container>
@@ -65,11 +65,24 @@
     <td mat-footer-cell *matFooterCellDef class="actualized">{{ getTotalActualized() | number:'':'' }}</td>
   </ng-container>
 
+  <ng-container matColumnDef="utilized">
+      <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="utilized">Utilization</th>
+      <td mat-cell *matCellDef="let element" class="utilized">{{ element.utilized | number:'':'' }}</td>
+      <td mat-footer-cell *matFooterCellDef class="utilized">{{ getTotalUtilized() | number:'':'' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="percentUtilized">
+      <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="percent-utilized">% Utilization</th>
+      <td mat-cell *matCellDef="let element" class="percent-utilized">{{ element.percentUtilized | number:'':'' }}%</td>
+      <td mat-footer-cell *matFooterCellDef class="percent-utilized">{{ getTotalPercentUtilized() | number:'':'' }}%</td>
+  </ng-container>
+
   <ng-container matColumnDef="remaining">
       <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="remaining">Remaining</th>
       <td mat-cell *matCellDef="let element" class="remaining">{{ element.remaining | number:'':'' }}</td>
       <td mat-footer-cell *matFooterCellDef class="remaining">{{ getTotalRemaining() | number:'':'' }}</td>
   </ng-container>
+
 
       <ng-container matColumnDef="expandedDetail">
         <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">

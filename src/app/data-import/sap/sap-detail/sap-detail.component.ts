@@ -26,6 +26,7 @@ export class SapDetailComponent implements OnInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
+  isLoading = false;
   searchField = '';
   transactions: Transaction[];
   dataSource: MatTableDataSource<Transaction>;
@@ -46,11 +47,17 @@ export class SapDetailComponent implements OnInit {
     this.fetchData(this.expandedId);
   }
 
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
+
   async fetchData(expandedId: string | null) {
+    this.isLoading = true;
     const result = await this.sapService.getTransactions(this.fiscalYear, this.orderNumber)
     .toPromise().catch(error => { console.log(error); });
     if (!result) { return false; }
 
+    // await this.delay(2000);
     this.transactions = result.data;
     this.dataSource = new MatTableDataSource(this.transactions);
     this.dataSource.sort = this.sort;
@@ -59,6 +66,7 @@ export class SapDetailComponent implements OnInit {
       this.expandedElement = this.transactions.filter(row => row.id === expandedId)[0];
     }
     this.applyFilter(this.searchField);
+    this.isLoading = false;
     return true;
   }
 

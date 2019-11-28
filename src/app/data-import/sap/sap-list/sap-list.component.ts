@@ -33,7 +33,7 @@ export class SapListComponent implements OnInit, OnDestroy {
   expandedElement;
   expandedId: string | null;
   displayedColumns = [
-    'no', 'orderNumber', 'budget', 'prActual', 'prPlan', 'poActual', 'poPlan', 'actualized', 'remaining'
+    'no', 'orderNumber', 'budget', 'prActual', 'poActual', 'actualized', 'utilized', 'percentUtilized', 'remaining'
   ];
 
   constructor(
@@ -134,6 +134,20 @@ export class SapListComponent implements OnInit, OnDestroy {
   getTotalBudget() {
     if (this.dataSource) {
       return this.dataSource.filteredData.map(row => row.budget).reduce((acc, value) => acc + value, 0);
+    }
+  }
+
+  getTotalUtilized() {
+    if (this.dataSource) {
+      return this.dataSource.filteredData.map(row => row.utilized).reduce((acc, value) => acc + value, 0);
+    }
+  }
+
+  getTotalPercentUtilized() {
+    if (this.dataSource) {
+      const utilization = this.dataSource.filteredData.map(row => row.utilized).reduce((acc, value) => acc + value, 0);
+      const budget = this.dataSource.filteredData.map(row => row.budget).reduce((acc, value) => acc + value, 0);
+      return Math.floor(utilization / budget * 100);
     }
   }
 

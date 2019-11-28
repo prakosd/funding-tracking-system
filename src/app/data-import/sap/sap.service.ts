@@ -71,17 +71,20 @@ export class SapService {
     }
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, data: result.data.map((row, index) => {
+        const budget = 2000000000;
         return {
           no: index + 1,
           year: row.year,
           orderNumber: row.orderNumber,
-          budget: 10000000,
+          budget,
           prActual: row.totalPrActual,
           prPlan: row.totalPrPlan,
           poActual: row.totalPoActual,
           poPlan: row.totalPoPlan,
           actualized: row.totalGrActual,
-          remaining: 10000000 - ( row.totalPrActual + row.totalPoActual + row.totalGrActual)
+          utilized: ( row.totalPrActual + row.totalPoActual + row.totalGrActual ),
+          remaining: budget - ( row.totalPrActual + row.totalPoActual + row.totalGrActual),
+          percentUtilized: Math.floor(( row.totalPrActual + row.totalPoActual + row.totalGrActual) / budget * 100),
         };
       })};
     }));

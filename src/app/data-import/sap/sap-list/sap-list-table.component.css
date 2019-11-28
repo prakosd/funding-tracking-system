@@ -18,6 +18,9 @@ tr.example-element-row:not(.example-expanded-row):active {
   font-size: 1.2rem;
 }
 
+
+
+
 .example-element-detail {
   overflow: hidden;
   display: flex;
@@ -40,7 +43,7 @@ th.mat-sort-header-sorted {
   color: black;
 }
 
-.budget, .pr-plan, .pr-actual, .po-plan, .po-actual, .actualized, .remaining {
+.budget, .pr-plan, .pr-actual, .po-plan, .po-actual, .actualized, .utilized, .percent-utilized, .remaining {
   text-align: right;
   padding-right: 1rem;
 }
@@ -79,4 +82,3 @@ tr.mat-footer-row {
 .mat-footer-cell {
   font-size: 1.4rem;
 }
-

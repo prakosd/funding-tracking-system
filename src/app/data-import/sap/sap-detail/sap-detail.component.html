@@ -1,4 +1,8 @@
-<div class="flex-container">
+<div style="display: flex; justify-content: center; flex-flow: row;" *ngIf='isLoading'>
+    <mat-spinner style="margin: 1rem;"></mat-spinner>
+</div>
+
+<div class="flex-container" *ngIf='!isLoading'>
   <div class="flex-container" style="justify-content: flex-start; width: 50%;">
     <div>
       <button mat-raised-button (click)="onRefresh()" type="button" color="primary">
@@ -16,7 +20,7 @@
   </div>
 </div>
 
-<table mat-table matSort [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+<table mat-table matSort [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8" [hidden]='isLoading'>
   <ng-container matColumnDef="no">
     <th mat-header-cell mat-sort-header *matHeaderCellDef class="no">No.</th>
     <td mat-cell *matCellDef="let element" class="no">{{ element.no }}</td>
@@ -184,9 +188,9 @@
   <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
 </table>
 <mat-paginator showFirstLastButtons [length]="transactions?.length" [pageSize]="15"
-  [pageSizeOptions]="[5, 10, 15, 20, 25, 30]" class="mat-elevation-z8"></mat-paginator>
+  [pageSizeOptions]="[5, 10, 15, 20, 25, 30]" class="mat-elevation-z8" [hidden]='isLoading'></mat-paginator>
 
-<div class="flex-container">
+<div class="flex-container" *ngIf='!isLoading'>
   <div class="flex-container" style="justify-content: flex-start;">
     <div>
       <button mat-raised-button color="primary" type="button" (click)="exportToExcel()">
@@ -200,5 +204,3 @@
     </div>
   </div>
 </div>
-<ngx-spinner>
-</ngx-spinner>

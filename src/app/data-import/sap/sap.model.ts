@@ -8,6 +8,8 @@ export interface Sap {
     poActual: number;
     poPlan: number;
     actualized: number;
+    utilized: number;
+    percentUtilized: number;
     remaining: number;
     transactions: Transaction[];
 }
