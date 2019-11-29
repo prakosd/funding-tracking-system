@@ -37,7 +37,7 @@
 
   <ng-container matColumnDef="prActual">
     <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="pr-actual">PR</th>
-    <td mat-cell *matCellDef="let element" class="pr-actual">{{ element.prActual | number:'':'' }}</td>
+    <td mat-cell *matCellDef="let element" class="pr-actual-cell">{{ element.prActual | number:'':'' }}</td>
     <td mat-footer-cell *matFooterCellDef class="pr-actual">{{ getTotalPrActual() | number:'':'' }}</td>
   </ng-container>
 
@@ -49,7 +49,7 @@
 
   <ng-container matColumnDef="poActual">
     <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="po-actual">PO</th>
-    <td mat-cell *matCellDef="let element" class="po-actual">{{ element.poActual | number:'':''  }}</td>
+    <td mat-cell *matCellDef="let element" class="po-actual-cell">{{ element.poActual | number:'':''  }}</td>
     <td mat-footer-cell *matFooterCellDef class="po-actual">{{ getTotalPoActual() | number:'':'' }}</td>
   </ng-container>
 
@@ -61,7 +61,7 @@
 
   <ng-container matColumnDef="actualized">
     <th mat-header-cell mat-sort-header arrowPosition='before' *matHeaderCellDef class="actualized">Actualized</th>
-    <td mat-cell *matCellDef="let element" class="actualized">{{ element.actualized | number:'':''  }}</td>
+    <td mat-cell *matCellDef="let element" class="actualized-cell">{{ element.actualized | number:'':''  }}</td>
     <td mat-footer-cell *matFooterCellDef class="actualized">{{ getTotalActualized() | number:'':'' }}</td>
   </ng-container>
 
