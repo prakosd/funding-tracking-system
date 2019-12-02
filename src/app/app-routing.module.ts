@@ -13,16 +13,23 @@ import { SapEasListComponent } from './data-import/sap-eas/sap-eas-list/sap-eas-
 import { SapEasFormComponent } from './data-import/sap-eas/sap-eas-form/sap-eas-form.component';
 import { SapComponent } from './data-import/sap/sap.component';
 import { SapListComponent } from './data-import/sap/sap-list/sap-list.component';
+import { SapDetailComponent } from './data-import/sap/sap-detail/sap-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'data-import', component: DataImportComponent , children: [
-    { path: '', redirectTo: 'sap', pathMatch: 'full' },
-    { path: 'sap', component: SapComponent, children: [
+    { path: '', redirectTo: 'sap-master', pathMatch: 'full' },
+    { path: 'sap-master', component: SapComponent, children: [
       { path: '', redirectTo: 'sap-list', pathMatch: 'full' },
       { path: 'sap-list', component: SapListComponent },
       { path: 'sap-list/:orderNumber', component: SapListComponent }
+    ] },
+    { path: '', redirectTo: 'sap-detail', pathMatch: 'full' },
+    { path: 'sap-detail', component: SapComponent, children: [
+      { path: '', redirectTo: 'sap-detail', pathMatch: 'full' },
+      { path: 'sap-list', component: SapDetailComponent },
+      { path: 'sap-list/:orderNumber', component: SapDetailComponent }
     ] },
     { path: 'sap-commitment', component: SapCommitmentComponent, children: [
       { path: '', redirectTo: 'sap-commitment-list', pathMatch: 'full' },

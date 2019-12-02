@@ -33,7 +33,7 @@ export class SapDetailComponent implements OnInit {
   expandedElement;
   expandedId: string | null;
   displayedColumns = [
-    'no', 'prNumber', 'poNumber', 'grNumber', 'subject',
+    'no', 'orderNumber', 'prNumber', 'poNumber', 'grNumber', 'subject',
     'prValue', 'poValue', 'grValue',
     'issueDate', 'etaDate', 'actualDate', 'dueDay'
   ];
@@ -44,6 +44,10 @@ export class SapDetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    if (this.orderNumber !== '') {
+      this.displayedColumns = this.displayedColumns.filter(column => column !== 'orderNumber');
+    }
+
     this.fetchData(this.expandedId);
   }
 

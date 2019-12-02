@@ -46,20 +46,18 @@ th.mat-sort-header-sorted {
 
 .pr-value-cell {
   text-align: right;
-  padding-right: 1rem;
   color: red;
 }
 
 .po-value-cell {
   text-align: right;
-  padding-right: 1rem;
   color: blue;
 }
 
 .gr-value-cell {
   text-align: right;
-  padding-right: 1rem;
   color: green;
+  padding-right: 1rem;
 }
 
 
