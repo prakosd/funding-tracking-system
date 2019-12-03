@@ -25,12 +25,7 @@ const routes: Routes = [
       { path: 'sap-list', component: SapListComponent },
       { path: 'sap-list/:orderNumber', component: SapListComponent }
     ] },
-    { path: '', redirectTo: 'sap-detail', pathMatch: 'full' },
-    { path: 'sap-detail', component: SapComponent, children: [
-      { path: '', redirectTo: 'sap-detail', pathMatch: 'full' },
-      { path: 'sap-list', component: SapDetailComponent },
-      { path: 'sap-list/:orderNumber', component: SapDetailComponent }
-    ] },
+    { path: 'sap-detail', component: SapDetailComponent },
     { path: 'sap-commitment', component: SapCommitmentComponent, children: [
       { path: '', redirectTo: 'sap-commitment-list', pathMatch: 'full' },
       { path: 'sap-commitment-list', component: SapCommitmentListComponent },

@@ -247,7 +247,7 @@ export class SapCommitmentListComponent implements OnInit, OnDestroy {
   }
 
   exportToExcel() {
-    this.sapCommitmentService.exportToExcel(this.sapCommitments);
+    this.sapCommitmentService.exportToExcel(this.dataSource.filteredData);
   }
 
   async onFilePicked(event: Event) {

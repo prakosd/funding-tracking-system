@@ -1,8 +1,10 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, OnDestroy } from '@angular/core';
 import { trigger, state, transition, style, animate } from '@angular/animations';
 import { MatSort, MatPaginator, MatTableDataSource, MatSnackBar } from '@angular/material';
 import { Transaction } from '../sap.model';
 import { SapService } from '../sap.service';
+import { DataImportService } from '../../data-import.service';
+import { Subscription } from 'rxjs';
 // import { DataImportService } from '../../data-import.service';
 // import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -19,16 +21,17 @@ import { SapService } from '../sap.service';
   ]
 })
 
-export class SapDetailComponent implements OnInit {
-  @Input() fiscalYear: number;
+export class SapDetailComponent implements OnInit, OnDestroy {
   @Input() orderNumber: string;
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
+  fiscalYear: number;
   isLoading = false;
   searchField = '';
   transactions: Transaction[];
+  fiscalYearSubs: Subscription;
   dataSource: MatTableDataSource<Transaction>;
   expandedElement;
   expandedId: string | null;
@@ -40,15 +43,23 @@ export class SapDetailComponent implements OnInit {
 
   constructor(
     private sapService: SapService,
+    private dataImportService: DataImportService,
     private snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {
-    if (this.orderNumber !== '') {
+    if (this.orderNumber) {
       this.displayedColumns = this.displayedColumns.filter(column => column !== 'orderNumber');
     }
 
-    this.fetchData(this.expandedId);
+    this.fiscalYearSubs = this.dataImportService.getFiscalYear().subscribe(year => {
+      this.fiscalYear = year;
+      this.fetchData(this.expandedId).then(isFetched => {
+        if (isFetched) {
+          this.applyFilter(this.searchField);
+        }
+      });
+    });
   }
 
   delay(ms: number) {
@@ -124,20 +135,33 @@ export class SapDetailComponent implements OnInit {
   }
 
   exportToExcel() {
-    this.sapService.exportToExcel(this.transactions);
+    const formatedDate = this.dataSource.filteredData.map(row => {
+      return {
+        'Order Number': row.orderNumber,
+        'PR No.': row.prNumber,
+        'PO No': row.poNumber,
+        'GR No.': row.grNumber,
+        Subject: row.subject,
+        PR: row.prValue,
+        PO: row.poValue,
+        GR: row.grValue,
+        Requestor: row.requestor,
+        'Issue Date': new Date(row.issueDate),
+        'ETA Date': new Date(row.etaDate),
+        'GR Date': new Date(row.actualDate),
+        'Due Day': row.dueDay,
+        Status: row.status
+      };
+    });
+    this.sapService.exportToExcel(formatedDate);
   }
 
-  async onBlurPrNumber(id: string, orderNumber: string, poNumber: string, grNumber: string, event: any) {
+  async onBlurPrNumber(id: string, orderNumber: string, poNumber: string, grNumber: string, newPrNumber: string) {
     this.expandedId = id;
-    let newPrNumber = '';
-    if (event.target.value) {
-      newPrNumber = event.target.value.trim();
-    }
 
     if (poNumber) {
       let result = await this.sapService.deletePrToPo(orderNumber, poNumber)
       .toPromise().catch(error => { console.log(error); });
-
       if (newPrNumber.length > 0) {
         result = await this.sapService.updatePrToPo(orderNumber, newPrNumber, poNumber)
         .toPromise().catch(error => { console.log(error); });
@@ -234,5 +258,9 @@ export class SapDetailComponent implements OnInit {
 
     await this.fetchData(this.expandedId);
     this.snackBar.open('Deleting', 'success', { duration: 2000 });
+  }
+
+  ngOnDestroy() {
+    this.fiscalYearSubs.unsubscribe();
   }
 }

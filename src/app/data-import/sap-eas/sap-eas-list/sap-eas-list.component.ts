@@ -241,7 +241,7 @@ export class SapEasListComponent implements OnInit, OnDestroy {
   }
 
   exportToExcel() {
-    this.sapEasService.exportToExcel(this.sapEases);
+    this.sapEasService.exportToExcel(this.dataSource.filteredData);
   }
 
   async onFilePicked(event: Event) {

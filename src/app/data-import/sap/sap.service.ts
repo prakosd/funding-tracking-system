@@ -91,14 +91,19 @@ export class SapService {
   }
 
   getTransactions(year: number, orderNumber: string) {
-    const queryParams = `${year}/details/${orderNumber}`;
+    let queryParams;
+    if (!orderNumber) {
+      queryParams = `${year}/details`;
+    } else {
+      queryParams = `${year}/details/${orderNumber}`;
+    }
     return this.http.get<{ message: string; data: any }>(BACKEND_URL + queryParams).pipe(map(result => {
       return { message: result.message, data: result.data.map((row, index) => {
         return {
           id: orderNumber + row.prNumber + row.poNumber + row.grNumber,
           no: index + 1,
           year,
-          orderNumber,
+          orderNumber: row.orderNumber,
           prNumber: row.prNumber,
           poNumber: row.poNumber,
           grNumber: row.grNumber,

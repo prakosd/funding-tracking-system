@@ -242,7 +242,7 @@ export class SapActualListComponent implements OnInit, OnDestroy {
   }
 
   exportToExcel() {
-    this.sapActualService.exportToExcel(this.sapActuals);
+    this.sapActualService.exportToExcel(this.dataSource.filteredData);
   }
 
   async onFilePicked(event: Event) {

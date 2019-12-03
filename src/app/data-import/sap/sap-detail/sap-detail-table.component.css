@@ -44,17 +44,38 @@ th.mat-sort-header-sorted {
   text-align: right;
 }
 
-.pr-value-cell {
-  text-align: right;
-  color: red;
+.pr-no-cell {
+  color: darkred;
 }
 
-.po-value-cell {
-  text-align: right;
-  color: blue;
+.po-no-cell {
+  color: darkblue;
 }
 
-.gr-value-cell {
+.gr-no-cell {
+  color: green;
+}
+
+.subject-cell, .issue-date-cell, .eta-date-cell, .actual-date-cell {
+  font-size: 0.8rem;
+}
+
+
+.order-number-cell {
+  font-size: 0.9rem;
+}
+
+.pr-value-cell, .pr-value-footer {
+  text-align: right;
+  color: darkred;
+}
+
+.po-value-cell, .po-value-footer {
+  text-align: right;
+  color: darkblue;
+}
+
+.gr-value-cell, .gr-value-footer {
   text-align: right;
   color: green;
   padding-right: 1rem;
