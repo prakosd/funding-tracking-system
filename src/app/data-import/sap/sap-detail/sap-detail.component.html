@@ -35,19 +35,24 @@
 
   <ng-container matColumnDef="prNumber">
     <th mat-header-cell mat-sort-header *matHeaderCellDef class="pr-no">PR No.</th>
-    <td mat-cell *matCellDef="let element" class="pr-no-cell">{{ element.prNumber }}</td>
+    <td mat-cell *matCellDef="let element" class="pr-no-cell">
+    <a [routerLink]="['/data-import/sap-commitment/sap-commitment-list']" [queryParams]="{filter: element.prNumber}" target="_blank">{{ element.prNumber }}</a></td>
     <td mat-footer-cell *matFooterCellDef></td>
   </ng-container>
 
   <ng-container matColumnDef="poNumber">
     <th mat-header-cell mat-sort-header *matHeaderCellDef class="po-no">PO No.</th>
-    <td mat-cell *matCellDef="let element" class="po-no-cell">{{ element.poNumber }}</td>
+    <td mat-cell *matCellDef="let element" class="po-no-cell">
+        <a [routerLink]="['/data-import/sap-commitment/sap-commitment-list']" [queryParams]="{filter: element.poNumber}" target="_blank">{{ element.poNumber }}</a>
+    </td>
     <td mat-footer-cell *matFooterCellDef></td>
   </ng-container>
 
   <ng-container matColumnDef="grNumber">
     <th mat-header-cell mat-sort-header *matHeaderCellDef class="gr-no">GR No.</th>
-    <td mat-cell *matCellDef="let element" class="gr-no-cell">{{ element.grNumber }}</td>
+    <td mat-cell *matCellDef="let element" class="gr-no-cell">
+        <a [routerLink]="['/data-import/sap-actual/sap-actual-list']" [queryParams]="{filter: element.grNumber}" target="_blank">{{ element.grNumber }}</a>
+    </td>
     <td mat-footer-cell *matFooterCellDef></td>
   </ng-container>
 
@@ -134,9 +139,9 @@
                 </mat-form-field>
               </div>
               <div>
-                <mat-form-field style="width: 16rem">
+                <mat-form-field style="width: 20rem;">
                   <mat-select placeholder="Item x{{ element.items.length }}" [(value)]="element.items[0]">
-                    <mat-option *ngFor="let item of element.items" [value]="item">{{ item }}</mat-option>
+                    <mat-option *ngFor="let item of element.items" [value]="item">IDR {{ item.value | number:'':'' }} - {{ item.name }}</mat-option>
                   </mat-select>
                 </mat-form-field>
               </div>

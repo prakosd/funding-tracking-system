@@ -23,7 +23,7 @@ export interface Transaction {
     poNumber: string;
     grNumber: string;
     subject: string;
-    items: string[];
+    items: { name: string, value: number; }[];
     remarks: string[];
     headerTexts: string[];
     prValue: number;

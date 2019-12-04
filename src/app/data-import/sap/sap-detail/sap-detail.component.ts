@@ -135,25 +135,26 @@ export class SapDetailComponent implements OnInit, OnDestroy {
   }
 
   exportToExcel() {
-    const formatedDate = this.dataSource.filteredData.map(row => {
+    const formatedData = this.dataSource.filteredData.map(row => {
       return {
         'Order Number': row.orderNumber,
         'PR No.': row.prNumber,
         'PO No': row.poNumber,
         'GR No.': row.grNumber,
         Subject: row.subject,
-        PR: row.prValue,
-        PO: row.poValue,
-        GR: row.grValue,
+        PR: +row.prValue,
+        PO: +row.poValue,
+        GR: +row.grValue,
         Requestor: row.requestor,
-        'Issue Date': new Date(row.issueDate),
-        'ETA Date': new Date(row.etaDate),
-        'GR Date': new Date(row.actualDate),
-        'Due Day': row.dueDay,
+        'Issue Date': row.issueDate ? new Date(row.issueDate) : null,
+        'ETA Date': row.etaDate ? new Date(row.etaDate) : null,
+        'GR Date': row.actualDate ? new Date(row.actualDate) : null,
+        'Due Day': +row.dueDay,
         Status: row.status
       };
     });
-    this.sapService.exportToExcel(formatedDate);
+    console.log(formatedData);
+    this.sapService.exportToExcel(formatedData);
   }
 
   async onBlurPrNumber(id: string, orderNumber: string, poNumber: string, grNumber: string, newPrNumber: string) {
