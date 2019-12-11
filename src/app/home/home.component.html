@@ -1,1 +1,25 @@
-<h1>This is Homepage</h1>
+<div class="flex-container">
+  <h3>FUNDING SUMMARY</h3>
+  <div>
+      <mat-form-field style="text-align: right;">
+          <mat-label>Fiscal Year</mat-label>
+            <mat-select [(value)]="selectedYear" (selectionChange)="onFiscalYearChange($event.value)">
+              <mat-option *ngFor="let year of years" [value]="year.value">
+                {{ year.viewValue }}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+  </div>
+</div>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+     *ngFor="let link of navLinks"
+     [routerLink]="link.path"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    {{ link.label }}
+  </a>
+</nav>
+<main>
+    <router-outlet></router-outlet>
+</main>

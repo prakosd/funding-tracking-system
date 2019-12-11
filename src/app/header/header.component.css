@@ -9,6 +9,10 @@ a {
   color: white;
 }
 
+a.title {
+  font-size: 2rem;
+}
+
 ul {
   display: flex;
   flex: 1;

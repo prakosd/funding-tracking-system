@@ -16,10 +16,18 @@ import { SapListComponent } from './data-import/sap/sap-list/sap-list.component'
 import { SapDetailComponent } from './data-import/sap/sap-detail/sap-detail.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'data-import', component: DataImportComponent , children: [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, children: [
     { path: '', redirectTo: 'sap-master', pathMatch: 'full' },
+    { path: 'sap-master', component: SapComponent, children: [
+      { path: '', redirectTo: 'sap-list', pathMatch: 'full' },
+      { path: 'sap-list', component: SapListComponent },
+      { path: 'sap-list/:orderNumber', component: SapListComponent }
+    ] },
+    { path: 'sap-detail', component: SapDetailComponent }
+  ] },
+  { path: 'data-import', component: DataImportComponent , children: [
+    { path: '', redirectTo: 'sap-commitment', pathMatch: 'full' },
     { path: 'sap-master', component: SapComponent, children: [
       { path: '', redirectTo: 'sap-list', pathMatch: 'full' },
       { path: 'sap-list', component: SapListComponent },

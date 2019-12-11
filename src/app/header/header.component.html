@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <span>
-    <a routerLink="/">Funding Tracking</a>
+    <a class="title" routerLink="/">DigiFund 1.0</a>
   </span>
   <span class="spacer"></span>
   <ul>
@@ -11,18 +11,20 @@
       </a>
     </li>
     <li *ngIf="isUserAuthenticated">
-      <button mat-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu" routerLink="/data-import"  routerLinkActive="mat-accent">
-      <!-- [disabled]="false" (mouseenter)="menuTrigger.openMenu()"> -->
+      <button mat-button routerLink="/data-import"  routerLinkActive="mat-accent">
+          <mat-icon>cloud</mat-icon>&nbsp;
+          Data Import</button>
+      <!-- <button mat-button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu" routerLink="/data-import"  routerLinkActive="mat-accent">
         <mat-icon>cloud</mat-icon>&nbsp;
         Data Import</button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item routerLink="/data-import/sap-commitment" routerLinkActive="mat-accent">SAP Commitment</button>
           <button mat-menu-item routerLink="/data-import/sap-actual" routerLinkActive="mat-accent">SAP Actual</button>
-          <button mat-menu-item routerLink="/data-import/eas" routerLinkActive="mat-accent">EAS</button>
-        </mat-menu>
+          <button mat-menu-item routerLink="/data-import/sap-eas" routerLinkActive="mat-accent">SAP Fiori</button>
+        </mat-menu> -->
     </li>
-    <li *ngIf="isUserAuthenticated">
+    <!-- <li *ngIf="isUserAuthenticated">
       <button mat-button (click)="onLogout()">Logout</button>
-    </li>
+    </li> -->
   </ul>
 </mat-toolbar>

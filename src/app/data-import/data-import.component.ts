@@ -19,9 +19,9 @@ export class DataImportComponent implements OnInit {
     this.navLinks = [
       { path: './sap-commitment', label: 'SAP Commitment' },
       { path: './sap-actual', label: 'SAP Actual' },
-      { path: './sap-eas', label: 'EAS' },
-      { path: './sap-master', label: 'Master Detail' },
-      { path: './sap-detail', label: 'Detail Only' }
+      { path: './sap-eas', label: 'SAP Fiori' }
+      // { path: './sap-master', label: 'Master Detail' },
+      // { path: './sap-detail', label: 'Detail Only' }
     ];
     this.dataImportService.setFiscalYear((new Date()).getFullYear());
   }
