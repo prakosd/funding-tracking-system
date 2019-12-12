@@ -9,7 +9,7 @@
         <mat-icon>refresh</mat-icon>
       </button>
     </div>
-    <div style="width: 50%;">
+    <div style="width: 25%;">
       <mat-form-field style="width: 100%; margin-top: 0.3rem;">
         <input [(ngModel)]="searchField" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
         <button mat-button mat-icon-button matSuffix (click)="clearSearchField()" *ngIf="searchField">
