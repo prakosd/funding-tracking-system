@@ -1,10 +1,10 @@
 MIME-Version: 1.0
 X-Document-Type: Workbook
-Content-Type: multipart/related; boundary="----=_NextPart_01D5B101.9C59EB80"
+Content-Type: multipart/related; boundary="----=_NextPart_01D5B68A.D245A7A0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01D5B101.9C59EB80
+------=_NextPart_01D5B68A.D245A7A0
 Content-Location: file:///C:/B4F2C5ED/COMP-2019-COMM.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="us-ascii"
@@ -356,8 +356,8 @@ function fnSetActiveSheet(iSh)
    </x:ExcelWorksheet>
   </x:ExcelWorksheets>
   <x:Stylesheet HRef=3D"COMP-2019-COMM_files/stylesheet.css"/>
-  <x:WindowHeight>13590</x:WindowHeight>
-  <x:WindowWidth>28800</x:WindowWidth>
+  <x:WindowHeight>6870</x:WindowHeight>
+  <x:WindowWidth>16230</x:WindowWidth>
   <x:WindowTopX>0</x:WindowTopX>
   <x:WindowTopY>0</x:WindowTopY>
   <x:ProtectStructure>False</x:ProtectStructure>
@@ -379,7 +379,7 @@ th=3D0 marginheight=3D0>
 </frameset>
 </html>
 
-------=_NextPart_01D5B101.9C59EB80
+------=_NextPart_01D5B68A.D245A7A0
 Content-Location: file:///C:/B4F2C5ED/COMP-2019-COMM_files/stylesheet.css
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/css; charset="us-ascii"
@@ -470,7 +470,7 @@ td
 	mso-number-format:"0\.000";
 	text-align:right;}
 
-------=_NextPart_01D5B101.9C59EB80
+------=_NextPart_01D5B68A.D245A7A0
 Content-Location: file:///C:/B4F2C5ED/COMP-2019-COMM_files/tabstrip.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="us-ascii"
@@ -519,7 +519,7 @@ htm" target=3D"frSheet"><font face=3D"Arial" color=3D"#000000">Sheet3</font=
 </body>
 </html>
 
-------=_NextPart_01D5B101.9C59EB80
+------=_NextPart_01D5B68A.D245A7A0
 Content-Location: file:///C:/B4F2C5ED/COMP-2019-COMM_files/sheet001.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="us-ascii"
@@ -3668,6 +3668,132 @@ br>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135425</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Needle-seat dosing valve VS 01 L=3D200 mm,</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>38838056</td>
+  <td class=3Dxl70>10/21/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135425</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Needle seat dosing valve main body</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>17739434</td>
+  <td class=3Dxl70>10/21/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135425</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>Special-extension for KAA1300 / VS 01 1</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>14311536</td>
+  <td class=3Dxl70>10/21/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135425</td>
+  <td>40</td>
+  <td>490000</td>
+  <td>Pressure regulator for materiall ARO</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>17088744</td>
+  <td class=3Dxl70>10/21/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135425</td>
+  <td>50</td>
+  <td>490000</td>
+  <td>Linear table belt drive 850mm</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>43075020</td>
+  <td class=3Dxl70>10/21/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135425</td>
+  <td>60</td>
+  <td>490000</td>
+  <td>Z-Axle</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>25221334</td>
+  <td class=3Dxl70>10/21/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135425</td>
+  <td>70</td>
+  <td>490000</td>
+  <td>Shipment CPT Airport Jakarta</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>21983805</td>
+  <td class=3Dxl70>10/21/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
   <td>3</td>
   <td>CGMM2019M264</td>
   <td>POrd</td>
@@ -3683,6 +3809,438 @@ br>
   <td class=3Dxl70>7/24/2018</td>
   <td class=3Dxl70>3/14/2019</td>
   <td>AALFAJR</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135539</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Motor Blower Fan</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>16459016</td>
+  <td class=3Dxl70>11/12/2019</td>
+  <td class=3Dxl70>12/19/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Output air hose (incl. Balancer) 43013</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>35506927</td>
+  <td class=3Dxl69>35506927</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Output air hose (incl. Balancer) 43014</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>42904171</td>
+  <td class=3Dxl69>42904171</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>Output air hose (incl. Balancer) 43015</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>61397281</td>
+  <td class=3Dxl69>61397281</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>40</td>
+  <td>490000</td>
+  <td>Plate heat exchanger (x2 CB 60-100L)</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>71013542</td>
+  <td class=3Dxl69>71013542</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>50</td>
+  <td>490000</td>
+  <td>Pressure measuring</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>8728904</td>
+  <td class=3Dxl69>8728904</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>60</td>
+  <td>490000</td>
+  <td>Circulation pump for havoline</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>23523236</td>
+  <td class=3Dxl69>23523236</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>70</td>
+  <td>490000</td>
+  <td>Servo controller</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>42164291</td>
+  <td class=3Dxl69>42164291</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>80</td>
+  <td>490000</td>
+  <td>Door sensor</td>
+  <td class=3Dxl71>2.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>29441031</td>
+  <td class=3Dxl69>29441031</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>90</td>
+  <td>490000</td>
+  <td>Servo motor</td>
+  <td class=3Dxl71>3.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>10652031</td>
+  <td class=3Dxl69>10652031</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>100</td>
+  <td>490000</td>
+  <td>Valve maifold</td>
+  <td class=3Dxl71>2.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>6213685</td>
+  <td class=3Dxl69>6213685</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>110</td>
+  <td>490000</td>
+  <td>Circulation pump for fuel</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>52520432</td>
+  <td class=3Dxl69>52520432</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>120</td>
+  <td>490000</td>
+  <td>Fuel regulation valve</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>6805464</td>
+  <td class=3Dxl69>6805464</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>130</td>
+  <td>490000</td>
+  <td>Regulation for supply air</td>
+  <td class=3Dxl71>3.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>18641055</td>
+  <td class=3Dxl69>18641055</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>140</td>
+  <td>490000</td>
+  <td>Level switch</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>6805464</td>
+  <td class=3Dxl69>6805464</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>150</td>
+  <td>490000</td>
+  <td>Flow Control</td>
+  <td class=3Dxl71>10.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>88027204</td>
+  <td class=3Dxl69>88027204</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>160</td>
+  <td>490000</td>
+  <td>Mounting assistance</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>82849133</td>
+  <td class=3Dxl69>82849133</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>170</td>
+  <td>490000</td>
+  <td>X-20 cable for M264</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>37725944</td>
+  <td class=3Dxl69>37725944</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>180</td>
+  <td>490000</td>
+  <td>Exhaust temperature sensor</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>1923283</td>
+  <td class=3Dxl69>1923283</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>190</td>
+  <td>490000</td>
+  <td>Temperature sensor oil</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>13758874</td>
+  <td class=3Dxl69>13758874</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>200</td>
+  <td>490000</td>
+  <td>X-26 cable (small box)</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>13610929</td>
+  <td class=3Dxl69>13610929</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135507</td>
+  <td>210</td>
+  <td>490000</td>
+  <td>Packing, transportation by air freight</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>78410786</td>
+  <td class=3Dxl69>78410786</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>RDIRDJO</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135570</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>ESD walking test tool</td>
+  <td class=3Dxl69>1</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>57814134</td>
+  <td class=3Dxl70>11/21/2019</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135448</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Engine Wash Machines Sensor</td>
+  <td class=3Dxl69>1</td>
+  <td>PAC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>51486304</td>
+  <td class=3Dxl70>10/28/2019</td>
+  <td class=3Dxl70>11/21/2019</td>
+  <td>EASID</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8359,7 +8917,7 @@ p;
   <td class=3Dxl69>10510000</td>
   <td class=3Dxl70>9/27/2019</td>
   <td class=3Dxl70>10/30/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8432,7 +8990,7 @@ p;
   <td class=3Dxl69>54900000</td>
   <td class=3Dxl70>10/22/2019</td>
   <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8558,7 +9116,25 @@ p;
   <td class=3Dxl69>44940000</td>
   <td class=3Dxl70>11/26/2019</td>
   <td class=3Dxl70>11/30/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135466</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Chain Hoist 500 kg, GM 4 500.8</td>
+  <td class=3Dxl69>1</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>56900000</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8576,7 +9152,7 @@ p;
   <td class=3Dxl69>97526</td>
   <td class=3Dxl70>11/6/2019</td>
   <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8594,7 +9170,7 @@ p;
   <td class=3Dxl69>46894850</td>
   <td class=3Dxl70>11/6/2019</td>
   <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8612,7 +9188,7 @@ p;
   <td class=3Dxl69>257515542</td>
   <td class=3Dxl70>11/6/2019</td>
   <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8632,7 +9208,7 @@ br>
   <td class=3Dxl69>1936304</td>
   <td class=3Dxl70>11/6/2019</td>
   <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8650,7 +9226,43 @@ br>
   <td class=3Dxl69>488048</td>
   <td class=3Dxl70>11/6/2019</td>
   <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135502</td>
+  <td>60</td>
+  <td>490000</td>
+  <td>Installation (Labor Cost)</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>6887500</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135562</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Safety Notification and Facility at Engi</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>46080000</td>
+  <td class=3Dxl70>11/19/2019</td>
+  <td class=3Dxl70>11/28/2019</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8758,7 +9370,97 @@ br>
   <td class=3Dxl69>55955000</td>
   <td class=3Dxl70>11/21/2019</td>
   <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135447</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Pump ETL 032-032-200 GG S/N : 9972760641</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>34218000</td>
+  <td class=3Dxl70>10/28/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
   <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135447</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Pump ETL 032-032-160 GG S/N : 9972790216</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>29979000</td>
+  <td class=3Dxl70>10/28/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135447</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>Pump Calio 030-060 PN10 S/N : 29134279</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>20889000</td>
+  <td class=3Dxl70>10/28/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135447</td>
+  <td>40</td>
+  <td>490000</td>
+  <td>Pump Calio 030-100 PN10 S/N : 29134918</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>22878000</td>
+  <td class=3Dxl70>10/28/2019</td>
+  <td class=3Dxl70>11/20/2019</td>
+  <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>310719C809</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>2017018401000 Replacement bushing set in</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>34022801</td>
+  <td class=3Dxl70>9/5/2019</td>
+  <td class=3Dxl70>12/11/2019</td>
+  <td>EENCUP</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -8838,6 +9540,24 @@ br>
   <td>CGMM2019M264</td>
   <td>POrd</td>
   <td>310719C809</td>
+  <td>60</td>
+  <td>490000</td>
+  <td>2017145000000 Cylinder measurement tools</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>39816158</td>
+  <td class=3Dxl70>9/5/2019</td>
+  <td class=3Dxl70>12/11/2019</td>
+  <td>EENCUP</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>310719C809</td>
   <td>70</td>
   <td>490000</td>
   <td>F8951071010 Engraving Machine with adapt</td>
@@ -8882,6 +9602,24 @@ br>
   <td>IDR</td>
   <td class=3Dxl69>0</td>
   <td class=3Dxl69>23173425</td>
+  <td class=3Dxl70>9/5/2019</td>
+  <td class=3Dxl70>12/11/2019</td>
+  <td>EENCUP</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>310719C809</td>
+  <td>100</td>
+  <td>490000</td>
+  <td>SE70007544 FlexGen-Sensor</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>21066750</td>
+  <td class=3Dxl69>21066750</td>
   <td class=3Dxl70>9/5/2019</td>
   <td class=3Dxl70>12/11/2019</td>
   <td>EENCUP</td>
@@ -8981,6 +9719,96 @@ br>
   <td>12</td>
   <td>CGMM2019M264</td>
   <td>POrd</td>
+  <td>4500135607</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Recondition Engine Assy Hall Air Conditi</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>25771515</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td class=3Dxl70>12/2/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135608</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Mechanic Tool Set</td>
+  <td class=3Dxl69>2</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>29905500</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135608</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Mechanic Special Tool Set</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>11092500</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135608</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>Electrical Tool Set</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>12609000</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
+  <td>4500135608</td>
+  <td>40</td>
+  <td>490000</td>
+  <td>Electronicl Tools</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>8800500</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td class=3Dxl70>11/29/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019M264</td>
+  <td>POrd</td>
   <td>4500135609</td>
   <td>10</td>
   <td>490000</td>
@@ -9066,7 +9894,7 @@ br>
   <td class=3Dxl69>107960000</td>
   <td class=3Dxl70>12/5/2019</td>
   <td class=3Dxl70>12/26/2019</td>
-  <td>EASID</td>
+  <td>ETRIEN</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -11919,7 +12747,7 @@ d>
   <td class=3Dxl69>22281469</td>
   <td class=3Dxl70>8/1/2019</td>
   <td class=3Dxl70>8/23/2019</td>
-  <td>LHIMAWA</td>
+  <td>FIDYASM</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -11937,7 +12765,7 @@ d>
   <td class=3Dxl69>16204093</td>
   <td class=3Dxl70>8/1/2019</td>
   <td class=3Dxl70>8/23/2019</td>
-  <td>LHIMAWA</td>
+  <td>FIDYASM</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -11955,7 +12783,7 @@ d>
   <td class=3Dxl69>93603916</td>
   <td class=3Dxl70>8/1/2019</td>
   <td class=3Dxl70>8/23/2019</td>
-  <td>LHIMAWA</td>
+  <td>FIDYASM</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -12262,6 +13090,24 @@ d>
   <td class=3Dxl70>10/15/2018</td>
   <td class=3Dxl70>2/28/2019</td>
   <td>FIDYASM</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>1</td>
+  <td>CGMM2019V167</td>
+  <td>POrd</td>
+  <td>330818802</td>
+  <td>130</td>
+  <td>490000</td>
+  <td>KR-3051084 Einstellehre Scheinwerfer Li</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>37730732</td>
+  <td class=3Dxl69>37730732</td>
+  <td class=3Dxl70>8/23/2018</td>
+  <td class=3Dxl70>1/31/2019</td>
+  <td>EENCUP</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -14014,6 +14860,114 @@ d>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019V177</td>
+  <td>POrd</td>
+  <td>330419802</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Cockpit Sub Assembly BP-F5949177 Bplan A</td>
+  <td class=3Dxl69>1</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>592207200</td>
+  <td class=3Dxl69>592207200</td>
+  <td class=3Dxl70>4/22/2019</td>
+  <td class=3Dxl70>12/12/2019</td>
+  <td>FGINAST</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019V177</td>
+  <td>POrd</td>
+  <td>330419802</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>MFA2 Adapter for VIN Engraving BR-100071</td>
+  <td class=3Dxl69>1</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>200166113</td>
+  <td class=3Dxl69>200166113</td>
+  <td class=3Dxl70>4/22/2019</td>
+  <td class=3Dxl70>12/12/2019</td>
+  <td>FGINAST</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019V177</td>
+  <td>POrd</td>
+  <td>330419802</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>317R CKD VIN Engraving BR-99990900-317</td>
+  <td class=3Dxl69>1</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>829090080</td>
+  <td class=3Dxl69>829090080</td>
+  <td class=3Dxl70>4/22/2019</td>
+  <td class=3Dxl70>12/12/2019</td>
+  <td>FGINAST</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMM2019V177</td>
+  <td>POrd</td>
+  <td>330419803</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>ASD Positioning Jigs on the vehicle KK-V</td>
+  <td class=3Dxl69>1</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>260571168</td>
+  <td class=3Dxl69>260571168</td>
+  <td class=3Dxl70>4/22/2019</td>
+  <td class=3Dxl70>10/4/2019</td>
+  <td>FGINAST</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMM2019V177</td>
+  <td>POrd</td>
+  <td>330419803</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>ASD handling Tool (Vacuum Pumps Manually</td>
+  <td class=3Dxl69>1</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>130285584</td>
+  <td class=3Dxl69>130285584</td>
+  <td class=3Dxl70>4/22/2019</td>
+  <td class=3Dxl70>10/4/2019</td>
+  <td>FGINAST</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMM2019V177</td>
+  <td>POrd</td>
+  <td>330419803</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>ASD Preparation/Turning Table KK-V177010</td>
+  <td class=3Dxl69>1</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>142129728</td>
+  <td class=3Dxl69>142129728</td>
+  <td class=3Dxl70>4/22/2019</td>
+  <td class=3Dxl70>10/4/2019</td>
+  <td>FGINAST</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
   <td>6</td>
   <td>CGMM2019V177</td>
   <td>POrd</td>
@@ -15618,6 +16572,456 @@ rdless
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Electronic Flow Meter for Splash Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>49825695</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Electronic Flow Meter for Top Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>49825695</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>Electronic Flow Meter for Left Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>49825695</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>40</td>
+  <td>490000</td>
+  <td>Electronic Flow Meter for Right Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>49825695</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>50</td>
+  <td>490000</td>
+  <td>Electronic Flow Meter for Bottom Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>49825695</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>60</td>
+  <td>490000</td>
+  <td>Flow calibration kit</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>52845420</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>70</td>
+  <td>490000</td>
+  <td>Regulator Valve for Top Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>19779300</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>80</td>
+  <td>490000</td>
+  <td>Regulator Valve for Left Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>19779300</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>90</td>
+  <td>490000</td>
+  <td>Regulator Valve for Right Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>19779300</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>100</td>
+  <td>490000</td>
+  <td>Regulator Valve for Bottom Zone</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>19779300</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>110</td>
+  <td>490000</td>
+  <td>Regulator Valve for Main Drain</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>19779300</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>120</td>
+  <td>490000</td>
+  <td>Printer</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>7549390</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>130</td>
+  <td>490000</td>
+  <td>PLC CPU 315-2DP/PN</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>46201932</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>140</td>
+  <td>490000</td>
+  <td>I/O Link Interface Profinet Module</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>30197405</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>150</td>
+  <td>490000</td>
+  <td>PC Rack Cabinet - Stand Type</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>40766520</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>160</td>
+  <td>490000</td>
+  <td>1D Barcode Scanner</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>9814223</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>170</td>
+  <td>490000</td>
+  <td>UPS 220 VAC</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>4529665</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>180</td>
+  <td>490000</td>
+  <td>Air condition for control cabinet</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>33217130</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>190</td>
+  <td>490000</td>
+  <td>Piping system with UPVC Type in Test roo</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>65875525</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>200</td>
+  <td>490000</td>
+  <td>Piping system for the flow control syste</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>52694411</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>210</td>
+  <td>490000</td>
+  <td>Pneumatic Tube for Cylinder Top Lift Uni</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>52694411</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>220</td>
+  <td>490000</td>
+  <td>Pneumatic Solenoid Valve for Top Lift Un</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>67944045</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>230</td>
+  <td>490000</td>
+  <td>Splash Pump and accessory</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>33217130</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>240</td>
+  <td>490000</td>
+  <td>Submersible pump in Test Room</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>23101044</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>4500135472</td>
+  <td>250</td>
+  <td>490000</td>
+  <td>Packing &amp; Shipping materials 1st phase m</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>51395572</td>
+  <td class=3Dxl70>10/30/2019</td>
+  <td class=3Dxl70>12/20/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
   <td>6</td>
   <td>CGMM2019X167</td>
   <td>POrd</td>
@@ -16125,6 +17529,60 @@ rdless
   <td>11</td>
   <td>CGMM2019X167</td>
   <td>POrd</td>
+  <td>1019GLS803</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Y980010041085 Spoiler gauge X167 for lif</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>159704735</td>
+  <td class=3Dxl69>159704735</td>
+  <td class=3Dxl70>10/23/2019</td>
+  <td class=3Dxl70>11/8/2019</td>
+  <td>LHIMAWA</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>1019GLS803</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Y980010037680 Spacer/support trunk lid X</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>21137391</td>
+  <td class=3Dxl69>21137391</td>
+  <td class=3Dxl70>10/23/2019</td>
+  <td class=3Dxl70>11/8/2019</td>
+  <td>LHIMAWA</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
+  <td>1019GLS803</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>Y980010041337 Jig for positioning fender</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>37577585</td>
+  <td class=3Dxl69>37577585</td>
+  <td class=3Dxl70>10/23/2019</td>
+  <td class=3Dxl70>11/8/2019</td>
+  <td>LHIMAWA</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMM2019X167</td>
+  <td>POrd</td>
   <td>4500135515</td>
   <td>10</td>
   <td>490000</td>
@@ -16136,7 +17594,7 @@ rdless
   <td class=3Dxl69>126309450</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16154,7 +17612,7 @@ rdless
   <td class=3Dxl69>24872040</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16172,7 +17630,7 @@ rdless
   <td class=3Dxl69>153442602</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16190,7 +17648,7 @@ rdless
   <td class=3Dxl69>29846448</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16208,7 +17666,7 @@ rdless
   <td class=3Dxl69>37192602</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16226,7 +17684,7 @@ rdless
   <td class=3Dxl69>3316272</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16244,7 +17702,7 @@ rdless
   <td class=3Dxl69>126247080</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16262,7 +17720,7 @@ rdless
   <td class=3Dxl69>9948816</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16280,7 +17738,7 @@ rdless
   <td class=3Dxl69>179925998</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16298,7 +17756,7 @@ rdless
   <td class=3Dxl69>19211514</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16316,7 +17774,7 @@ rdless
   <td class=3Dxl69>52241694</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16334,7 +17792,7 @@ rdless
   <td class=3Dxl69>5489004</td>
   <td class=3Dxl70>11/7/2019</td>
   <td class=3Dxl70>11/7/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -16945,6 +18403,42 @@ rdless
   <td class=3Dxl69>0</td>
   <td class=3Dxl69>32163750</td>
   <td class=3Dxl70>3/15/2019</td>
+  <td class=3Dxl70>4/15/2019</td>
+  <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>4</td>
+  <td>CGMMENG19001</td>
+  <td>POrd</td>
+  <td>4500134662</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Statutory Compliance Management System (</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>317285000</td>
+  <td class=3Dxl69>317285000</td>
+  <td class=3Dxl70>3/19/2019</td>
+  <td class=3Dxl70>4/15/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>4</td>
+  <td>CGMMENG19001</td>
+  <td>POrd</td>
+  <td>4500134662</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Legal and Technical Updates</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>31728500</td>
+  <td class=3Dxl69>31728500</td>
+  <td class=3Dxl70>3/19/2019</td>
   <td class=3Dxl70>4/15/2019</td>
   <td>EASID</td>
  </tr>
@@ -18062,7 +19556,7 @@ rdless
   <td class=3Dxl69>237000000</td>
   <td class=3Dxl70>11/20/2019</td>
   <td class=3Dxl70>11/12/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18080,7 +19574,7 @@ rdless
   <td class=3Dxl69>136304330</td>
   <td class=3Dxl70>11/20/2019</td>
   <td class=3Dxl70>12/12/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18098,7 +19592,7 @@ rdless
   <td class=3Dxl69>176852510</td>
   <td class=3Dxl70>11/20/2019</td>
   <td class=3Dxl70>12/12/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18422,7 +19916,7 @@ rdless
   <td class=3Dxl69>97000000</td>
   <td class=3Dxl70>12/5/2019</td>
   <td class=3Dxl70>12/16/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18440,7 +19934,7 @@ rdless
   <td class=3Dxl69>10000000</td>
   <td class=3Dxl70>12/5/2019</td>
   <td class=3Dxl70>12/16/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18458,7 +19952,7 @@ rdless
   <td class=3Dxl69>1135000</td>
   <td class=3Dxl70>12/5/2019</td>
   <td class=3Dxl70>12/16/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18476,7 +19970,43 @@ rdless
   <td class=3Dxl69>13000000</td>
   <td class=3Dxl70>12/5/2019</td>
   <td class=3Dxl70>12/16/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMENG19002</td>
+  <td>POrd</td>
+  <td>4500135632</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Software bridge weight</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>75000000</td>
+  <td class=3Dxl70>12/6/2019</td>
+  <td class=3Dxl70>12/27/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMENG19002</td>
+  <td>POrd</td>
+  <td>4500135632</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Cable network/kabel jaringan</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>25000000</td>
+  <td class=3Dxl70>12/6/2019</td>
+  <td class=3Dxl70>12/27/2019</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18495,6 +20025,24 @@ rdless
   <td class=3Dxl70>9/27/2019</td>
   <td class=3Dxl70>11/30/2019</td>
   <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMMENG19003</td>
+  <td>POrd</td>
+  <td>4500135503</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>New Road Concrete Ramp on Factory Entran</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>680000000</td>
+  <td class=3Dxl70>11/6/2019</td>
+  <td class=3Dxl70>11/30/2019</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18878,6 +20426,96 @@ p;
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>9</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135167</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>PM Services for building 4 Period Octobe</td>
+  <td class=3Dxl69>1</td>
+  <td>MON</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>37094690</td>
+  <td class=3Dxl70>8/2/2019</td>
+  <td class=3Dxl70>9/1/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>9</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135167</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>PM Services for building 4 Period Novemb</td>
+  <td class=3Dxl69>1</td>
+  <td>MON</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>37094690</td>
+  <td class=3Dxl70>8/2/2019</td>
+  <td class=3Dxl70>9/1/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135331</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Raised Floor to Hub Room</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>8500000</td>
+  <td class=3Dxl70>9/23/2019</td>
+  <td class=3Dxl70>11/14/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135331</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Data Works, CCTV &amp; Access Control</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>11976155</td>
+  <td class=3Dxl70>9/23/2019</td>
+  <td class=3Dxl70>11/14/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>11</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135331</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>Convert Interview Room to Office Cabin</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>43292876</td>
+  <td class=3Dxl70>9/23/2019</td>
+  <td class=3Dxl70>11/14/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
   <td>7</td>
   <td>CGMMHRM19002</td>
   <td>POrd</td>
@@ -18892,7 +20530,7 @@ p;
   <td class=3Dxl69>3649148000</td>
   <td class=3Dxl70>7/8/2019</td>
   <td class=3Dxl70>7/26/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -18932,6 +20570,152 @@ p;
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135600</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>New Cabinet &amp; Shelving to 12 pax meeting</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>6875000</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td class=3Dxl70>12/18/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135600</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Additional bumper to meeting room</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>2250000</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td class=3Dxl70>12/18/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135600</td>
+  <td>30</td>
+  <td>490000</td>
+  <td>Additional Glass door to Manager<span style=3D'mso-spacerun:yes'>&nbs=
+p;
+  </span>Room ,</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>19067473</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td class=3Dxl70>12/18/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135600</td>
+  <td>40</td>
+  <td>490000</td>
+  <td>Remove 2 sets of workstation at middle</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>1562500</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td class=3Dxl70>12/18/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135600</td>
+  <td>50</td>
+  <td>490000</td>
+  <td>Additional door Stopper to glass doors,</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>343750</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td class=3Dxl70>12/18/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135600</td>
+  <td>60</td>
+  <td>490000</td>
+  <td>Additional door stopper to toilet door ,</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>225000</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td class=3Dxl70>12/18/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135600</td>
+  <td>70</td>
+  <td>490000</td>
+  <td>Additional Downlight (L3) &amp; cabling for</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>2685163</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td class=3Dxl70>12/18/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>12</td>
+  <td>CGMMHRM19002</td>
+  <td>POrd</td>
+  <td>4500135600</td>
+  <td>80</td>
+  <td>490000</td>
+  <td>Cover the hole ex. artificial plantation</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>2625000</td>
+  <td class=3Dxl70>11/27/2019</td>
+  <td class=3Dxl70>12/18/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
   <td>2</td>
   <td>CGMMITM19001</td>
   <td>PReq</td>
@@ -18965,6 +20749,42 @@ p;
   <td class=3Dxl70>12/21/2018</td>
   <td class=3Dxl70>2/1/2019</td>
   <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>9</td>
+  <td>CGMMITM19002</td>
+  <td>PReq</td>
+  <td>5500011904</td>
+  <td>5</td>
+  <td>490000</td>
+  <td>IPKamera Hikvision 2MP DS-2CD2021-IAX</td>
+  <td class=3Dxl69>2</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>4400000</td>
+  <td class=3Dxl69>4400000</td>
+  <td class=3Dxl70>8/15/2019</td>
+  <td class=3Dxl70>9/16/2019</td>
+  <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>9</td>
+  <td>CGMMITM19002</td>
+  <td>PReq</td>
+  <td>5500011904</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Jasa Instalasi</td>
+  <td class=3Dxl69>2</td>
+  <td>UN</td>
+  <td>IDR</td>
+  <td class=3Dxl69>2000000</td>
+  <td class=3Dxl69>2000000</td>
+  <td class=3Dxl70>8/15/2019</td>
+  <td class=3Dxl70>9/16/2019</td>
+  <td>EASID</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -20307,6 +22127,24 @@ p;
   <td>10</td>
   <td>CGMMLA19X167</td>
   <td>POrd</td>
+  <td>0819GLS350</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>A1676006701 Normal Body</td>
+  <td class=3Dxl71>1.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>242098613</td>
+  <td class=3Dxl69>242098613</td>
+  <td class=3Dxl70>9/6/2019</td>
+  <td class=3Dxl70>10/14/2019</td>
+  <td>PID7028</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMMLA19X167</td>
+  <td>POrd</td>
   <td>0919GLS351</td>
   <td>10</td>
   <td>490000</td>
@@ -20391,6 +22229,24 @@ p;
   <td class=3Dxl70>9/6/2019</td>
   <td class=3Dxl70>9/27/2019</td>
   <td>FIDYASM</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMMLA19X167</td>
+  <td>POrd</td>
+  <td>0819GLS353</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>A1677807000 Sliding roof frame Compl.OSR</td>
+  <td class=3Dxl71>2.000</td>
+  <td>PC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>49689234</td>
+  <td class=3Dxl69>49689234</td>
+  <td class=3Dxl70>9/16/2019</td>
+  <td class=3Dxl70>10/14/2019</td>
+  <td>PID7028</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -20552,7 +22408,7 @@ p;
   <td class=3Dxl69>25362000</td>
   <td class=3Dxl70>10/30/2019</td>
   <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -20570,7 +22426,7 @@ p;
   <td class=3Dxl69>17951510</td>
   <td class=3Dxl70>10/30/2019</td>
   <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -20588,7 +22444,7 @@ p;
   <td class=3Dxl69>27247500</td>
   <td class=3Dxl70>10/30/2019</td>
   <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -20606,7 +22462,7 @@ p;
   <td class=3Dxl69>25326120</td>
   <td class=3Dxl70>10/30/2019</td>
   <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -20624,7 +22480,7 @@ p;
   <td class=3Dxl69>9377960</td>
   <td class=3Dxl70>10/30/2019</td>
   <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -21488,6 +23344,24 @@ p;
   <td class=3Dxl69>37094690</td>
   <td class=3Dxl70>2/22/2019</td>
   <td class=3Dxl70>8/31/2019</td>
+  <td>DINDART</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>7</td>
+  <td>CGMMMTW19000</td>
+  <td>POrd</td>
+  <td>4500134359</td>
+  <td>10</td>
+  <td>490000</td>
+  <td>Design Services for Building 4 &amp; Annex B</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>144130000</td>
+  <td class=3Dxl69>205900000</td>
+  <td class=3Dxl70>12/18/2018</td>
+  <td class=3Dxl70>7/31/2019</td>
   <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
@@ -22452,6 +24326,24 @@ Toilet
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>9</td>
+  <td>CGMMMTW19003</td>
+  <td>POrd</td>
+  <td>4500135119</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Services Cost for Additional Hydrant Pil</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>35275000</td>
+  <td class=3Dxl70>7/26/2019</td>
+  <td class=3Dxl70>9/6/2019</td>
+  <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
   <td>10</td>
   <td>CGMMMTW19003</td>
   <td>POrd</td>
@@ -22464,6 +24356,24 @@ Toilet
   <td>IDR</td>
   <td class=3Dxl69>0</td>
   <td class=3Dxl69>2216500000</td>
+  <td class=3Dxl70>5/3/2019</td>
+  <td class=3Dxl70>10/31/2019</td>
+  <td>EASID</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMMMTW19003</td>
+  <td>POrd</td>
+  <td>4500134810</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>Services Cost for Hydrant Pump System</td>
+  <td class=3Dxl69>1</td>
+  <td>PAC</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>133500000</td>
   <td class=3Dxl70>5/3/2019</td>
   <td class=3Dxl70>10/31/2019</td>
   <td>EASID</td>
@@ -23615,11 +25525,11 @@ Toilet
   <td class=3Dxl69>1</td>
   <td>SET</td>
   <td>IDR</td>
-  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>3099400</td>
   <td class=3Dxl69>3099400</td>
   <td class=3Dxl70>9/10/2019</td>
   <td class=3Dxl70>10/9/2019</td>
-  <td>PID7028</td>
+  <td>FGINAST</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -23651,11 +25561,11 @@ Toilet
   <td class=3Dxl69>1</td>
   <td>SET</td>
   <td>IDR</td>
-  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>10259014</td>
   <td class=3Dxl69>10259014</td>
   <td class=3Dxl70>9/10/2019</td>
   <td class=3Dxl70>10/9/2019</td>
-  <td>PID7028</td>
+  <td>FGINAST</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -23669,11 +25579,11 @@ Toilet
   <td class=3Dxl69>1</td>
   <td>SET</td>
   <td>IDR</td>
-  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>8538847</td>
   <td class=3Dxl69>8538847</td>
   <td class=3Dxl70>9/10/2019</td>
   <td class=3Dxl70>10/9/2019</td>
-  <td>PID7028</td>
+  <td>FGINAST</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -23705,11 +25615,11 @@ Toilet
   <td class=3Dxl69>1</td>
   <td>SET</td>
   <td>IDR</td>
-  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>4649100</td>
   <td class=3Dxl69>4649100</td>
   <td class=3Dxl70>9/10/2019</td>
   <td class=3Dxl70>10/9/2019</td>
-  <td>PID7028</td>
+  <td>FGINAST</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -23745,7 +25655,25 @@ Toilet
   <td class=3Dxl69>97088705</td>
   <td class=3Dxl70>9/11/2019</td>
   <td class=3Dxl70>10/9/2019</td>
-  <td>LHIMAWA</td>
+  <td>FIDYASM</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMMQPC19001</td>
+  <td>POrd</td>
+  <td>330819C802</td>
+  <td>20</td>
+  <td>490000</td>
+  <td>101 11 0003 - Software Firmware Freedom3</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>3099400</td>
+  <td class=3Dxl70>9/11/2019</td>
+  <td class=3Dxl70>10/9/2019</td>
+  <td>FGINAST</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -23763,7 +25691,43 @@ Toilet
   <td class=3Dxl69>1937125</td>
   <td class=3Dxl70>9/11/2019</td>
   <td class=3Dxl70>10/9/2019</td>
-  <td>LHIMAWA</td>
+  <td>FIDYASM</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMMQPC19001</td>
+  <td>POrd</td>
+  <td>330819C802</td>
+  <td>40</td>
+  <td>490000</td>
+  <td>8010007-Torque DAkkS Calibration CW/CCW</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>10259014</td>
+  <td class=3Dxl70>9/11/2019</td>
+  <td class=3Dxl70>10/9/2019</td>
+  <td>FGINAST</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMMQPC19001</td>
+  <td>POrd</td>
+  <td>330819C802</td>
+  <td>50</td>
+  <td>490000</td>
+  <td>8010057-DAkkS Calibration Angle (indirec</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>8538847</td>
+  <td class=3Dxl70>9/11/2019</td>
+  <td class=3Dxl70>10/9/2019</td>
+  <td>FGINAST</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -23781,7 +25745,25 @@ Toilet
   <td class=3Dxl69>5423950</td>
   <td class=3Dxl70>9/11/2019</td>
   <td class=3Dxl70>10/9/2019</td>
-  <td>LHIMAWA</td>
+  <td>FIDYASM</td>
+ </tr>
+ <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
+  <td height=3D17 style=3D'height:12.75pt'>2019</td>
+  <td>10</td>
+  <td>CGMMQPC19001</td>
+  <td>POrd</td>
+  <td>330819C802</td>
+  <td>70</td>
+  <td>490000</td>
+  <td>9910019-Shipping costs incl. packaging a</td>
+  <td class=3Dxl69>1</td>
+  <td>SET</td>
+  <td>IDR</td>
+  <td class=3Dxl69>0</td>
+  <td class=3Dxl69>4649100</td>
+  <td class=3Dxl70>9/11/2019</td>
+  <td class=3Dxl70>10/9/2019</td>
+  <td>FGINAST</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24393,7 +26375,7 @@ Toilet
   <td class=3Dxl69>427085781</td>
   <td class=3Dxl70>9/12/2019</td>
   <td class=3Dxl70>11/30/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24429,7 +26411,7 @@ Toilet
   <td class=3Dxl69>165600000</td>
   <td class=3Dxl70>11/11/2019</td>
   <td class=3Dxl70>11/18/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24447,7 +26429,7 @@ Toilet
   <td class=3Dxl69>76500000</td>
   <td class=3Dxl70>11/12/2019</td>
   <td class=3Dxl70>11/18/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24465,7 +26447,7 @@ Toilet
   <td class=3Dxl69>31500000</td>
   <td class=3Dxl70>11/12/2019</td>
   <td class=3Dxl70>11/18/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24501,7 +26483,7 @@ Toilet
   <td class=3Dxl69>122803200</td>
   <td class=3Dxl70>8/27/2019</td>
   <td class=3Dxl70>11/18/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24519,7 +26501,7 @@ Toilet
   <td class=3Dxl69>122803200</td>
   <td class=3Dxl70>8/27/2019</td>
   <td class=3Dxl70>11/18/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24537,7 +26519,7 @@ Toilet
   <td class=3Dxl69>162179200</td>
   <td class=3Dxl70>8/27/2019</td>
   <td class=3Dxl70>11/18/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24555,7 +26537,7 @@ Toilet
   <td class=3Dxl69>73440000</td>
   <td class=3Dxl70>8/27/2019</td>
   <td class=3Dxl70>11/18/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24573,7 +26555,7 @@ Toilet
   <td class=3Dxl69>33480000</td>
   <td class=3Dxl70>8/27/2019</td>
   <td class=3Dxl70>11/18/2019</td>
-  <td>EASID</td>
+  <td>DINDART</td>
  </tr>
  <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
   <td height=3D17 style=3D'height:12.75pt'>2019</td>
@@ -24592,1988 +26574,6 @@ Toilet
   <td class=3Dxl70>9/10/2019</td>
   <td class=3Dxl70>11/30/2019</td>
   <td>DINDART</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135600</td>
-  <td>60</td>
-  <td>490000</td>
-  <td>Additional door stopper to toilet door ,</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>225000</td>
-  <td class=3Dxl69>225000</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td class=3Dxl70>12/18/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135600</td>
-  <td>50</td>
-  <td>490000</td>
-  <td>Additional door Stopper to glass doors,</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>343750</td>
-  <td class=3Dxl69>343750</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td class=3Dxl70>12/18/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135600</td>
-  <td>40</td>
-  <td>490000</td>
-  <td>Remove 2 sets of workstation at middle</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>1562500</td>
-  <td class=3Dxl69>1562500</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td class=3Dxl70>12/18/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>180</td>
-  <td>490000</td>
-  <td>Exhaust temperature sensor</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>1923283</td>
-  <td class=3Dxl69>1923283</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>9</td>
-  <td>CGMMITM19002</td>
-  <td>PReq</td>
-  <td>5500011904</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Jasa Instalasi</td>
-  <td class=3Dxl69>2</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>2000000</td>
-  <td class=3Dxl69>2000000</td>
-  <td class=3Dxl70>8/15/2019</td>
-  <td class=3Dxl70>9/16/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135600</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Additional bumper to meeting room</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>2250000</td>
-  <td class=3Dxl69>2250000</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td class=3Dxl70>12/18/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135600</td>
-  <td>80</td>
-  <td>490000</td>
-  <td>Cover the hole ex. artificial plantation</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>2625000</td>
-  <td class=3Dxl69>2625000</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td class=3Dxl70>12/18/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135600</td>
-  <td>70</td>
-  <td>490000</td>
-  <td>Additional Downlight (L3) &amp; cabling for</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>2685163</td>
-  <td class=3Dxl69>2685163</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td class=3Dxl70>12/18/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMMQPC19001</td>
-  <td>POrd</td>
-  <td>330819C802</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>101 11 0003 - Software Firmware Freedom3</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>3099400</td>
-  <td class=3Dxl69>3099400</td>
-  <td class=3Dxl70>9/11/2019</td>
-  <td class=3Dxl70>10/9/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>9</td>
-  <td>CGMMITM19002</td>
-  <td>PReq</td>
-  <td>5500011904</td>
-  <td>5</td>
-  <td>490000</td>
-  <td>IPKamera Hikvision 2MP DS-2CD2021-IAX</td>
-  <td class=3Dxl69>2</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>4400000</td>
-  <td class=3Dxl69>4400000</td>
-  <td class=3Dxl70>8/15/2019</td>
-  <td class=3Dxl70>9/16/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>170</td>
-  <td>490000</td>
-  <td>UPS 220 VAC</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>4529665</td>
-  <td class=3Dxl69>4529665</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMMQPC19001</td>
-  <td>POrd</td>
-  <td>330819C802</td>
-  <td>70</td>
-  <td>490000</td>
-  <td>9910019-Shipping costs incl. packaging a</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>4649100</td>
-  <td class=3Dxl69>4649100</td>
-  <td class=3Dxl70>9/11/2019</td>
-  <td class=3Dxl70>10/9/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>100</td>
-  <td>490000</td>
-  <td>Valve maifold</td>
-  <td class=3Dxl71>2.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>6213685</td>
-  <td class=3Dxl69>6213685</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>120</td>
-  <td>490000</td>
-  <td>Fuel regulation valve</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>6805464</td>
-  <td class=3Dxl69>6805464</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>140</td>
-  <td>490000</td>
-  <td>Level switch</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>6805464</td>
-  <td class=3Dxl69>6805464</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135600</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>New Cabinet &amp; Shelving to 12 pax meeting</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>6875000</td>
-  <td class=3Dxl69>6875000</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td class=3Dxl70>12/18/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135502</td>
-  <td>60</td>
-  <td>490000</td>
-  <td>Installation (Labor Cost)</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>6887500</td>
-  <td class=3Dxl69>6887500</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>120</td>
-  <td>490000</td>
-  <td>Printer</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>7549390</td>
-  <td class=3Dxl69>7549390</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135331</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Raised Floor to Hub Room</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>8500000</td>
-  <td class=3Dxl69>8500000</td>
-  <td class=3Dxl70>9/23/2019</td>
-  <td class=3Dxl70>11/14/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMMQPC19001</td>
-  <td>POrd</td>
-  <td>330819C802</td>
-  <td>50</td>
-  <td>490000</td>
-  <td>8010057-DAkkS Calibration Angle (indirec</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>8538847</td>
-  <td class=3Dxl69>8538847</td>
-  <td class=3Dxl70>9/11/2019</td>
-  <td class=3Dxl70>10/9/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>50</td>
-  <td>490000</td>
-  <td>Pressure measuring</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>8728904</td>
-  <td class=3Dxl69>8728904</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135608</td>
-  <td>40</td>
-  <td>490000</td>
-  <td>Electronicl Tools</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>8800500</td>
-  <td class=3Dxl69>8800500</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>160</td>
-  <td>490000</td>
-  <td>1D Barcode Scanner</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>9814223</td>
-  <td class=3Dxl69>9814223</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMMQPC19001</td>
-  <td>POrd</td>
-  <td>330819C802</td>
-  <td>40</td>
-  <td>490000</td>
-  <td>8010007-Torque DAkkS Calibration CW/CCW</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>10259014</td>
-  <td class=3Dxl69>10259014</td>
-  <td class=3Dxl70>9/11/2019</td>
-  <td class=3Dxl70>10/9/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>90</td>
-  <td>490000</td>
-  <td>Servo motor</td>
-  <td class=3Dxl71>3.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>10652031</td>
-  <td class=3Dxl69>10652031</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135608</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Mechanic Special Tool Set</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>11092500</td>
-  <td class=3Dxl69>11092500</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135331</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Data Works, CCTV &amp; Access Control</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>11976155</td>
-  <td class=3Dxl69>11976155</td>
-  <td class=3Dxl70>9/23/2019</td>
-  <td class=3Dxl70>11/14/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135608</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>Electrical Tool Set</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>12609000</td>
-  <td class=3Dxl69>12609000</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>200</td>
-  <td>490000</td>
-  <td>X-26 cable (small box)</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>13610929</td>
-  <td class=3Dxl69>13610929</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>190</td>
-  <td>490000</td>
-  <td>Temperature sensor oil</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>13758874</td>
-  <td class=3Dxl69>13758874</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135425</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>Special-extension for KAA1300 / VS 01 1</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>14311536</td>
-  <td class=3Dxl69>14311536</td>
-  <td class=3Dxl70>10/21/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135539</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Motor Blower Fan</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>16459016</td>
-  <td class=3Dxl69>16459016</td>
-  <td class=3Dxl70>11/12/2019</td>
-  <td class=3Dxl70>12/19/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135425</td>
-  <td>40</td>
-  <td>490000</td>
-  <td>Pressure regulator for materiall ARO</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>17088744</td>
-  <td class=3Dxl69>17088744</td>
-  <td class=3Dxl70>10/21/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135425</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Needle seat dosing valve main body</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>17739434</td>
-  <td class=3Dxl69>17739434</td>
-  <td class=3Dxl70>10/21/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>130</td>
-  <td>490000</td>
-  <td>Regulation for supply air</td>
-  <td class=3Dxl71>3.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>18641055</td>
-  <td class=3Dxl69>18641055</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135600</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>Additional Glass door to Manager<span style=3D'mso-spacerun:yes'>&nbs=
-p;
-  </span>Room ,</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>19067473</td>
-  <td class=3Dxl69>19067473</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td class=3Dxl70>12/18/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>70</td>
-  <td>490000</td>
-  <td>Regulator Valve for Top Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>80</td>
-  <td>490000</td>
-  <td>Regulator Valve for Left Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>90</td>
-  <td>490000</td>
-  <td>Regulator Valve for Right Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>100</td>
-  <td>490000</td>
-  <td>Regulator Valve for Bottom Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>110</td>
-  <td>490000</td>
-  <td>Regulator Valve for Main Drain</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl69>19779300</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135447</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>Pump Calio 030-060 PN10 S/N : 29134279</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>20889000</td>
-  <td class=3Dxl69>20889000</td>
-  <td class=3Dxl70>10/28/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>310719C809</td>
-  <td>100</td>
-  <td>490000</td>
-  <td>SE70007544 FlexGen-Sensor</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>21066750</td>
-  <td class=3Dxl69>21066750</td>
-  <td class=3Dxl70>9/5/2019</td>
-  <td class=3Dxl70>12/11/2019</td>
-  <td>EENCUP</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>1019GLS803</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Y980010037680 Spacer/support trunk lid X</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>21137391</td>
-  <td class=3Dxl69>21137391</td>
-  <td class=3Dxl70>10/23/2019</td>
-  <td class=3Dxl70>11/8/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135425</td>
-  <td>70</td>
-  <td>490000</td>
-  <td>Shipment CPT Airport Jakarta</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>21983805</td>
-  <td class=3Dxl69>21983805</td>
-  <td class=3Dxl70>10/21/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135447</td>
-  <td>40</td>
-  <td>490000</td>
-  <td>Pump Calio 030-100 PN10 S/N : 29134918</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>22878000</td>
-  <td class=3Dxl69>22878000</td>
-  <td class=3Dxl70>10/28/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>240</td>
-  <td>490000</td>
-  <td>Submersible pump in Test Room</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>23101044</td>
-  <td class=3Dxl69>23101044</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>60</td>
-  <td>490000</td>
-  <td>Circulation pump for havoline</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>23523236</td>
-  <td class=3Dxl69>23523236</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMENG19002</td>
-  <td>POrd</td>
-  <td>4500135632</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Cable network/kabel jaringan</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>25000000</td>
-  <td class=3Dxl69>25000000</td>
-  <td class=3Dxl70>12/6/2019</td>
-  <td class=3Dxl70>12/27/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135425</td>
-  <td>60</td>
-  <td>490000</td>
-  <td>Z-Axle</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>25221334</td>
-  <td class=3Dxl69>25221334</td>
-  <td class=3Dxl70>10/21/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135607</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Recondition Engine Assy Hall Air Conditi</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>25771515</td>
-  <td class=3Dxl69>25771515</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td class=3Dxl70>12/2/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>80</td>
-  <td>490000</td>
-  <td>Door sensor</td>
-  <td class=3Dxl71>2.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>29441031</td>
-  <td class=3Dxl69>29441031</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135608</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Mechanic Tool Set</td>
-  <td class=3Dxl69>2</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>29905500</td>
-  <td class=3Dxl69>29905500</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td class=3Dxl70>11/29/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135447</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Pump ETL 032-032-160 GG S/N : 9972790216</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>29979000</td>
-  <td class=3Dxl69>29979000</td>
-  <td class=3Dxl70>10/28/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>140</td>
-  <td>490000</td>
-  <td>I/O Link Interface Profinet Module</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>30197405</td>
-  <td class=3Dxl69>30197405</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>4</td>
-  <td>CGMMENG19001</td>
-  <td>POrd</td>
-  <td>4500134662</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Legal and Technical Updates</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>31728500</td>
-  <td class=3Dxl69>31728500</td>
-  <td class=3Dxl70>3/19/2019</td>
-  <td class=3Dxl70>4/15/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>180</td>
-  <td>490000</td>
-  <td>Air condition for control cabinet</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>33217130</td>
-  <td class=3Dxl69>33217130</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>230</td>
-  <td>490000</td>
-  <td>Splash Pump and accessory</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>33217130</td>
-  <td class=3Dxl69>33217130</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>310719C809</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>2017018401000 Replacement bushing set in</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>34022801</td>
-  <td class=3Dxl69>34022801</td>
-  <td class=3Dxl70>9/5/2019</td>
-  <td class=3Dxl70>12/11/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135447</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Pump ETL 032-032-200 GG S/N : 9972760641</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>34218000</td>
-  <td class=3Dxl69>34218000</td>
-  <td class=3Dxl70>10/28/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>9</td>
-  <td>CGMMMTW19003</td>
-  <td>POrd</td>
-  <td>4500135119</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Services Cost for Additional Hydrant Pil</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>35275000</td>
-  <td class=3Dxl69>35275000</td>
-  <td class=3Dxl70>7/26/2019</td>
-  <td class=3Dxl70>9/6/2019</td>
-  <td>DINDART</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Output air hose (incl. Balancer) 43013</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>35506927</td>
-  <td class=3Dxl69>35506927</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>9</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135167</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>PM Services for building 4 Period Octobe</td>
-  <td class=3Dxl69>1</td>
-  <td>MON</td>
-  <td>IDR</td>
-  <td class=3Dxl69>37094690</td>
-  <td class=3Dxl69>37094690</td>
-  <td class=3Dxl70>8/2/2019</td>
-  <td class=3Dxl70>9/1/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>9</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135167</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>PM Services for building 4 Period Novemb</td>
-  <td class=3Dxl69>1</td>
-  <td>MON</td>
-  <td>IDR</td>
-  <td class=3Dxl69>37094690</td>
-  <td class=3Dxl69>37094690</td>
-  <td class=3Dxl70>8/2/2019</td>
-  <td class=3Dxl70>9/1/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>1019GLS803</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>Y980010041337 Jig for positioning fender</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>37577585</td>
-  <td class=3Dxl69>37577585</td>
-  <td class=3Dxl70>10/23/2019</td>
-  <td class=3Dxl70>11/8/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>170</td>
-  <td>490000</td>
-  <td>X-20 cable for M264</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>37725944</td>
-  <td class=3Dxl69>37725944</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>1</td>
-  <td>CGMM2019V167</td>
-  <td>POrd</td>
-  <td>330818802</td>
-  <td>130</td>
-  <td>490000</td>
-  <td>KR-3051084 Einstellehre Scheinwerfer Li</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>37730732</td>
-  <td class=3Dxl69>37730732</td>
-  <td class=3Dxl70>8/23/2018</td>
-  <td class=3Dxl70>1/31/2019</td>
-  <td>EENCUP</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135425</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Needle-seat dosing valve VS 01 L=3D200 mm,</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>38838056</td>
-  <td class=3Dxl69>38838056</td>
-  <td class=3Dxl70>10/21/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>310719C809</td>
-  <td>60</td>
-  <td>490000</td>
-  <td>2017145000000 Cylinder measurement tools</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>39816158</td>
-  <td class=3Dxl69>39816158</td>
-  <td class=3Dxl70>9/5/2019</td>
-  <td class=3Dxl70>12/11/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>150</td>
-  <td>490000</td>
-  <td>PC Rack Cabinet - Stand Type</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>40766520</td>
-  <td class=3Dxl69>40766520</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>70</td>
-  <td>490000</td>
-  <td>Servo controller</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>42164291</td>
-  <td class=3Dxl69>42164291</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Output air hose (incl. Balancer) 43014</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>42904171</td>
-  <td class=3Dxl69>42904171</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135425</td>
-  <td>50</td>
-  <td>490000</td>
-  <td>Linear table belt drive 850mm</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>43075020</td>
-  <td class=3Dxl69>43075020</td>
-  <td class=3Dxl70>10/21/2019</td>
-  <td class=3Dxl70>11/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMMHRM19002</td>
-  <td>POrd</td>
-  <td>4500135331</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>Convert Interview Room to Office Cabin</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>43292876</td>
-  <td class=3Dxl69>43292876</td>
-  <td class=3Dxl70>9/23/2019</td>
-  <td class=3Dxl70>11/14/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135562</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Safety Notification and Facility at Engi</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>46080000</td>
-  <td class=3Dxl69>46080000</td>
-  <td class=3Dxl70>11/19/2019</td>
-  <td class=3Dxl70>11/28/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>130</td>
-  <td>490000</td>
-  <td>PLC CPU 315-2DP/PN</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>46201932</td>
-  <td class=3Dxl69>46201932</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMMLA19X167</td>
-  <td>POrd</td>
-  <td>0819GLS353</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>A1677807000 Sliding roof frame Compl.OSR</td>
-  <td class=3Dxl71>2.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>49689234</td>
-  <td class=3Dxl69>49689234</td>
-  <td class=3Dxl70>9/16/2019</td>
-  <td class=3Dxl70>10/14/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Electronic Flow Meter for Splash Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Electronic Flow Meter for Top Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>Electronic Flow Meter for Left Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>40</td>
-  <td>490000</td>
-  <td>Electronic Flow Meter for Right Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>50</td>
-  <td>490000</td>
-  <td>Electronic Flow Meter for Bottom Zone</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl69>49825695</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>250</td>
-  <td>490000</td>
-  <td>Packing &amp; Shipping materials 1st phase m</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>51395572</td>
-  <td class=3Dxl69>51395572</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135448</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Engine Wash Machines Sensor</td>
-  <td class=3Dxl69>1</td>
-  <td>PAC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>51486304</td>
-  <td class=3Dxl69>51486304</td>
-  <td class=3Dxl70>10/28/2019</td>
-  <td class=3Dxl70>11/21/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>110</td>
-  <td>490000</td>
-  <td>Circulation pump for fuel</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>52520432</td>
-  <td class=3Dxl69>52520432</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>200</td>
-  <td>490000</td>
-  <td>Piping system for the flow control syste</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>52694411</td>
-  <td class=3Dxl69>52694411</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>210</td>
-  <td>490000</td>
-  <td>Pneumatic Tube for Cylinder Top Lift Uni</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>52694411</td>
-  <td class=3Dxl69>52694411</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>60</td>
-  <td>490000</td>
-  <td>Flow calibration kit</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>52845420</td>
-  <td class=3Dxl69>52845420</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135466</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Chain Hoist 500 kg, GM 4 500.8</td>
-  <td class=3Dxl69>1</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>56900000</td>
-  <td class=3Dxl69>56900000</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>11/27/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135570</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>ESD walking test tool</td>
-  <td class=3Dxl69>1</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>57814134</td>
-  <td class=3Dxl69>57814134</td>
-  <td class=3Dxl70>11/21/2019</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>Output air hose (incl. Balancer) 43015</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>61397281</td>
-  <td class=3Dxl69>61397281</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>190</td>
-  <td>490000</td>
-  <td>Piping system with UPVC Type in Test roo</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>65875525</td>
-  <td class=3Dxl69>65875525</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>4500135472</td>
-  <td>220</td>
-  <td>490000</td>
-  <td>Pneumatic Solenoid Valve for Top Lift Un</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>67944045</td>
-  <td class=3Dxl69>67944045</td>
-  <td class=3Dxl70>10/30/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>40</td>
-  <td>490000</td>
-  <td>Plate heat exchanger (x2 CB 60-100L)</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>71013542</td>
-  <td class=3Dxl69>71013542</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMMENG19002</td>
-  <td>POrd</td>
-  <td>4500135632</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Software bridge weight</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>75000000</td>
-  <td class=3Dxl69>75000000</td>
-  <td class=3Dxl70>12/6/2019</td>
-  <td class=3Dxl70>12/27/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>210</td>
-  <td>490000</td>
-  <td>Packing, transportation by air freight</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>78410786</td>
-  <td class=3Dxl69>78410786</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>160</td>
-  <td>490000</td>
-  <td>Mounting assistance</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>82849133</td>
-  <td class=3Dxl69>82849133</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019M264</td>
-  <td>POrd</td>
-  <td>4500135507</td>
-  <td>150</td>
-  <td>490000</td>
-  <td>Flow Control</td>
-  <td class=3Dxl71>10.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>88027204</td>
-  <td class=3Dxl69>88027204</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>12/20/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMM2019V177</td>
-  <td>POrd</td>
-  <td>330419803</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>ASD handling Tool (Vacuum Pumps Manually</td>
-  <td class=3Dxl69>1</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>130285584</td>
-  <td class=3Dxl69>130285584</td>
-  <td class=3Dxl70>4/22/2019</td>
-  <td class=3Dxl70>10/4/2019</td>
-  <td>FGINAST</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMMMTW19003</td>
-  <td>POrd</td>
-  <td>4500134810</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>Services Cost for Hydrant Pump System</td>
-  <td class=3Dxl69>1</td>
-  <td>PAC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>133500000</td>
-  <td class=3Dxl69>133500000</td>
-  <td class=3Dxl70>5/3/2019</td>
-  <td class=3Dxl70>10/31/2019</td>
-  <td>RDIRDJO</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMM2019V177</td>
-  <td>POrd</td>
-  <td>330419803</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>ASD Preparation/Turning Table KK-V177010</td>
-  <td class=3Dxl69>1</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>142129728</td>
-  <td class=3Dxl69>142129728</td>
-  <td class=3Dxl70>4/22/2019</td>
-  <td class=3Dxl70>10/4/2019</td>
-  <td>FGINAST</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>7</td>
-  <td>CGMMMTW19000</td>
-  <td>POrd</td>
-  <td>4500134359</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Design Services for Building 4 &amp; Annex B</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>144130000</td>
-  <td class=3Dxl69>205900000</td>
-  <td class=3Dxl70>12/18/2018</td>
-  <td class=3Dxl70>7/31/2019</td>
-  <td>DINDART</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMM2019X167</td>
-  <td>POrd</td>
-  <td>1019GLS803</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Y980010041085 Spoiler gauge X167 for lif</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>159704735</td>
-  <td class=3Dxl69>159704735</td>
-  <td class=3Dxl70>10/23/2019</td>
-  <td class=3Dxl70>11/8/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019V177</td>
-  <td>POrd</td>
-  <td>330419802</td>
-  <td>20</td>
-  <td>490000</td>
-  <td>MFA2 Adapter for VIN Engraving BR-100071</td>
-  <td class=3Dxl69>1</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>200166113</td>
-  <td class=3Dxl69>200166113</td>
-  <td class=3Dxl70>4/22/2019</td>
-  <td class=3Dxl70>12/12/2019</td>
-  <td>FGINAST</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMMLA19X167</td>
-  <td>POrd</td>
-  <td>0819GLS350</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>A1676006701 Normal Body</td>
-  <td class=3Dxl71>1.000</td>
-  <td>PC</td>
-  <td>IDR</td>
-  <td class=3Dxl69>242098613</td>
-  <td class=3Dxl69>242098613</td>
-  <td class=3Dxl70>9/6/2019</td>
-  <td class=3Dxl70>10/14/2019</td>
-  <td>PID7028</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>10</td>
-  <td>CGMM2019V177</td>
-  <td>POrd</td>
-  <td>330419803</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>ASD Positioning Jigs on the vehicle KK-V</td>
-  <td class=3Dxl69>1</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>260571168</td>
-  <td class=3Dxl69>260571168</td>
-  <td class=3Dxl70>4/22/2019</td>
-  <td class=3Dxl70>10/4/2019</td>
-  <td>FGINAST</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>4</td>
-  <td>CGMMENG19001</td>
-  <td>POrd</td>
-  <td>4500134662</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Statutory Compliance Management System (</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>317285000</td>
-  <td class=3Dxl69>317285000</td>
-  <td class=3Dxl70>3/19/2019</td>
-  <td class=3Dxl70>4/15/2019</td>
-  <td>DINDART</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019V177</td>
-  <td>POrd</td>
-  <td>330419802</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>Cockpit Sub Assembly BP-F5949177 Bplan A</td>
-  <td class=3Dxl69>1</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>592207200</td>
-  <td class=3Dxl69>592207200</td>
-  <td class=3Dxl70>4/22/2019</td>
-  <td class=3Dxl70>12/12/2019</td>
-  <td>FGINAST</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>11</td>
-  <td>CGMMENG19003</td>
-  <td>POrd</td>
-  <td>4500135503</td>
-  <td>10</td>
-  <td>490000</td>
-  <td>New Road Concrete Ramp on Factory Entran</td>
-  <td class=3Dxl69>1</td>
-  <td>SET</td>
-  <td>IDR</td>
-  <td class=3Dxl69>680000000</td>
-  <td class=3Dxl69>680000000</td>
-  <td class=3Dxl70>11/6/2019</td>
-  <td class=3Dxl70>11/30/2019</td>
-  <td>EASID</td>
- </tr>
- <tr height=3D17 style=3D'height:12.75pt' xmlns=3D"">
-  <td height=3D17 style=3D'height:12.75pt'>2019</td>
-  <td>12</td>
-  <td>CGMM2019V177</td>
-  <td>POrd</td>
-  <td>330419802</td>
-  <td>30</td>
-  <td>490000</td>
-  <td>317R CKD VIN Engraving BR-99990900-317</td>
-  <td class=3Dxl69>1</td>
-  <td>UN</td>
-  <td>IDR</td>
-  <td class=3Dxl69>829090080</td>
-  <td class=3Dxl69>829090080</td>
-  <td class=3Dxl70>4/22/2019</td>
-  <td class=3Dxl70>12/12/2019</td>
-  <td>FGINAST</td>
  </tr>
  <![if supportMisalignedColumns]>
  <tr height=3D0 style=3D'display:none'>
@@ -26601,7 +26601,7 @@ p;
 
 </html>
 
-------=_NextPart_01D5B101.9C59EB80
+------=_NextPart_01D5B68A.D245A7A0
 Content-Location: file:///C:/B4F2C5ED/COMP-2019-COMM_files/sheet002.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="us-ascii"
@@ -26673,7 +26673,7 @@ r-collapse:
 
 </html>
 
-------=_NextPart_01D5B101.9C59EB80
+------=_NextPart_01D5B68A.D245A7A0
 Content-Location: file:///C:/B4F2C5ED/COMP-2019-COMM_files/sheet003.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="us-ascii"
@@ -26745,7 +26745,7 @@ r-collapse:
 
 </html>
 
-------=_NextPart_01D5B101.9C59EB80
+------=_NextPart_01D5B68A.D245A7A0
 Content-Location: file:///C:/B4F2C5ED/COMP-2019-COMM_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -26759,4 +26759,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"sheet003.htm"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01D5B101.9C59EB80--
+------=_NextPart_01D5B68A.D245A7A0--
